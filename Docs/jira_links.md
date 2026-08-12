@@ -1,5 +1,30 @@
-Employee Banking REST API - Jira Documentation Links
-1. Purpose
+Table of Contents
+Purpose
+Jira Project Information
+Jira Ticket to Documentation Mapping
+Jira Ticket Link Format
+Employee API Documentation Links
+Account API Documentation Links
+Banking Transaction Documentation Links
+Database Documentation Links
+Architecture Documentation Links
+Validation Documentation Links
+Exception Handling Documentation Links
+HikariCP Documentation Links
+Actuator Monitoring Documentation Links
+Environment Setup Documentation Links
+Deployment Documentation Links
+Troubleshooting Documentation Links
+FAQ Documentation Links
+Change Log Integration
+Documentation Update Checklist
+Jira Traceability Flow
+Adding Documentation to a Jira Ticket
+Adding a Jira Ticket to Documentation
+Documentation Repository Structure
+Jira Documentation Maintenance Rule
+Jira Traceability Summary
+Purpose
 
 This document maintains traceability between Jira work items and the technical documentation of the Employee Banking REST API project.
 
@@ -11,17 +36,13 @@ Which Jira ticket fixed an issue
 Which documentation was updated
 Which change is recorded in the project change log
 Which Jira ticket is associated with database, API, monitoring, or deployment changes
-2. Jira Project Information
+Jira Project Information
 
-Jira project:
+Jira Project: Employee Banking REST API
 
-Employee Banking REST API
+Example Jira Project Key: EBR
 
-Example Jira project key:
-
-EBR
-
-Jira base URL:
+Jira Base URL:
 
 https://<your-company>.atlassian.net/browse/
 
@@ -29,7 +50,7 @@ Replace <your-company> with the actual company Jira workspace.
 
 The Jira ticket IDs below are examples. Replace them with the actual Jira ticket IDs assigned to the project.
 
-3. Jira Ticket to Documentation Mapping
+Jira Ticket to Documentation Mapping
 Jira Ticket	Work Item	Documentation
 EBR-001	Employee CRUD API	docs/API_DESIGN.md
 EBR-002	Account Management API	docs/API_DESIGN.md
@@ -48,7 +69,7 @@ EBR-014	Troubleshooting Guide	docs/TROUBLESHOOTING.md
 EBR-015	FAQ Documentation	docs/FAQ.md
 EBR-016	Change Log Maintenance	CHANGELOG.md
 EBR-017	Jira Documentation Traceability	docs/JIRA_LINKS.md
-4. Jira Ticket Link Format
+Jira Ticket Link Format
 
 When an actual Jira ticket exists, use:
 
@@ -60,7 +81,7 @@ https://<your-company>.atlassian.net/browse/EBR-001
 
 The placeholder Jira project key and ticket numbers must be replaced with the actual values used by the team.
 
-5. Employee API Documentation Links
+Employee API Documentation Links
 
 Employee API-related Jira tickets should reference:
 
@@ -76,9 +97,7 @@ Delete Employee
 Pagination
 Employee Validation
 Duplicate Email Handling
-
-Example traceability:
-
+Example Traceability
 Employee CRUD Requirement
         |
         v
@@ -92,7 +111,7 @@ API Testing
         |
         v
 docs/API_DESIGN.md
-6. Account API Documentation Links
+Account API Documentation Links
 
 Account-related Jira tickets should reference:
 
@@ -103,9 +122,7 @@ The account functionality includes:
 Deposit
 Withdraw
 Get Balance
-
-Example:
-
+Example
 Account Management
        |
        v
@@ -116,7 +133,7 @@ Account API
        |
        v
 docs/API_DESIGN.md
-7. Banking Transaction Documentation Links
+Banking Transaction Documentation Links
 
 Deposit and withdrawal functionality should be documented against the relevant Jira tickets.
 
@@ -135,7 +152,7 @@ docs/API_DESIGN.md
 
 Withdrawal-related business rules should also be documented in the API documentation and troubleshooting guide.
 
-8. Database Documentation Links
+Database Documentation Links
 
 Database-related Jira tickets should reference:
 
@@ -152,9 +169,7 @@ Constraints
 Indexes
 Column changes
 JPA entity mapping changes
-
-Example:
-
+Example
 Database Schema Change
         |
         v
@@ -165,7 +180,7 @@ Entity / Database Change
         |
         v
 docs/DATABASE_SCHEMA.md
-9. Architecture Documentation Links
+Architecture Documentation Links
 
 Architecture-related Jira tickets should reference:
 
@@ -189,9 +204,7 @@ JPA / Hibernate
    |
    v
 SQL Server
-
-Example:
-
+Example
 Architecture Documentation
           |
           v
@@ -199,7 +212,7 @@ Jira: EBR-007
           |
           v
 docs/ARCHITECTURE.md
-10. Validation Documentation Links
+Validation Documentation Links
 
 Validation-related Jira tickets should reference:
 
@@ -219,9 +232,7 @@ Email validation
 Salary validation
 Account amount validation
 Invalid request handling
-
-Example:
-
+Example
 Validation Requirement
         |
         v
@@ -232,7 +243,7 @@ Implementation
         |
         v
 docs/API_DESIGN.md
-11. Exception Handling Documentation Links
+Exception Handling Documentation Links
 
 Exception handling tickets should reference:
 
@@ -249,7 +260,7 @@ Generic Exception
 
 The documentation should explain the expected HTTP response for each major error.
 
-12. HikariCP Documentation Links
+HikariCP Documentation Links
 
 HikariCP configuration-related Jira tickets should reference:
 
@@ -262,19 +273,17 @@ maximum-pool-size
 minimum-idle
 connection-timeout
 max-lifetime
-pool monitoring
-
-Example:
-
+Pool monitoring
+Example
 HikariCP Configuration
         |
         v
 Jira: EBR-010
         |
-        +---- ENVIRONMENT_SETUP.md
+        +---- docs/ENVIRONMENT_SETUP.md
         |
-        +---- RUNBOOK.md
-13. Actuator Monitoring Documentation Links
+        +---- docs/RUNBOOK.md
+Actuator Monitoring Documentation Links
 
 Spring Boot Actuator-related Jira tickets should reference:
 
@@ -295,18 +304,16 @@ HTTP requests
 HikariCP connections
 Disk usage
 Application startup time
-
-Example:
-
+Example
 Actuator Monitoring
        |
        v
 Jira: EBR-011
        |
-       +---- RUNBOOK.md
+       +---- docs/RUNBOOK.md
        |
-       +---- ENVIRONMENT_SETUP.md
-14. Environment Setup Documentation Links
+       +---- docs/ENVIRONMENT_SETUP.md
+Environment Setup Documentation Links
 
 Environment-related Jira tickets should reference:
 
@@ -323,9 +330,7 @@ JDBC configuration
 HikariCP configuration
 Application configuration
 Actuator configuration
-
-Example:
-
+Example
 Environment Setup
        |
        v
@@ -333,7 +338,7 @@ Jira: EBR-012
        |
        v
 docs/ENVIRONMENT_SETUP.md
-15. Deployment Documentation Links
+Deployment Documentation Links
 
 Deployment-related Jira tickets should reference:
 
@@ -357,9 +362,7 @@ Database Verification
      |
      v
 API Verification
-
-Example:
-
+Example
 Deployment Procedure
        |
        v
@@ -367,7 +370,7 @@ Jira: EBR-013
        |
        v
 docs/DEPLOYMENT.md
-16. Troubleshooting Documentation Links
+Troubleshooting Documentation Links
 
 Bug-fix Jira tickets should reference:
 
@@ -387,9 +390,7 @@ Duplicate email
 Application startup failure
 Actuator health failure
 Port already in use
-
-Example:
-
+Example
 Problem
    |
    v
@@ -400,7 +401,7 @@ Bug Fix
    |
    v
 docs/TROUBLESHOOTING.md
-17. FAQ Documentation Links
+FAQ Documentation Links
 
 Frequently asked project questions should be maintained in:
 
@@ -420,7 +421,7 @@ Why withdrawal fails
 How to check account balance
 How to check Actuator health
 How to troubleshoot database errors
-18. Change Log Integration
+Change Log Integration
 
 Significant Jira work should also be recorded in:
 
@@ -454,21 +455,21 @@ Documentation
      |
      v
 CHANGELOG.md
-19. Documentation Update Checklist
+Documentation Update Checklist
 
 When completing a Jira ticket, verify:
 
-[ ] Requirement completed
-[ ] Code implementation completed
-[ ] Unit/integration testing completed
-[ ] API testing completed
-[ ] Relevant documentation updated
-[ ] Jira ticket referenced
-[ ] Documentation link added to Jira
-[ ] CHANGELOG.md updated if required
-[ ] Troubleshooting guide updated if required
-[ ] Jira ticket moved to the appropriate status
-20. Jira Traceability Flow
+ Requirement completed
+ Code implementation completed
+ Unit/integration testing completed
+ API testing completed
+ Relevant documentation updated
+ Jira ticket referenced
+ Documentation link added to Jira
+ CHANGELOG.md updated if required
+ Troubleshooting guide updated if required
+ Jira ticket moved to the appropriate status
+Jira Traceability Flow
 
 The standard project documentation process is:
 
@@ -487,18 +488,17 @@ Documentation Update
        |         |          |
        v         v          v
  API_DESIGN  DATABASE    RUNBOOK
-    |          SCHEMA       |
-    |                       |
-    +-----------+-----------+
-                |
-                v
-          CHANGELOG.md
-21. Adding Documentation to a Jira Ticket
+             SCHEMA
+       |         |          |
+       +---------+----------+
+                 |
+                 v
+           CHANGELOG.md
+Adding Documentation to a Jira Ticket
 
 When a Jira ticket is completed, add the relevant documentation to the ticket.
 
-Example Jira comment:
-
+Example Jira Comment
 Implementation completed.
 
 Documentation updated:
@@ -521,7 +521,7 @@ Documentation updated:
 
 Change log:
 - CHANGELOG.md
-22. Adding a Jira Ticket to Documentation
+Adding a Jira Ticket to Documentation
 
 When documentation is updated because of a Jira ticket, record the ticket ID.
 
@@ -538,7 +538,7 @@ Related Jira:
 
 This makes it possible to trace the documentation back to the original requirement.
 
-23. Documentation Repository Structure
+Documentation Repository Structure
 
 The project's documentation should be maintained using the following structure:
 
@@ -547,7 +547,6 @@ EmployeeBankRestApi/
 ├── src/
 │
 ├── pom.xml
-│
 ├── CHANGELOG.md
 │
 └── docs/
@@ -560,7 +559,7 @@ EmployeeBankRestApi/
     ├── TROUBLESHOOTING.md
     ├── FAQ.md
     └── JIRA_LINKS.md
-24. Jira Documentation Maintenance Rule
+Jira Documentation Maintenance Rule
 
 Whenever a new feature, bug fix, database change, configuration change, monitoring change, or deployment change is implemented:
 
@@ -583,7 +582,7 @@ Update CHANGELOG.md
 
 The documentation must be updated whenever the implemented behavior changes.
 
-25. Jira Traceability Summary
+Jira Traceability Summary
 
 The following documentation mapping should be maintained throughout the project:
 

@@ -1,512 +1,1292 @@
-Employee & Account API - Operations Runbook
-1. Purpose
+# EmployeeBankRestApi - Operations Runbook
 
-This runbook provides instructions for common operational tasks for the Employee & Account REST API.
+## 1. Overview
 
-It covers:
+This runbook provides the standard procedures for starting, stopping, monitoring, testing, and troubleshooting the EmployeeBankRestApi application.
 
-Starting the application
-Stopping the application
-Verifying application availability
-Checking the SQL Server database
-Testing Employee APIs
-Testing Account APIs
-Running Postman collections
-Checking application logs
-Handling common errors
-Restart and recovery procedures
-2. Application Information
-Property	Value
-Application	Employee API
-Framework	Spring Boot
-Language	Java 21
-Build Tool	Maven
-Database	Microsoft SQL Server
-Persistence	Spring Data JPA / Hibernate
-API Testing	Postman
-CLI Testing	Newman
-Default Port	8089
-API Base Path	/api/v1
+The application is a Spring Boot REST API that uses:
 
-The application contains two major functional areas:
+- Java 21
+- Spring Boot
+- Spring Data JPA
+- Hibernate
+- Microsoft SQL Server
+- HikariCP
+- Redis
+- Maven
+- Postman
+- Spring Boot Actuator
+- Swagger / OpenAPI
 
-Employee Management
-        +
-Account / Banking Management
-3. Prerequisites
+---
 
-Before starting the application, verify that the following are available:
+## 2. Prerequisites
+
+Before starting the application, verify that the following software is installed and available.
+
+| Software | Purpose |
+|---|---|
+| Java 21 | Application runtime |
+| Maven | Build and package application |
+| SQL Server | Application database |
+| Redis | Application caching |
+| Postman | API testing |
+| Git | Source code management |
+EmployeeBankRestApi - Operations Runbook
+1. Overview
+
+This runbook provides the standard procedures for starting, stopping, monitoring, testing, and troubleshooting the EmployeeBankRestApi application.
+
+The application is a Spring Boot REST API that uses:
 
 Java 21
-Maven
+Spring Boot
+Spring Data JPA
+Hibernate
 Microsoft SQL Server
-SQL Server Management Studio
+HikariCP
+Redis
+Maven
 Postman
-Node.js
-Newman
+Spring Boot Actuator
+Swagger / OpenAPI
+2. Prerequisites
 
-The SQL Server database must be available and the configured database must exist.
+Before starting the application, verify that the following software is installed and available.
 
-4. Start the Application
-Using Eclipse
+Software	Purpose
+Java 21	Application runtime
+Maven	Build and package application
+SQL Server	Application database
+Redis	Application caching
+Postman	API testing
+Git	Source code management
+Verify Java
+java -version
+Verify Maven
+mvn -version
+Verify Git
+git --version
+Verify Node.js if Newman is required
+node -v
+Verify npm
+npm -v
+3. Project Structure
 
-Open the project in Eclipse.
+The main project structure is:
 
-Locate the main Spring Boot class, for example:
+EmployeeBankRestApi
+│
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com.tns.employeeapi
+│   │   └── resources
+│   │       └── application.yml
+│   │
+│   └── test
+│
+├── docs
+│   ├── API_DESIGN.md
+│   ├── ARCHITECTURE.md
+│   ├── RUNBOOK.md
+│   ├── DEPLOYMENT.md
+│   ├── DATABASE_SCHEMA.md
+│   ├── TROUBLESHOOTING.md
+│   ├── ENVIRONMENT_SETUP.md
+│   ├── FAQ.md
+│   └── JIRA_LINKS.md
+│
+├── pom.xml
+├── CHANGELOG.md
+└── README.md
+4. Application Configuration
 
-EmployeeApiApplication.java
+The main configuration file is:
 
-Right-click:
+src/main/resources/application.yml
 
-Run As
-   ↓
-Spring Boot App
-
-Wait until the console displays a successful startup message similar to:
-
-Started EmployeeApiApplication
-
-The application should then be available on:
+The application is configured to run on:
 
 http://localhost:8089
-5. Start Using Maven
 
-Open Command Prompt or terminal in the project root directory.
+Main configuration areas include:
+
+Application
+SQL Server
+HikariCP
+JPA / Hibernate
+Redis
+Spring Cache
+Actuator
+Logging
+Swagger / OpenAPI
+Server Port
+5. Start SQL Server
+
+Before starting the Spring Boot application, verify that SQL Server is running.
+
+The application uses SQL Server as its primary database.
+
+The configured database is:
+
+SpringBootRestApi
+
+Verify that the database exists:
+
+SELECT name
+FROM sys.databases
+WHERE name = 'SpringBootRestApi';
+
+If the database does not exist, create it:
+
+CREATE DATABASE SpringBootRestApi;
+GO
+6. Start Redis
+
+The application uses Redis for caching.
+
+Redis is configured as:
+
+Host: localhost
+Port: 6379
+
+Verify that Redis is running before starting the application.
+
+If Redis is installed as a Windows service, verify that the Redis service is running.
+
+If Redis is started manually, start the Redis server using the appropriate Redis installation command.
+
+7. Build the Application
+
+Navigate to the project root directory.
 
 Run:
 
+mvn clean package
+
+A successful build should end with:
+
+BUILD SUCCESS
+
+The generated JAR file will be available under:
+
+target/
+8. Run the Application Using Maven
+
+The application can be started using:
+
 mvn spring-boot:run
 
-Wait for Spring Boot to complete startup.
+The application should start on:
 
-A successful startup should display a message similar to:
+http://localhost:8089
 
-Started EmployeeApiApplication
-6. Stop the Application
-Eclipse
+A successful startup should contain a message similar to:
 
-Click the red:
+Started EmployeeBankRestApiApplication
+9. Run the Application Using JAR
 
-Terminate
+After successfully building the application:
 
-button in the Eclipse Console.
+mvn clean package
 
-Command Line
+Navigate to the target directory.
 
-If the application is running in the terminal, press:
+Run the generated JAR:
 
-Ctrl + C
-7. Verify Application Availability
+java -jar employee-api-1.0.0.jar
 
-The application exposes Employee and Account APIs under:
+Use the actual JAR filename generated by the Maven build if it differs.
 
-/api/v1
+10. Verify Application Startup
 
-Verify the Employee API:
+After starting the application, verify the health endpoint:
 
+GET http://localhost:8089/actuator/health
+
+Expected response:
+
+{
+  "status": "UP"
+}
+
+The application is ready when the health endpoint returns:
+
+UP
+11. Verify Swagger
+
+Open:
+
+http://localhost:8089/swagger-ui.html
+
+Swagger UI should display the available Employee and Account APIs.
+
+The OpenAPI JSON endpoint is:
+
+http://localhost:8089/api-docs
+12. Verify Redis Cache
+
+The application uses Redis caching for employee and account data.
+
+Verify Redis is available on:
+
+localhost:6379
+
+The application uses cache names including:
+
+employees
+accounts
+accountBalances
+
+Employee lookup uses:
+
+employees
+
+Account balance lookup uses:
+
+accountBalances
+13. Verify Database Connection
+
+The application uses Microsoft SQL Server through:
+
+Spring Data JPA
+        |
+        v
+Hibernate
+        |
+        v
+HikariCP
+        |
+        v
+SQL Server
+
+Database connectivity can also be checked using:
+
+GET http://localhost:8089/actuator/health
+
+If the database connection is healthy, the health response should show the database component as available.
+
+14. Basic API Verification
+
+After application startup, verify the Employee API.
+
+Get All Employees
 GET http://localhost:8089/api/v1/employees
 
 Expected:
 
 200 OK
+Get Employee By ID
+GET http://localhost:8089/api/v1/employees/1
 
-The Account API can also be verified using:
+Expected:
+
+200 OK
+
+or:
+
+404 Not Found
+
+if the employee does not exist.
+
+15. Create Employee
+
+Use:
+
+POST http://localhost:8089/api/v1/employees
+
+Example request body:
+
+{
+  "name": "Satyaprakash Samantray",
+  "email": "satyaprakash@gmail.com",
+  "department": "IT",
+  "salary": 55000
+}
+
+Expected response:
+
+201 Created
+16. Update Employee
+
+Use:
+
+PUT http://localhost:8089/api/v1/employees/{id}
+
+Example:
+
+PUT http://localhost:8089/api/v1/employees/1
+
+Request body:
+
+{
+  "name": "Satyaprakash Samantray",
+  "email": "satyaprakash@gmail.com",
+  "department": "Software Development",
+  "salary": 65000
+}
+
+Expected:
+
+200 OK
+17. Delete Employee
+
+Use:
+
+DELETE http://localhost:8089/api/v1/employees/{id}
+
+Example:
+
+DELETE http://localhost:8089/api/v1/employees/1
+
+Expected:
+
+204 No Content
+18. Deposit Money
+
+Use:
+
+POST http://localhost:8089/api/v1/accounts/{id}/deposit
+
+Example:
+
+POST http://localhost:8089/api/v1/accounts/1/deposit
+
+Request body:
+
+{
+  "amount": 1000
+}
+
+Expected:
+
+200 OK
+19. Withdraw Money
+
+Use:
+
+POST http://localhost:8089/api/v1/accounts/{id}/withdraw
+
+Example:
+
+POST http://localhost:8089/api/v1/accounts/1/withdraw
+
+Request body:
+
+{
+  "amount": 500
+}
+
+Expected:
+
+200 OK
+
+If the account does not have sufficient balance, the application returns a business error.
+
+Expected status:
+
+400 Bad Request
+20. Get Account Balance
+
+Use:
 
 GET http://localhost:8089/api/v1/accounts/{id}/balance
 
-If the account exists, the API should return:
+Example:
+
+GET http://localhost:8089/api/v1/accounts/1/balance
+
+Expected:
 
 200 OK
 
 If the account does not exist:
 
 404 Not Found
-8. Verify SQL Server
+21. Monitoring
 
-Open SQL Server Management Studio and connect to the SQL Server instance configured in:
+Spring Boot Actuator provides application monitoring endpoints.
 
-src/main/resources/application.yml
+Configured endpoints include:
 
-Verify the configured database.
+/actuator/health
+/actuator/info
+/actuator/metrics
+/actuator/prometheus
+/actuator/caches
 
-Then execute:
+Examples:
 
-SELECT DB_NAME() AS CurrentDatabase;
+GET http://localhost:8089/actuator/health
+GET http://localhost:8089/actuator/metrics
+GET http://localhost:8089/actuator/caches
 
-Verify that the application is connected to the expected database.
+Actuator endpoints should be appropriately secured in non-development environments.
 
-9. Check Database Tables
+22. Application Logs
 
-The project contains the Employee and Account domains.
+The application uses SLF4J logging.
 
-Verify the available tables:
+Important log categories include:
 
-SELECT TABLE_NAME
-FROM INFORMATION_SCHEMA.TABLES
-WHERE TABLE_TYPE = 'BASE TABLE';
+com.tns.employeeapi
+org.hibernate.SQL
+org.hibernate.orm.jdbc.bind
+com.zaxxer.hikari
 
-Check the tables associated with:
+Logs can be used to investigate:
 
-Employee
-Account
-
-The exact table names should match the @Table mappings in the entity classes.
-
-10. Check Employee Records
-
-Use SQL Server Management Studio to verify employee data.
-
-For example:
-
-SELECT *
-FROM employees;
-
-Use the actual table name configured in Employee.java if it differs from employees.
-
-To verify a particular employee:
-
-SELECT *
-FROM employees
-WHERE id = 1;
-11. Check Account Records
-
-Verify account data using:
-
-SELECT *
-FROM accounts;
-
-To verify a particular account:
-
-SELECT *
-FROM accounts
-WHERE id = 1;
-
-The exact table name should match the mapping configured in Account.java.
-
-12. Test Employee APIs Using Postman
-
-Open Postman and select the Employee API collection/environment configured for the project.
-
-The main Employee operations are:
-
-GET    /api/v1/employees
-GET    /api/v1/employees/{id}
-POST   /api/v1/employees
-PUT    /api/v1/employees/{id}
-DELETE /api/v1/employees/{id}
-
-Example:
-
-GET http://localhost:8089/api/v1/employees
-
-Expected:
-
-200 OK
-13. Test Account APIs Using Postman
-
-The Account APIs provide banking operations.
-
-Deposit
-POST /api/v1/accounts/{id}/deposit
-Withdraw
-POST /api/v1/accounts/{id}/withdraw
-Balance
-GET /api/v1/accounts/{id}/balance
-
-Example:
-
-GET http://localhost:8089/api/v1/accounts/1/balance
-
-Expected:
-
-200 OK
-
-when the account exists.
-
-14. Account Transaction Verification
-
-For a deposit:
-
-Account
-   |
-   v
-Deposit Request
-   |
-   v
-Account Service
-   |
-   v
-Update Balance
-   |
-   v
-Repository
-   |
-   v
-SQL Server
-
-For a withdrawal:
-
-Withdrawal Request
-        |
-        v
-Check Account
-        |
-        v
-Check Available Balance
-        |
-        +---- Insufficient Balance
-        |          |
-        |          v
-        |      Error Response
-        |
-        +---- Sufficient Balance
-                   |
-                   v
-             Update Balance
-                   |
-                   v
-               SQL Server
-15. Verify Employee Pagination
-
-The Employee API supports paginated retrieval.
-
-Example:
-
-GET /api/v1/employees?page=0&size=10
-
-The response should contain the employees for the requested page.
-
-For sorting:
-
-GET /api/v1/employees?page=0&size=10&sort=name
-
-Use the actual entity property name when specifying sorting.
-
-16. Expected HTTP Status Codes
-Status	Meaning
-200 OK	Successful GET, PUT, deposit or valid withdrawal
-201 Created	Employee/account resource successfully created
-204 No Content	Successful DELETE
-400 Bad Request	Invalid request or validation/business input error
-404 Not Found	Requested employee/account does not exist
-409 Conflict	Duplicate resource, such as duplicate email
-422 Unprocessable Entity	Business rule violation
-500 Internal Server Error	Unexpected application error
-17. Check Application Logs
-
-Application logs are displayed in the Eclipse console or terminal.
-
-The project uses SLF4J/Logback logging.
-
-Look for:
-
-Started EmployeeApiApplication
-
-for successful startup.
-
-Application logs can also show:
-
-HTTP requests
-HTTP responses
+Application startup
+Database connectivity
+API requests
 Employee operations
 Account operations
-Validation failures
-Exceptions
-Database-related errors
+SQL queries
+HikariCP connection activity
+Application errors
+23. Stop the Application
 
-Correlation IDs/MDC values can be used to trace requests when configured.
+If the application is running in the current terminal, press:
 
-Do not expose passwords, authentication secrets, or other sensitive information in logs.
+Ctrl + C
 
-18. Application Fails to Start
+The Spring Boot application will shut down gracefully.
 
-If the application fails during startup, check the console for the root exception.
+If the application is running as a process and the process ID is known, it can be stopped using the appropriate operating system command.
 
-Common causes include:
+24. Check Port 8089
 
-SQL Server not running
-Incorrect datasource URL
-Database does not exist
-Integrated authentication problem
-JDBC driver problem
-Port 8089 already in use
-Invalid application.yml configuration
-Missing dependency
-
-First verify:
-
-java -version
-
-Then verify SQL Server and the datasource configuration.
-
-19. Port 8089 Already in Use
-
-Check whether another process is using port 8089.
+If the application does not start because port 8089 is already in use, check the port.
 
 On Windows:
 
 netstat -ano | findstr :8089
 
-The command displays the PID using the port.
+Example:
 
-If the process is no longer required, it can be terminated:
+TCP    0.0.0.0:8089    ...    LISTENING    12345
 
-taskkill /PID <PID> /F
+Here:
 
-Then restart the Spring Boot application.
+12345
 
-20. SQL Server Connection Failure
+is the process ID.
 
-If the application cannot connect to SQL Server, verify:
+If the process can safely be terminated:
 
-[ ] SQL Server service is running
-[ ] Correct server/instance is configured
-[ ] Database exists
-[ ] JDBC URL is correct
-[ ] SQL Server JDBC driver is available
-[ ] Integrated authentication is configured correctly
-[ ] Windows account has database access
+taskkill /PID 12345 /F
 
-For integrated authentication problems, also verify that the required Microsoft SQL Server JDBC authentication component is correctly configured for the Java/JDBC driver version being used.
+Do not terminate an unknown process without confirming what it is.
 
-Restart the application after correcting the configuration.
+25. Restart Procedure
 
-21. API Returns 400, 404, 409 or 422
-400 Bad Request
+Use the following restart sequence:
 
-Check the request body and validation fields.
+Stop Application
+       |
+       v
+Verify SQL Server
+       |
+       v
+Verify Redis
+       |
+       v
+Run Maven Build
+       |
+       v
+Start Spring Boot Application
+       |
+       v
+Check Actuator Health
+       |
+       v
+Test Swagger / Postman
+26. Postman Testing Procedure
 
-For example:
+The recommended testing order is:
 
-Required field missing
-Invalid email
-Invalid salary
-Invalid request value
-404 Not Found
+Start Application
+       |
+       v
+Verify baseUrl
+       |
+       v
+Create / Verify Account
+       |
+       v
+Create Employee
+       |
+       v
+Get Employee
+       |
+       v
+Update Employee
+       |
+       v
+Test Account Deposit
+       |
+       v
+Test Account Withdrawal
+       |
+       v
+Check Account Balance
+       |
+       v
+Delete Employee
 
-Verify that the requested employee or account ID exists.
+The Postman environment should use:
 
-SELECT *
-FROM employees
-WHERE id = 1;
+baseUrl = http://localhost:8089
+27. Newman Testing
 
-or:
-
-SELECT *
-FROM accounts
-WHERE id = 1;
-409 Conflict
-
-A duplicate resource may already exist.
-
-For example:
-
-Duplicate employee email
-
-Check the existing database records.
-
-422 Unprocessable Entity
-
-The request may violate a business rule.
-
-For example:
-
-Insufficient account balance
-
-Check the account's current balance before retrying the transaction.
-
-22. Postman Collection Fails
-
-If the Postman tests fail, verify:
-
-[ ] Spring Boot application is running
-[ ] Correct Postman environment is selected
-[ ] baseUrl points to http://localhost:8089
-[ ] Correct endpoint is being used
-[ ] Request body is valid
-[ ] Required IDs exist
-[ ] Database is available
-
-For Employee tests, verify that the employee data used by subsequent requests was successfully created.
-
-For Account tests, verify that the account exists and has sufficient balance for withdrawal operations.
-
-23. Run Newman Tests
-
-Verify Newman:
+If Newman is installed, verify:
 
 newman --version
 
-Run the exported Postman collection:
+Run the Postman collection using the exported collection and environment files.
 
-newman run "Employee API.postman_collection.json" -e "Employee API Local.postman_environment.json"
+Example:
 
-If the environment is not configured correctly, provide the local base URL explicitly:
+newman run "EmployeeBankRestApiPostmanCollection.postman_collection.json" -e "EmployeeBankRestApi.postman_environment.json"
 
-newman run "Employee API.postman_collection.json" -e "Employee API Local.postman_environment.json" --env-var "baseUrl=http://localhost:8089"
+If the collection or environment filename is different, use the actual filenames in the project.
 
-The exact collection/environment filenames should match the exported project files.
+A successful Newman run should report:
 
-24. Restart Procedure
+failed requests: 0
+failed assertions: 0
+28. Pre-Deployment Checklist
 
-For a routine restart:
+Before deployment, verify:
 
-1. Stop Spring Boot
+ Java version is correct
+ Maven build succeeds
+ SQL Server is available
+ Database exists
+ Redis is available
+ Application configuration is correct
+ Application starts successfully
+ Actuator health is UP
+ Swagger UI is accessible
+ Employee APIs work
+ Account APIs work
+ Validation works
+ Error handling works
+ Postman tests pass
+29. Post-Deployment Verification
+
+After deployment:
+
+Start application
+Check application logs
+Check health endpoint
+Check database connectivity
+Check Redis connectivity
+Open Swagger UI
+Execute Employee API tests
+Execute Account API tests
+Verify Actuator metrics
+Verify no unexpected errors
+30. Rollback Procedure
+
+If a newly deployed version causes application problems:
+
+Stop Current Version
         |
         v
-2. Verify SQL Server is running
+Restore Previous Application Version
         |
         v
-3. Verify application.yml
+Start Previous Version
         |
         v
-4. Start Spring Boot
+Check Database Connectivity
         |
         v
-5. Wait for successful startup
+Check Redis
         |
         v
-6. Test Employee API
+Check Actuator Health
         |
         v
-7. Test Account API
-        |
-        v
-8. Confirm successful responses
+Run API Smoke Tests
 
-Example verification:
+Database rollback should only be performed when required and after confirming the database changes associated with the deployment.
 
+31. Standard Health Check
+
+The basic application health check is:
+
+GET /actuator/health
+
+Expected:
+
+{
+  "status": "UP"
+}
+
+If the status is not UP, check:
+
+Spring Boot logs
+SQL Server
+Redis
+Application configuration
+Network connectivity
+32. Standard API Smoke Test
+
+The minimum smoke test should verify:
+
+API	Expected
+Get Employees	200
+Get Employee By ID	200 or 404
+Create Employee	201
+Update Employee	200
+Delete Employee	204
+Deposit	200
+Withdraw	200 or 400
+Get Balance	200 or 404
+33. Operational Summary
+
+The standard operational flow is:
+
+Environment
+    |
+    v
+SQL Server + Redis
+    |
+    v
+Spring Boot Application
+    |
+    v
+Actuator Health Check
+    |
+    v
+Swagger Verification
+    |
+    v
+Postman API Testing
+    |
+    v
+Newman Automated Testing
+    |
+    v
+Application Monitoring
+Verify Java:
+
+```bash
+java -version
+
+Verify Maven:
+
+mvn -version
+
+Verify Git:
+
+git --version
+
+Verify Node.js if Newman is required:
+
+node -v
+
+Verify npm:
+
+npm -v
+3. Project Structure
+
+The main project structure is:
+
+EmployeeBankRestApi
+│
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com.tns.employeeapi
+│   │   └── resources
+│   │       └── application.yml
+│   │
+│   └── test
+│
+├── docs
+│   ├── API_DESIGN.md
+│   ├── ARCHITECTURE.md
+│   ├── RUNBOOK.md
+│   ├── DEPLOYMENT.md
+│   ├── DATABASE_SCHEMA.md
+│   ├── TROUBLESHOOTING.md
+│   ├── ENVIRONMENT_SETUP.md
+│   └── FAQ.md
+│
+├── pom.xml
+└── README.md
+4. Application Configuration
+
+The main configuration file is:
+
+src/main/resources/application.yml
+
+The application is configured to run on:
+
+http://localhost:8089
+
+Main configuration areas include:
+
+Application
+SQL Server
+HikariCP
+JPA / Hibernate
+Redis
+Spring Cache
+Actuator
+Logging
+Swagger
+Server Port
+5. Start SQL Server
+
+Before starting the Spring Boot application, verify that SQL Server is running.
+
+The application uses SQL Server as its primary database.
+
+The configured database is:
+
+SpringBootRestApi
+
+Verify that the database exists.
+
+Example SQL:
+
+SELECT name
+FROM sys.databases
+WHERE name = 'SpringBootRestApi';
+
+If the database does not exist, create it:
+
+CREATE DATABASE SpringBootRestApi;
+GO
+6. Start Redis
+
+The application uses Redis for caching.
+
+Redis is configured as:
+
+Host: localhost
+Port: 6379
+
+Verify that Redis is running before starting the application.
+
+If Redis is installed as a Windows service, verify the Redis service is running.
+
+If Redis is started manually, start the Redis server using the appropriate Redis installation command.
+
+7. Build the Application
+
+Navigate to the project root directory.
+
+Run:
+
+mvn clean package
+
+A successful build should end with:
+
+BUILD SUCCESS
+
+The generated JAR file will be available under:
+
+target/
+8. Run the Application Using Maven
+
+The application can be started using:
+
+mvn spring-boot:run
+
+The application should start on:
+
+http://localhost:8089
+
+A successful startup should contain a message similar to:
+
+Started EmployeeBankRestApiApplication
+9. Run the Application Using JAR
+
+After successfully building the application:
+
+mvn clean package
+
+Navigate to the target directory.
+
+Run the generated JAR:
+
+java -jar employee-api-1.0.0.jar
+
+Use the actual JAR filename generated by the Maven build if it differs.
+
+10. Verify Application Startup
+
+After starting the application, verify the health endpoint:
+
+GET http://localhost:8089/actuator/health
+
+Expected response:
+
+{
+  "status": "UP"
+}
+
+The application is ready when the health endpoint returns:
+
+UP
+11. Verify Swagger
+
+Open:
+
+http://localhost:8089/swagger-ui.html
+
+Swagger UI should display the available Employee and Account APIs.
+
+The OpenAPI JSON endpoint is:
+
+http://localhost:8089/api-docs
+12. Verify Redis Cache
+
+The application uses Redis caching for employee and account data.
+
+Verify Redis is available on:
+
+localhost:6379
+
+The application uses cache names including:
+
+employees
+accounts
+accountBalances
+
+Employee lookup uses:
+
+employees
+
+Account balance lookup uses:
+
+accountBalances
+13. Verify Database Connection
+
+The application uses Microsoft SQL Server through:
+
+Spring Data JPA
+        |
+        v
+Hibernate
+        |
+        v
+HikariCP
+        |
+        v
+SQL Server
+
+Database connectivity can also be checked using:
+
+GET http://localhost:8089/actuator/health
+
+If the database connection is healthy, the health response should show the database component as available.
+
+14. Basic API Verification
+
+After application startup, verify the Employee API.
+
+Get All Employees
 GET http://localhost:8089/api/v1/employees
 
-Then:
+Expected:
+
+200 OK
+Get Employee By ID
+GET http://localhost:8089/api/v1/employees/1
+
+Expected:
+
+200 OK
+
+or:
+
+404 Not Found
+
+if the employee does not exist.
+
+15. Create Employee
+
+Use:
+
+POST http://localhost:8089/api/v1/employees
+
+Request body:
+
+{
+  "name": "Satyaprakash Samantray",
+  "email": "satyaprakash@gmail.com",
+  "department": "IT",
+  "salary": 55000
+}
+
+Expected response:
+
+201 Created
+16. Update Employee
+
+Use:
+
+PUT http://localhost:8089/api/v1/employees/{id}
+
+Example:
+
+PUT http://localhost:8089/api/v1/employees/1
+
+Request body:
+
+{
+  "name": "Satyaprakash Samantray",
+  "email": "satyaprakash@gmail.com",
+  "department": "Software Development",
+  "salary": 65000
+}
+
+Expected:
+
+200 OK
+17. Delete Employee
+
+Use:
+
+DELETE http://localhost:8089/api/v1/employees/{id}
+
+Example:
+
+DELETE http://localhost:8089/api/v1/employees/1
+
+Expected:
+
+204 No Content
+18. Deposit Money
+
+Use:
+
+POST http://localhost:8089/api/v1/accounts/{id}/deposit
+
+Example:
+
+POST http://localhost:8089/api/v1/accounts/1/deposit
+
+Request body:
+
+{
+  "amount": 1000
+}
+
+Expected:
+
+200 OK
+19. Withdraw Money
+
+Use:
+
+POST http://localhost:8089/api/v1/accounts/{id}/withdraw
+
+Example:
+
+POST http://localhost:8089/api/v1/accounts/1/withdraw
+
+Request body:
+
+{
+  "amount": 500
+}
+
+Expected:
+
+200 OK
+
+If the account does not have sufficient balance, the application returns a business error.
+
+Expected status:
+
+400 Bad Request
+20. Get Account Balance
+
+Use:
+
+GET http://localhost:8089/api/v1/accounts/{id}/balance
+
+Example:
 
 GET http://localhost:8089/api/v1/accounts/1/balance
-25. Basic Recovery Checklist
 
-If the application is not working:
+Expected:
 
-[ ] Check Java version
-[ ] Check Maven
-[ ] Check SQL Server
-[ ] Check database availability
-[ ] Check application.yml
-[ ] Check JDBC configuration
-[ ] Check port 8089
-[ ] Check Spring Boot console
-[ ] Restart the application
-[ ] Test Employee API
-[ ] Test Account API
-[ ] Run Postman collection
-[ ] Run Newman if required
+200 OK
 
-If the problem continues, capture:
+If the account does not exist:
 
-Error message
-HTTP method
-API endpoint
-Request body
-HTTP status
-Relevant application logs
-Database error, if any
+404 Not Found
+21. Monitoring
 
-and associate the issue with the relevant Jira ticket.
+Spring Boot Actuator provides application monitoring endpoints.
+
+Configured endpoints include:
+
+/actuator/health
+/actuator/info
+/actuator/metrics
+/actuator/prometheus
+/actuator/caches
+
+Examples:
+
+GET http://localhost:8089/actuator/health
+GET http://localhost:8089/actuator/metrics
+GET http://localhost:8089/actuator/caches
+22. Application Logs
+
+The application uses SLF4J logging.
+
+Important log categories include:
+
+com.tns.employeeapi
+org.hibernate.SQL
+org.hibernate.orm.jdbc.bind
+com.zaxxer.hikari
+
+Logs can be used to investigate:
+
+Application startup
+Database connectivity
+API requests
+Employee operations
+Account operations
+SQL queries
+HikariCP connection activity
+Application errors
+23. Stop the Application
+
+If the application is running in the current terminal, press:
+
+Ctrl + C
+
+The Spring Boot application will shut down gracefully.
+
+If the application is running as a process and the process ID is known, it can be stopped using the appropriate operating system command.
+
+24. Check Port 8089
+
+If the application does not start because port 8089 is already in use, check the port.
+
+On Windows:
+
+netstat -ano | findstr :8089
+
+Example:
+
+TCP    0.0.0.0:8089    ...    LISTENING    12345
+
+Here:
+
+12345
+
+is the process ID.
+
+If the process can safely be terminated:
+
+taskkill /PID 12345 /F
+
+Do not terminate an unknown process without confirming what it is.
+
+25. Restart Procedure
+
+Use the following restart sequence:
+
+Stop Application
+       |
+       v
+Verify SQL Server
+       |
+       v
+Verify Redis
+       |
+       v
+Run Maven Build
+       |
+       v
+Start Spring Boot Application
+       |
+       v
+Check Actuator Health
+       |
+       v
+Test Swagger / Postman
+26. Postman Testing Procedure
+
+The recommended testing order is:
+
+Start Application
+       |
+       v
+Verify baseUrl
+       |
+       v
+Create / Verify Account
+       |
+       v
+Create Employee
+       |
+       v
+Get Employee
+       |
+       v
+Update Employee
+       |
+       v
+Test Account Deposit
+       |
+       v
+Test Account Withdrawal
+       |
+       v
+Check Account Balance
+       |
+       v
+Delete Employee
+
+The Postman environment should use:
+
+baseUrl = http://localhost:8089
+27. Newman Testing
+
+If Newman is installed, verify:
+
+newman --version
+
+Run the Postman collection using the exported collection and environment files.
+
+Example:
+
+newman run "EmployeeBankRestApiPostmanCollection.postman_collection.json" -e "EmployeeBankRestApi.postman_environment.json"
+
+If the collection or environment filename is different, use the actual filenames in the project.
+
+A successful Newman run should report:
+
+failed requests: 0
+failed assertions: 0
+28. Pre-Deployment Checklist
+
+Before deployment, verify:
+
+Java version is correct.
+Maven build succeeds.
+SQL Server is available.
+Database exists.
+Redis is available.
+Application configuration is correct.
+Application starts successfully.
+Actuator health is UP.
+Swagger UI is accessible.
+Employee APIs work.
+Account APIs work.
+Validation works.
+Error handling works.
+Postman tests pass.
+29. Post-Deployment Verification
+
+After deployment:
+
+1. Start application
+2. Check application logs
+3. Check health endpoint
+4. Check database connectivity
+5. Check Redis connectivity
+6. Open Swagger UI
+7. Execute Employee API tests
+8. Execute Account API tests
+9. Verify Actuator metrics
+10. Verify no unexpected errors
+30. Rollback Procedure
+
+If a newly deployed version causes application problems:
+
+Stop Current Version
+        |
+        v
+Restore Previous Application Version
+        |
+        v
+Start Previous Version
+        |
+        v
+Check Database Connectivity
+        |
+        v
+Check Redis
+        |
+        v
+Check Actuator Health
+        |
+        v
+Run API Smoke Tests
+
+Database rollback should only be performed when required and after confirming the database changes associated with the deployment.
+
+31. Standard Health Check
+
+The basic application health check is:
+
+GET /actuator/health
+
+Expected:
+
+{
+  "status": "UP"
+}
+
+If the status is not UP, check:
+
+Spring Boot logs
+SQL Server
+Redis
+Application configuration
+Network connectivity
+32. Standard API Smoke Test
+
+The minimum smoke test should verify:
+
+API	Expected
+Get Employees	200
+Get Employee By ID	200 or 404
+Create Employee	201
+Update Employee	200
+Delete Employee	204
+Deposit	200
+Withdraw	200 or 400
+Get Balance	200 or 404
+33. Operational Summary
+
+The standard operational flow is:
+
+Environment
+    |
+    v
+SQL Server + Redis
+    |
+    v
+Spring Boot Application
+    |
+    v
+Actuator Health Check
+    |
+    v
+Swagger Verification
+    |
+    v
+Postman API Testing
+    |
+    v
+Newman Automated Testing
+    |
+    v
+Application Monitoring

@@ -1,5 +1,31 @@
 Employee Banking REST API - Frequently Asked Questions
-1. What is Employee Banking REST API?
+Table of Contents
+What is Employee Banking REST API?
+What technologies are used in the project?
+What is the application URL?
+What Employee APIs are available?
+What Account APIs are available?
+How do I create an employee?
+How do I get an employee by ID?
+How do I update or delete an employee?
+How do I deposit money into an account?
+How do I withdraw money from an account?
+How do I check the account balance?
+Why am I getting "Insufficient balance"?
+What validation is implemented?
+What HTTP status codes are used?
+Does the application use Global Exception Handling?
+What information is included in the error response?
+Why am I getting 400 Bad Request?
+Why am I getting 404 Not Found?
+Which database does the application use?
+Does the application use HikariCP?
+What should I check if the database connection fails?
+Does the project use Spring Boot Actuator?
+How do I check whether the application is healthy?
+How do I start and test the application?
+Where should I look when something goes wrong?
+What is Employee Banking REST API?
 
 Employee Banking REST API is a Spring Boot REST application used to manage employees and bank accounts.
 
@@ -9,13 +35,13 @@ Employee management
 Account management
 Deposit operations
 Withdrawal operations
-Account balance
+Account balance inquiry
 Validation
 Exception handling
 
 The application uses Microsoft SQL Server for persistent data storage.
 
-2. What technologies are used in the project?
+What technologies are used in the project?
 Component	Technology
 Backend	Spring Boot
 Programming Language	Java 21
@@ -29,7 +55,7 @@ Validation	Jakarta Validation
 Connection Pool	HikariCP
 Monitoring	Spring Boot Actuator
 API Testing	Postman
-3. What is the application URL?
+What is the application URL?
 
 The application runs on port:
 
@@ -46,19 +72,19 @@ The API base path is:
 For example:
 
 http://localhost:8089/api/v1/employees
-4. What Employee APIs are available?
+What Employee APIs are available?
 
 The Employee APIs are:
 
-GET    /api/v1/employees
-GET    /api/v1/employees/{id}
-POST   /api/v1/employees
-PUT    /api/v1/employees/{id}
-DELETE /api/v1/employees/{id}
+GET     /api/v1/employees
+GET     /api/v1/employees/{id}
+POST    /api/v1/employees
+PUT     /api/v1/employees/{id}
+DELETE  /api/v1/employees/{id}
 
 These endpoints provide CRUD operations for employees.
 
-5. What Account APIs are available?
+What Account APIs are available?
 
 The Account APIs are:
 
@@ -68,7 +94,7 @@ GET  /api/v1/accounts/{id}/balance
 
 These APIs are used to perform banking operations on accounts.
 
-6. How do I create an employee?
+How do I create an employee?
 
 Use:
 
@@ -86,7 +112,7 @@ Example request:
 A successful employee creation returns:
 
 201 Created
-7. How do I get an employee by ID?
+How do I get an employee by ID?
 
 Use:
 
@@ -103,7 +129,7 @@ If the employee exists:
 If the employee does not exist:
 
 404 Not Found
-8. How do I update or delete an employee?
+How do I update or delete an employee?
 Update
 PUT /api/v1/employees/{id}
 
@@ -120,7 +146,7 @@ DELETE /api/v1/employees/{id}
 Successful deletion:
 
 204 No Content
-9. How do I deposit money into an account?
+How do I deposit money into an account?
 
 Use:
 
@@ -135,7 +161,7 @@ The application validates the deposit amount and updates the account balance.
 A successful deposit returns:
 
 200 OK
-10. How do I withdraw money from an account?
+How do I withdraw money from an account?
 
 Use:
 
@@ -154,7 +180,7 @@ If sufficient balance is available:
 If the balance is insufficient:
 
 400 Bad Request
-11. How do I check the account balance?
+How do I check the account balance?
 
 Use:
 
@@ -164,14 +190,14 @@ Example:
 
 GET /api/v1/accounts/1/balance
 
-If the account exists, the API returns:
+If the account exists:
 
 200 OK
 
 If the account does not exist:
 
 404 Not Found
-12. Why am I getting "Insufficient balance"?
+Why am I getting "Insufficient balance"?
 
 The withdrawal operation checks whether the requested amount is available in the account.
 
@@ -189,7 +215,7 @@ The API returns:
 with a message similar to:
 
 Insufficient balance.
-13. What validation is implemented?
+What validation is implemented?
 
 The application uses Jakarta Validation for request validation.
 
@@ -207,9 +233,9 @@ Email must be valid.
 Required fields cannot be null.
 Salary must be positive.
 Account amounts must satisfy the configured business rules.
-14. What HTTP status codes are used?
+What HTTP status codes are used?
 Status	Meaning	Usage
-200	OK	Successful GET, PUT and banking operations
+200	OK	Successful GET, PUT, and banking operations
 201	Created	Successful employee creation
 204	No Content	Successful employee deletion
 400	Bad Request	Validation or business rule failure
@@ -217,7 +243,7 @@ Status	Meaning	Usage
 409	Conflict	Duplicate resource such as email
 422	Unprocessable Entity	Business rule violation where configured
 500	Internal Server Error	Unexpected application error
-15. Does the application use Global Exception Handling?
+Does the application use Global Exception Handling?
 
 Yes.
 
@@ -237,7 +263,7 @@ Exception
 
 This ensures that APIs return consistent error responses.
 
-16. What information is included in the error response?
+What information is included in the error response?
 
 The application uses an error response containing fields such as:
 
@@ -256,7 +282,7 @@ Example:
   "errors": null,
   "path": "/api/v1/employees/100"
 }
-17. Why am I getting 400 Bad Request?
+Why am I getting 400 Bad Request?
 
 A 400 Bad Request can occur when:
 
@@ -268,7 +294,7 @@ An account withdrawal exceeds the available balance.
 
 Check the response body for the exact error message.
 
-18. Why am I getting 404 Not Found?
+Why am I getting 404 Not Found?
 
 A 404 Not Found means that the requested resource does not exist.
 
@@ -282,7 +308,7 @@ If employee 999 does not exist, the API returns:
 
 The same principle applies to account operations.
 
-19. Which database does the application use?
+Which database does the application use?
 
 The application uses:
 
@@ -294,7 +320,7 @@ src/main/resources/application.yml
 
 The application uses the Microsoft SQL Server JDBC driver to establish the database connection.
 
-20. Does the application use HikariCP?
+Does the application use HikariCP?
 
 Yes.
 
@@ -312,7 +338,7 @@ spring:
 
 HikariCP improves database connection management by reusing existing connections instead of creating a new connection for every request.
 
-21. What should I check if the database connection fails?
+What should I check if the database connection fails?
 
 Check the following:
 
@@ -328,7 +354,7 @@ Also check the Spring Boot console for the actual SQLServerException.
 
 For integrated authentication errors, verify that the required Microsoft JDBC authentication component is correctly configured for the JDBC driver version being used.
 
-22. Does the project use Spring Boot Actuator?
+Does the project use Spring Boot Actuator?
 
 Yes.
 
@@ -351,7 +377,7 @@ Application startup time
 
 Actuator endpoints should be appropriately secured in non-development environments.
 
-23. How do I check whether the application is healthy?
+How do I check whether the application is healthy?
 
 When Actuator health is exposed, use:
 
@@ -377,8 +403,8 @@ ssl
 
 depending on the application's configured dependencies.
 
-24. How do I start and test the application?
-Start the application
+How do I start and test the application?
+Start the Application
 
 Using Maven:
 
@@ -393,44 +419,70 @@ GET http://localhost:8089/api/v1/employees
 Expected:
 
 200 OK
-Test using Postman
+Test Using Postman
 
 Test the main flows:
 
 Employee CRUD
-       |
-       v
+      |
+      v
 Account Deposit
-       |
-       v
+      |
+      v
 Account Balance
-       |
-       v
+      |
+      v
 Account Withdrawal
-       |
-       v
+      |
+      v
 Account Balance
-25. Where should I look when something goes wrong?
+Where should I look when something goes wrong?
 
-Use the following order:
+Use the following troubleshooting order:
 
 1. Check the API request in Postman
-          |
-          v
+             |
+             v
 2. Check HTTP status and response body
-          |
-          v
+             |
+             v
 3. Check Spring Boot console/logs
-          |
-          v
+             |
+             v
 4. Check application.yml
-          |
-          v
+             |
+             v
 5. Check SQL Server connectivity
-          |
-          v
+             |
+             v
 6. Check database records
-          |
-          v
-7. Check HikariCP/Actuator metrics
+             |
+             v
+7. Check HikariCP / Actuator metrics
+FAQ Summary
 
+The Employee Banking REST API provides two main functional areas:
+
+EmployeeBankRestApi
+        |
+        +----------------------+
+        |                      |
+        v                      v
+Employee Module          Account Module
+        |                      |
+        v                      v
+Employee CRUD          Deposit / Withdraw
+        |                      |
+        |                      v
+        |                Balance Inquiry
+        |                      |
+        +----------+-----------+
+                   |
+                   v
+            Spring Data JPA
+                   |
+                   v
+               Hibernate
+                   |
+                   v
+           Microsoft SQL Server

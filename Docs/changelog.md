@@ -1,10 +1,12 @@
 # Employee Bank REST API - Change Log
 
-All notable changes made to the Employee Bank REST API are documented in this file.
+All notable changes made to the **Employee Bank REST API** are documented in this file.
+
+This change log records major changes related to APIs, database configuration, validation, exception handling, logging, monitoring, testing, deployment, and documentation.
 
 ---
 
-## [1.0.0] - Initial Release
+## 1.0.0 - Initial Release
 
 ### Added
 
@@ -66,6 +68,8 @@ Validation includes:
 @NotNull
 @Email
 @Positive
+@DecimalMin
+@Size
 
 Invalid request data returns:
 
@@ -87,7 +91,7 @@ Handled scenarios include:
 Handled exceptions include:
 
 ResourceNotFoundException
-DuplicateEmailException
+DuplicateResourceException
 BusinessException
 MethodArgumentNotValidException
 Exception
@@ -98,7 +102,7 @@ Added pagination support for employee listing using Spring Data JPA Pageable.
 Example:
 
 GET /api/v1/employees?page=0&size=10
-[1.1.0] - Logging and Observability
+1.1.0 - Logging and Observability
 Added
 SLF4J and Logback
 
@@ -129,20 +133,23 @@ HTTP Logging
 
 Added logging support for HTTP requests and responses.
 
-Sensitive information such as passwords, tokens, and credentials must not be logged.
+Sensitive information such as passwords, tokens, and credentials should not be logged.
 
-[1.2.0] - HikariCP Connection Pooling
+1.2.0 - HikariCP Connection Pooling
 Added
 
 Configured HikariCP as the application's database connection pool.
 
 Configuration includes:
 
-pool-name
-maximum-pool-size
-minimum-idle
-connection-timeout
-max-lifetime
+Pool name
+Maximum pool size
+Minimum idle connections
+Connection timeout
+Idle timeout
+Maximum lifetime
+Leak detection threshold
+Validation timeout
 
 Added HikariCP monitoring through Spring Boot Actuator.
 
@@ -152,7 +159,7 @@ hikaricp.connections
 hikaricp.connections.active
 hikaricp.connections.idle
 hikaricp.connections.pending
-[1.3.0] - Spring Boot Actuator
+1.3.0 - Spring Boot Actuator
 Added
 
 Added Spring Boot Actuator for application monitoring.
@@ -162,6 +169,8 @@ Configured endpoints include:
 /actuator/health
 /actuator/info
 /actuator/metrics
+/actuator/prometheus
+/actuator/caches
 
 Monitoring includes:
 
@@ -171,10 +180,11 @@ Disk space
 JVM metrics
 HTTP request metrics
 HikariCP metrics
+Cache metrics
 
 Added support for liveness and readiness monitoring.
 
-[1.4.0] - Swagger / OpenAPI
+1.4.0 - Swagger / OpenAPI
 Added
 
 Added API documentation using Springdoc OpenAPI.
@@ -192,7 +202,7 @@ Request parameters
 Request bodies
 Response codes
 Validation
-[1.5.0] - Datadog Monitoring
+1.5.0 - Datadog Monitoring
 Added
 
 Added Datadog monitoring support using Micrometer.
@@ -223,7 +233,7 @@ Error rate
 JVM health
 Database metrics
 Connection pool metrics
-[1.6.0] - Environment Configuration
+1.6.0 - Environment Configuration
 Added
 
 Added environment-specific Spring Boot configuration:
@@ -244,7 +254,7 @@ Changed
 
 Sensitive configuration values should be provided through environment variables or secure configuration rather than committed directly to source control.
 
-[1.7.0] - Standardized Error Responses
+1.7.0 - Standardized Error Responses
 Added
 
 Added a standardized error response structure containing:
@@ -255,6 +265,18 @@ message
 errors
 path
 
+Example:
+
+{
+  "timestamp": "2026-08-12T10:30:00",
+  "status": 400,
+  "message": "Validation failed",
+  "errors": {
+    "email": "Email must be valid"
+  },
+  "path": "/api/v1/employees"
+}
+
 Handled business errors include:
 
 Employee not found
@@ -262,7 +284,7 @@ Account not found
 Duplicate employee email
 Insufficient account balance
 Invalid employee data
-[1.8.0] - API Testing
+1.8.0 - API Testing
 Added
 
 Added API testing using Postman.
@@ -280,15 +302,16 @@ Insufficient balance
 
 Added tests for expected HTTP status codes:
 
-200 OK
-201 Created
-204 No Content
-400 Bad Request
-404 Not Found
-409 Conflict
-422 Unprocessable Entity
-500 Internal Server Error
-[1.9.0] - Database and Connection Improvements
+Status Code	Description
+200 OK	Successful request
+201 Created	Resource created
+204 No Content	Resource deleted
+400 Bad Request	Invalid request or business failure
+404 Not Found	Resource not found
+409 Conflict	Duplicate resource
+422 Unprocessable Entity	Business rule violation
+500 Internal Server Error	Unexpected application error
+1.9.0 - Database and Connection Improvements
 Added
 
 Improved SQL Server database and JDBC configuration.
@@ -308,7 +331,7 @@ Connection reliability
 Connection timeout
 Connection pool management
 Database resource usage
-[2.0.0] - Build and Deployment
+2.0.0 - Build and Deployment
 Added
 
 Standardized Maven build process:
@@ -333,7 +356,7 @@ API testing
 
 Added rollback procedure for restoring a previously working application version.
 
-[2.1.0] - Project Documentation
+2.1.0 - Project Documentation
 Added
 
 Added project documentation covering:
@@ -346,7 +369,6 @@ Deployment
 Runbook
 Troubleshooting
 FAQ
-Jira Links
 
 Documentation is maintained under:
 
@@ -356,8 +378,8 @@ Added database documentation covering:
 
 Tables
 Columns
-Primary Keys
-Foreign Keys
+Primary keys
+Foreign keys
 Constraints
 JPA mappings
 SQL Server configuration
@@ -452,62 +474,96 @@ Future Change Template
 - Description of removed functionality.
 - Jira: EMP-XXX
 
+### Deprecated
+
+- Description of deprecated functionality.
+- Jira: EMP-XXX
+
 ### Security
 
 - Description of security-related change.
 - Jira: EMP-XXX
 Current Project Version Summary
-1.0.0
-└── Employee and Banking REST APIs
-    ├── Employee CRUD
-    ├── Account Deposit
-    ├── Account Withdrawal
-    ├── Account Balance
-    ├── Validation
-    ├── Exception Handling
-    └── Pagination
-
-1.1.0
-└── Logging and Observability
-    ├── SLF4J
-    ├── Logback
-    ├── MDC
-    ├── Correlation ID
-    └── HTTP Logging
-
-1.2.0
+1.0.0 - Employee and Banking REST APIs
+Employee and Banking REST APIs
+├── Employee CRUD
+├── Account Deposit
+├── Account Withdrawal
+├── Account Balance
+├── Validation
+├── Exception Handling
+└── Pagination
+1.1.0 - Logging and Observability
+Logging and Observability
+├── SLF4J
+├── Logback
+├── MDC
+├── Correlation ID
+└── HTTP Logging
+1.2.0 - HikariCP Connection Pooling
+HikariCP Connection Pooling
+├── Maximum Pool Size
+├── Minimum Idle Connections
+├── Connection Timeout
+├── Idle Timeout
+└── Maximum Lifetime
+1.3.0 - Spring Boot Actuator
+Spring Boot Actuator
+├── Health
+├── Metrics
+├── JVM Monitoring
+└── Liveness / Readiness
+1.4.0 - Swagger / OpenAPI
+Swagger / OpenAPI
+├── API Documentation
+├── Request Documentation
+├── Response Documentation
+└── Validation Documentation
+1.5.0 - Datadog Monitoring
+Datadog Monitoring
+├── Custom Metrics
+├── Timers
+└── Application Monitoring
+1.6.0 - Environment Configuration
+Environment Configuration
+├── Development
+├── Test
+└── Production
+1.7.0 - Standardized Error Responses
+Standardized Error Responses
+├── Validation Errors
+├── Resource Not Found
+├── Duplicate Resource
+├── Business Errors
+└── Internal Server Errors
+1.8.0 - Postman API Testing
+Postman API Testing
+├── Employee CRUD
+├── Account Deposit
+├── Account Withdrawal
+├── Account Balance
+└── Error Scenarios
+1.9.0 - Database and Connection Improvements
+Database and Connection Improvements
+├── SQL Server JDBC
+├── Integrated Security
+├── Encrypted Connection
+├── Trust Server Certificate
 └── HikariCP Connection Pooling
-
-1.3.0
-└── Spring Boot Actuator
-    ├── Health
-    ├── Metrics
-    ├── JVM Monitoring
-    └── Liveness / Readiness
-
-1.4.0
-└── Swagger / OpenAPI
-
-1.5.0
-└── Datadog Monitoring
-    ├── Custom Metrics
-    ├── Timers
-    └── Application Monitoring
-
-1.6.0
-└── Environment Configuration
-
-1.7.0
-└── Standardized Error Responses
-
-1.8.0
-└── Postman API Testing
-
-1.9.0
-└── Database and Connection Improvements
-
-2.0.0
-└── Build and Deployment
-
-2.1.0
-└── Project Documentation
+2.0.0 - Build and Deployment
+Build and Deployment
+├── Maven Build
+├── Executable JAR
+├── Application Startup
+├── Deployment Verification
+└── Rollback Procedure
+2.1.0 - Project Documentation
+Project Documentation
+├── API Design
+├── Architecture
+├── Database Schema
+├── Environment Setup
+├── Deployment
+├── Runbook
+├── Troubleshooting
+└── FAQ

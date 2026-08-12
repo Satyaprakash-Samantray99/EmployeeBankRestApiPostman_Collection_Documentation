@@ -1,42 +1,97 @@
-EmployeeBankRestApi - Environment Setup Guide
-1. Purpose
+# EmployeeBankRestApi - Environment Setup Guide
 
-This document describes how to configure the development environment for the EmployeeBankRestApi Spring Boot application.
+## Table of Contents
+
+1.  Purpose](#1-purpose)
+2.  Technology Requirements](#2-technology-requirements)
+3.  Verify Java](#3-verify-java)
+4.  Verify Maven](#4-verify-maven)
+5.  Import Project into Eclipse](#5-import-project-into-eclipse)
+6.  Update Maven Dependencies](#6-update-maven-dependencies)
+7.  Required Maven Dependencies](#7-required-maven-dependencies)
+8.  SQL Server Setup](#8-sql-server-setup)
+9.  Create Application Database](#9-create-application-database)
+10. Configure Spring Boot Datasource](#10-configure-spring-boot-datasource)
+11. SQL Server Integrated Authentication](#11-sql-server-integrated-authentication)
+12. JPA Configuration](#12-jpa-configuration)
+13. Employee Database Table](#13-employee-database-table)
+14. Account Database Table](#14-account-database-table)
+15. Verify Database Tables](#15-verify-database-tables)
+16. Verify Employee Data](#16-verify-employee-data)
+17. Verify Account Data](#17-verify-account-data)
+18. Configure Application Port](#18-configure-application-port)
+19. Verify Port 8089](#19-verify-port-8089)
+20. Start the Application from Eclipse](#20-start-the-application-from-eclipse)
+21. Start the Application Using Maven](#21-start-the-application-using-maven)
+22. Start the Packaged Application](#22-start-the-packaged-application)
+23. Verify Application Startup](#23-verify-application-startup)
+24. Verify Employee API](#24-verify-employee-api)
+25. Verify Employee CRUD APIs](#25-verify-employee-crud-apis)
+26. Verify Account API](#26-verify-account-api)
+27. Verify Deposit API](#27-verify-deposit-api)
+28. Verify Withdrawal API](#28-verify-withdrawal-api)
+29. Verify Insufficient Balance](#29-verify-insufficient-balance)
+30. Verify Account Balance API](#30-verify-account-balance-api)
+31. Postman Setup](#31-postman-setup)
+32. Create Postman Environment](#32-create-postman-environment)
+33. Environment Variable Usage](#33-environment-variable-usage)
+34. Postman Request Chaining](#34-postman-request-chaining)
+35. Run Postman Tests](#35-run-postman-tests)
+36. First-Run Verification](#36-first-run-verification)
+37. Common Environment Setup Problems](#37-common-environment-setup-problems)
+38. Environment Setup Flow](#38-environment-setup-flow)
+39. Final Environment Checklist](#39-final-environment-checklist)
+40. Environment Setup Complete](#40-environment-setup-complete)
+
+---
+
+## 1. Purpose
+
+This document describes how to configure the development environment for the **EmployeeBankRestApi** Spring Boot application.
 
 The setup includes:
 
-Java 21
-Maven
-Eclipse/STS
-Microsoft SQL Server
-SQL Server Management Studio
-Database configuration
-Spring Boot configuration
-Postman
-Employee API testing
-Account API testing
-First-run verification
+- Java 21
+- Maven
+- Eclipse / Spring Tool Suite
+- Microsoft SQL Server
+- SQL Server Management Studio
+- Database configuration
+- Spring Boot configuration
+- Postman
+- Employee API testing
+- Account API testing
+- First-run verification
 
 The application provides REST APIs for:
 
-Employee management
-Bank account management
-Deposit operations
-Withdrawal operations
-Account balance inquiry
-2. Technology Requirements
-Tool	Purpose
-Java 21	Run the Spring Boot application
-Maven	Dependency management and project build
-Eclipse/STS	Development IDE
-Spring Boot	Application framework
-Microsoft SQL Server	Application database
-SQL Server Management Studio	Database administration
-Postman	REST API testing
-3. Verify Java
+- Employee management
+- Bank account management
+- Deposit operations
+- Withdrawal operations
+- Account balance inquiry
+
+---
+
+## 2. Technology Requirements
+
+| Tool | Purpose |
+|---|---|
+| Java 21 | Run the Spring Boot application |
+| Maven | Dependency management and project build |
+| Eclipse / STS | Development IDE |
+| Spring Boot | Application framework |
+| Microsoft SQL Server | Application database |
+| SQL Server Management Studio | Database administration |
+| Postman | REST API testing |
+
+---
+
+## 3. Verify Java
 
 Open Command Prompt:
 
+```bash
 java -version
 
 The project uses Java 21.
@@ -45,7 +100,7 @@ Also verify the Java compiler:
 
 javac -version
 
-Expected:
+Expected output:
 
 java version "21..."
 javac 21...
@@ -138,8 +193,8 @@ Verify that the SQL Server service is running.
 
 The application uses SQL Server for:
 
-Employee Data
-Account Data
+Employee data
+Account data
 9. Create Application Database
 
 Create the database used by the EmployeeBankRestApi application.
@@ -241,7 +296,7 @@ name
 email
 salary
 
-The exact database structure is created/updated according to the Employee JPA entity.
+The exact database structure is created or updated according to the Employee JPA entity.
 
 14. Account Database Table
 
@@ -252,10 +307,10 @@ accounts
 The table contains account-related information such as:
 
 id
-account number
+account_number
 balance
 
-The exact database structure is created/updated according to the Account JPA entity.
+The exact database structure is created or updated according to the Account JPA entity.
 
 15. Verify Database Tables
 
@@ -309,7 +364,7 @@ The application is configured to run on:
 
 8089
 
-The configuration is maintained in:
+The configuration is maintained using:
 
 server:
   port: 8089
@@ -317,6 +372,7 @@ server:
 Therefore, the local application base URL is:
 
 http://localhost:8089
+
 19. Verify Port 8089
 
 Before starting the application, verify that port 8089 is available.
@@ -378,6 +434,8 @@ A successful Spring Boot startup should contain a message similar to:
 
 Started EmployeeApiApplication
 
+The exact application class name depends on the project's main Spring Boot class.
+
 The application should also successfully initialize:
 
 Spring Boot
@@ -416,20 +474,12 @@ A database containing no employee records may return:
 
 The Employee module provides:
 
-GET     /api/v1/employees
-GET     /api/v1/employees/{id}
-POST    /api/v1/employees
-PUT     /api/v1/employees/{id}
-DELETE  /api/v1/employees/{id}
-
-Expected successful status codes:
-
-Operation	Expected Status
-Get all employees	200 OK
-Get employee by ID	200 OK
-Create employee	201 Created
-Update employee	200 OK
-Delete employee	204 No Content
+Operation	Method	Endpoint	Expected Status
+Get all employees	GET	/api/v1/employees	200 OK
+Get employee by ID	GET	/api/v1/employees/{id}	200 OK
+Create employee	POST	/api/v1/employees	201 Created
+Update employee	PUT	/api/v1/employees/{id}	200 OK
+Delete employee	DELETE	/api/v1/employees/{id}	204 No Content
 26. Verify Account API
 
 The Account module provides:
@@ -495,7 +545,7 @@ Withdrawal      = 7,000
 
 The operation should be rejected.
 
-Expected:
+Expected response:
 
 400 Bad Request
 
@@ -613,9 +663,7 @@ accountId
 The Account requests can then use:
 
 {{accountId}}
-
-Example flow:
-
+Employee Flow
 Create Employee
        |
        v
@@ -629,9 +677,7 @@ Update Employee
        |
        v
 Delete Employee
-
-Account flow:
-
+Account Flow
 Account
    |
    v
@@ -649,18 +695,17 @@ Check Balance
 
 Before running the collection, verify:
 
-SQL Server                  → Running
-Spring Boot Application     → Running
-Port 8089                   → Available
-Postman Environment         → Selected
-baseUrl                     → Correct
+SQL Server              → Running
+Spring Boot Application → Running
+Port 8089               → Available
+Postman Environment     → Selected
+baseUrl                 → Correct
 
 Run the EmployeeBankRestApi collection.
 
-Verify:
+Verify that:
 
 Employee APIs
-+
 Account APIs
 
 are returning the expected HTTP status codes.
@@ -745,7 +790,7 @@ Database name
 JDBC URL
 SQL Server JDBC driver
 Integrated authentication
-Firewall/network connectivity
+Firewall / network connectivity
 37.4 Integrated Authentication Error
 
 If the application reports:
@@ -793,7 +838,7 @@ Install Java 21
 Verify Maven
        |
        v
-Configure Eclipse/STS
+Configure Eclipse / STS
        |
        v
 Import EmployeeBankRestApi
@@ -802,7 +847,7 @@ Import EmployeeBankRestApi
 Resolve Maven Dependencies
        |
        v
-Install/Configure SQL Server
+Install / Configure SQL Server
        |
        v
 Create Application Database
@@ -835,46 +880,46 @@ Run API Tests
 Environment Ready
 39. Final Environment Checklist
 Development Environment
-[ ] Java 21 installed
-[ ] java -version verified
-[ ] javac -version verified
-[ ] Maven installed
-[ ] mvn -version verified
-[ ] Eclipse/STS configured
-[ ] EmployeeBankRestApi imported
-[ ] Maven dependencies resolved
-[ ] No compilation errors
+ Java 21 installed
+ java -version verified
+ javac -version verified
+ Maven installed
+ mvn -version verified
+ Eclipse / STS configured
+ EmployeeBankRestApi imported
+ Maven dependencies resolved
+ No compilation errors
 Database Environment
-[ ] SQL Server installed
-[ ] SQL Server running
-[ ] Application database created
-[ ] application.yml configured
-[ ] SQL Server JDBC driver available
-[ ] Integrated authentication configured
-[ ] Database connection verified
-[ ] employees table available
-[ ] accounts table available
+ SQL Server installed
+ SQL Server running
+ Application database created
+ application.yml configured
+ SQL Server JDBC driver available
+ Integrated authentication configured
+ Database connection verified
+ employees table available
+ accounts table available
 Spring Boot Application
-[ ] Application starts successfully
-[ ] No critical startup errors
-[ ] Port 8089 available
-[ ] SQL Server connection successful
-[ ] GET /api/v1/employees returns 200
-[ ] Employee CRUD APIs verified
-[ ] Deposit API verified
-[ ] Withdrawal API verified
-[ ] Balance API verified
-[ ] Insufficient balance scenario verified
+ Application starts successfully
+ No critical startup errors
+ Port 8089 available
+ SQL Server connection successful
+ GET /api/v1/employees returns 200
+ Employee CRUD APIs verified
+ Deposit API verified
+ Withdrawal API verified
+ Balance API verified
+ Insufficient balance scenario verified
 Postman
-[ ] Postman installed
-[ ] EmployeeBankRestApi collection available
-[ ] EmployeeBankRestApi Local environment configured
-[ ] baseUrl configured
-[ ] employeeId configured where required
-[ ] accountId configured where required
-[ ] Employee requests verified
-[ ] Account requests verified
-[ ] Expected status codes verified
+ Postman installed
+ EmployeeBankRestApi collection available
+ EmployeeBankRestApi Local environment configured
+ baseUrl configured
+ employeeId configured where required
+ accountId configured where required
+ Employee requests verified
+ Account requests verified
+ Expected status codes verified
 40. Environment Setup Complete
 
 The development environment for EmployeeBankRestApi is considered ready when:
@@ -883,7 +928,7 @@ Java 21 is available
         +
 Maven build succeeds
         +
-Eclipse/STS project is configured
+Eclipse / STS project is configured
         +
 SQL Server is running
         +
@@ -897,6 +942,8 @@ Employee APIs work correctly
         +
 Account APIs work correctly
         +
-Deposit/Withdrawal business rules work
+Deposit / Withdrawal business rules work
         +
 Postman API tests pass
+        =
+Environment Ready

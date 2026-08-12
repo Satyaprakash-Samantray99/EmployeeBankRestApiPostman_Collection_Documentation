@@ -50,17 +50,15 @@ This separation keeps HTTP request handling, business logic, data access, and da
 +--------------------------+
 |      SQL Server          |
 |--------------------------|
-| employees                |
-| accounts                 |
+| employee_details7        |
+| account_details7         |
 +--------------------------+
 3. Layered Architecture
 3.1 Client Layer
 
 The Client Layer sends HTTP requests to the REST API.
 
-The primary API testing client used in this project is:
-
-Postman
+The primary API testing client used in this project is Postman.
 
 Example:
 
@@ -77,23 +75,23 @@ Main components:
 EmployeeController
 AccountController
 Responsibilities
-Receive HTTP requests.
-Read path parameters.
-Read request bodies.
-Validate incoming requests.
-Call the appropriate service.
-Return HTTP responses.
-Map application results to REST responses.
-Employee Controller
+Receive HTTP requests
+Read path parameters
+Read request bodies
+Validate incoming requests
+Call the appropriate service
+Return HTTP responses
+Map application results to REST responses
+EmployeeController
 
-The EmployeeController handles employee operations such as:
+The EmployeeController handles employee operations:
 
 GET     /api/v1/employees
 GET     /api/v1/employees/{id}
 POST    /api/v1/employees
 PUT     /api/v1/employees/{id}
 DELETE  /api/v1/employees/{id}
-Account Controller
+AccountController
 
 The AccountController handles banking operations:
 
@@ -112,23 +110,23 @@ EmployeeService
 
 Responsible for:
 
-Creating employees.
-Retrieving employees.
-Retrieving an employee by ID.
-Updating employees.
-Deleting employees.
-Checking employee-related business rules.
-Handling duplicate employee email scenarios.
+Creating employees
+Retrieving employees
+Retrieving an employee by ID
+Updating employees
+Deleting employees
+Checking employee-related business rules
+Handling duplicate employee email scenarios
 AccountService
 
 Responsible for:
 
-Depositing money.
-Withdrawing money.
-Checking account balance.
-Validating account existence.
-Checking sufficient balance before withdrawal.
-Applying banking business rules.
+Depositing money
+Withdrawing money
+Checking account balance
+Validating account existence
+Checking sufficient balance before withdrawal
+Applying banking business rules
 
 For example, withdrawal processing follows:
 
@@ -172,12 +170,10 @@ The repository layer keeps database access separate from the application's busin
 
 The application uses Microsoft SQL Server as its relational database.
 
-The primary database tables are:
+The primary tables used by the application are:
 
-employees
-accounts
-
-The database stores employee and account information used by the application.
+employee_details7
+account_details7
 
 The application communicates with SQL Server through:
 
@@ -189,74 +185,69 @@ Hibernate
        v
 Microsoft SQL Server
 4. Component Interaction Diagram
-                  +----------------+
-                  |    Postman     |
-                  |     Client     |
-                  +-------+--------+
-                          |
-                          | HTTP
-                          v
-              +-------------------------+
-              |    REST Controllers     |
-              |-------------------------|
-              | EmployeeController      |
-              | AccountController       |
-              +------------+------------+
-                           |
-                           v
-              +-------------------------+
-              |      Service Layer      |
-              |-------------------------|
-              | EmployeeService          |
-              | AccountService           |
-              +------------+------------+
-                           |
-                           v
-              +-------------------------+
-              |    Repository Layer     |
-              |-------------------------|
-              | EmployeeRepository      |
-              | AccountRepository       |
-              +------------+------------+
-                           |
-                           | JPA / Hibernate
-                           v
-              +-------------------------+
-              |     Microsoft SQL       |
-              |        Server           |
-              |-------------------------|
-              | employees               |
-              | accounts                |
-              +-------------------------+
++----------------+
+|    Postman     |
+|     Client     |
++-------+--------+
+        |
+        | HTTP
+        v
++-------------------------+
+|    REST Controllers     |
+|-------------------------|
+| EmployeeController      |
+| AccountController       |
++------------+------------+
+             |
+             v
++-------------------------+
+|      Service Layer      |
+|-------------------------|
+| EmployeeService         |
+| AccountService          |
++------------+------------+
+             |
+             v
++-------------------------+
+|    Repository Layer     |
+|-------------------------|
+| EmployeeRepository      |
+| AccountRepository       |
++------------+------------+
+             |
+             | JPA / Hibernate
+             v
++-------------------------+
+|     Microsoft SQL       |
+|        Server           |
+|-------------------------|
+| employee_details7       |
+| account_details7        |
++-------------------------+
 5. Employee API Request Flow
 
-The following diagram shows how an employee request is processed.
+The following diagram shows how an employee creation request is processed.
 
 Postman
    |
    | POST /api/v1/employees
-   |
    v
 EmployeeController
    |
-   | createEmployee()
-   |
+   | addEmployee()
    v
 EmployeeService
    |
    | Validate employee
    | Check duplicate email
-   |
    v
 EmployeeRepository
    |
    | save()
-   |
    v
 SQL Server
    |
    | INSERT employee
-   |
    v
 EmployeeRepository
    |
@@ -267,27 +258,23 @@ EmployeeService
 EmployeeController
    |
    | 201 Created
-   |
    v
 Postman
 6. Account Deposit Request Flow
 
-The deposit operation follows the following flow:
+The deposit operation follows this flow:
 
 Postman
    |
    | POST /api/v1/accounts/{id}/deposit
-   |
    v
 AccountController
    |
    | deposit()
-   |
    v
 AccountService
    |
    | Find Account
-   |
    v
 AccountRepository
    |
@@ -299,14 +286,11 @@ SQL Server
 AccountService
    |
    | Add deposit amount
-   |
    | Update balance
-   |
    v
 AccountRepository
    |
    | save()
-   |
    v
 SQL Server
    |
@@ -314,7 +298,6 @@ SQL Server
 AccountController
    |
    | 200 OK
-   |
    v
 Postman
 7. Account Withdrawal Request Flow
@@ -324,7 +307,6 @@ Withdrawal contains additional business validation.
 Postman
    |
    | POST /api/v1/accounts/{id}/withdraw
-   |
    v
 AccountController
    |
@@ -332,7 +314,6 @@ AccountController
 AccountService
    |
    | Find Account
-   |
    v
 AccountRepository
    |
@@ -359,43 +340,42 @@ AccountService
    +---- Insufficient Balance
                 |
                 v
-          Business Exception
+        BusinessException
                 |
                 v
-          400 Bad Request
+         400 Bad Request
 
-The application therefore prevents an account from being withdrawn beyond its available balance.
+The application prevents an account from being withdrawn beyond its available balance.
 
 8. Database Architecture
 
 The application uses SQL Server as the persistence layer.
 
-+-----------------------+
-|       employees       |
-+-----------------------+
-| PK  id                |
-|     name              |
-|     email             |
-|     salary            |
-+-----------------------+
-
-
-+-----------------------+
-|       accounts        |
-+-----------------------+
-| PK  id                |
-|     account_number    |
-|     balance           |
-|     ...               |
-+-----------------------+
-
-The exact columns should match the Employee and Account entity classes in your project.
+Employee Table
++-----------------------------+
+|      employee_details7      |
++-----------------------------+
+| PK  id                      |
+|     name                    |
+|     email                   |
+|     department               |
+|     salary                  |
++-----------------------------+
+Account Table
++-----------------------------+
+|       account_details7      |
++-----------------------------+
+| PK  id                      |
+|     account_holder_name     |
+|     account_number          |
+|     balance                 |
++-----------------------------+
 
 The application accesses these tables through JPA repositories rather than directly executing database operations from the Controller layer.
 
 9. Exception Handling Architecture
 
-The application handles API errors using the application's exception-handling mechanism.
+The application handles API errors using its exception-handling mechanism.
 
 The general flow is:
 
@@ -420,85 +400,86 @@ Client
 Common error scenarios include:
 
 400 Bad Request
-       |
-       +-- Invalid input
-       +-- Validation failure
-       +-- Insufficient account balance
+|
++-- Invalid input
++-- Validation failure
++-- Insufficient account balance
 
 404 Not Found
-       |
-       +-- Employee not found
-       +-- Account not found
+|
++-- Employee not found
++-- Account not found
 
 409 Conflict
-       |
-       +-- Duplicate employee email
+|
++-- Duplicate employee email
 
 422 Unprocessable Entity
-       |
-       +-- Business rule violation
+|
++-- Business rule violation
 
 500 Internal Server Error
-       |
-       +-- Unexpected application error
+|
++-- Unexpected application error
 10. Employee Validation Flow
 
 Employee creation and update requests are validated before business processing.
 
 JSON Request
-     |
-     v
+      |
+      v
 EmployeeController
-     |
-     | @Valid
-     v
+      |
+      | @Valid
+      v
 Request Validation
-     |
-     +---------- Valid ----------+
-     |                           |
-     |                           v
-     |                    EmployeeService
-     |
-     +---------- Invalid
-                  |
-                  v
-           Error Handling
-                  |
-                  v
-           400 Bad Request
+      |
+      +---------- Valid ----------+
+      |                            |
+      |                            v
+      |                    EmployeeService
+      |
+      +---------- Invalid
+                   |
+                   v
+             Error Handling
+                   |
+                   v
+             400 Bad Request
 
-Validation can include:
+Validation includes fields such as:
 
 Name
 Email
+Department
 Salary
 
-The exact validation rules are defined by the DTO/entity validation configuration in the project.
+The exact validation rules are defined in the DTO validation configuration.
 
 11. Employee and Account Module Architecture
 
-The application contains two independent functional modules.
+The application contains two functional modules.
 
                     EmployeeBankRestApi
-                           |
-              +------------+------------+
-              |                         |
-              v                         v
-       Employee Module            Account Module
-              |                         |
-              v                         v
-     EmployeeController          AccountController
-              |                         |
-              v                         v
-       EmployeeService            AccountService
-              |                         |
-              v                         v
-     EmployeeRepository          AccountRepository
-              |                         |
-              +------------+------------+
-                           |
-                           v
-                     SQL Server
+                            |
+               +------------+------------+
+               |                         |
+               v                         v
+        Employee Module            Account Module
+               |                         |
+               v                         v
+      EmployeeController         AccountController
+               |                         |
+               v                         v
+        EmployeeService             AccountService
+               |                         |
+               v                         v
+      EmployeeRepository         AccountRepository
+               |                         |
+               +------------+------------+
+                            |
+                            v
+                       SQL Server
 
 This separation allows employee management and banking operations to have their own business logic while using the same application and database infrastructure.
 
@@ -512,7 +493,7 @@ Postman is used to test the REST endpoints.
              |
              v
 +-------------------------+
-| Employee API Requests   |
+|     Employee APIs       |
 |-------------------------|
 | Get All Employees       |
 | Get Employee By ID      |
@@ -524,7 +505,7 @@ Postman is used to test the REST endpoints.
              |
              v
 +-------------------------+
-| Account API Requests    |
+|      Account APIs       |
 |-------------------------|
 | Deposit                 |
 | Withdraw                |
@@ -532,18 +513,20 @@ Postman is used to test the REST endpoints.
 +------------+------------+
              |
              v
-      Spring Boot API
++-------------------------+
+|     Spring Boot API     |
++-------------------------+
 
 Postman can be used to verify:
 
-HTTP status codes.
-Request validation.
-Employee CRUD operations.
-Account deposit operations.
-Account withdrawal operations.
-Insufficient balance handling.
-Account balance retrieval.
-Resource-not-found scenarios.
+HTTP status codes
+Request validation
+Employee CRUD operations
+Account deposit operations
+Account withdrawal operations
+Insufficient balance handling
+Account balance retrieval
+Resource-not-found scenarios
 13. Technology Stack
 Component	Technology
 Backend	Spring Boot
@@ -554,8 +537,11 @@ ORM	Hibernate
 Database	Microsoft SQL Server
 Database Driver	Microsoft SQL Server JDBC Driver
 Validation	Jakarta Validation
+Caching	Redis
+Connection Pool	HikariCP
 API Testing	Postman
 Build Tool	Maven
+API Documentation	Swagger / OpenAPI
 14. Architecture Summary
 
 The overall application request flow is:
@@ -563,27 +549,29 @@ The overall application request flow is:
                  Postman / Client
                         |
                         v
-               REST Controller
+                REST Controller
+                   /        \
                   /          \
-                 /            \
-                v              v
+                 v            v
         EmployeeService    AccountService
-                |              |
-                v              v
-        EmployeeRepository AccountRepository
-                \              /
-                 \            /
-                  v          v
-                JPA / Hibernate
+                |                |
+                v                v
+        EmployeeRepository  AccountRepository
+                \                /
+                 \              /
+                  v            v
+                  JPA / Hibernate
                         |
                         v
-                  SQL Server
+                   SQL Server
 
 The architecture separates responsibilities across the application layers:
 
-Controller — handles HTTP requests and responses.
-Service — contains business logic.
-Repository — handles database access.
-JPA/Hibernate — manages object-relational mapping.
-SQL Server — stores persistent employee and account data.
-Postman — provides API testing and validation.
+Layer	Responsibility
+Controller	Handles HTTP requests and responses
+Service	Contains business logic
+Repository	Handles database access
+JPA/Hibernate	Manages object-relational mapping
+SQL Server	Stores persistent employee and account data
+Redis	Provides caching for frequently accessed data
+Postman	Provides API testing and validation

@@ -1,26 +1,43 @@
-Employee & Account API - Troubleshooting Guide
+# Employee & Account API - Troubleshooting Guide
+
+## Table of Contents
+
 1. Purpose
-
-This document provides solutions for common issues encountered while developing, running, testing, and maintaining the Employee & Account REST API.
-
-The guide covers:
-
-Spring Boot startup problems
-SQL Server connection problems
-Integrated authentication problems
-Port conflicts
-HTTP 400, 404, 409, 422, and 500 errors
-Validation errors
-Database constraint errors
-HikariCP connection pool problems
-Postman issues
-Newman CLI issues
-Maven build problems
-Account transaction problems
 2. Troubleshooting Flow
+3. Spring Boot Application Does Not Start
+4. Port 8089 Already in Use
+5. SQL Server Connection Failure
+6. Integrated Authentication Error
+7. Database Does Not Exist
+8. Tables Are Missing
+9. HTTP 400 Bad Request
+10. Employee Validation Failure
+11. HTTP 404 Not Found
+12. HTTP 409 Conflict
+13. HTTP 422 Unprocessable Entity
+14. HTTP 500 Internal Server Error
+15. Duplicate Employee Email
+16. Account Withdrawal Fails
+17. Account Deposit Does Not Update Balance
+18. Postman baseUrl Not Working
+19. Postman Request Returns 404
+20. Postman Request Body Validation Fails
+21. Postman Tests Fail
+22. Newman Command Not Recognized
+23. Node Command Not Recognized
+24. Newman Invalid URI Error
+25. Maven Build Failure
+26. HikariCP Connection Pool Problem
+27. Quick Troubleshooting Matrix
+28. Information to Collect Before Escalation
+29. Troubleshooting Complete
+---
+
+## 2. Troubleshooting Flow
 
 When an issue occurs, follow this sequence:
 
+```text
 Problem Occurs
       |
       v
@@ -82,7 +99,7 @@ Then check:
 
 src/main/resources/application.yml
 
-Verify SQL Server is running and the configured database is available.
+Verify that SQL Server is running and the configured database is available.
 
 4. Port 8089 Already in Use
 Error
@@ -94,8 +111,6 @@ Check the Port
 On Windows:
 
 netstat -ano | findstr :8089
-
-The command displays the process ID using port 8089.
 
 Example:
 
@@ -112,7 +127,7 @@ taskkill /PID 12345 /F
 
 Then restart the Spring Boot application.
 
-Do not terminate an unknown process without first confirming what it is.
+Warning: Do not terminate an unknown process without first confirming what it is.
 
 5. SQL Server Connection Failure
 Symptoms
@@ -139,7 +154,7 @@ Resolution
 
 Verify SQL Server is running.
 
-Verify the database:
+Verify the available databases:
 
 SELECT name
 FROM sys.databases;
@@ -148,7 +163,7 @@ Check that the configured database exists.
 
 Verify the datasource configuration in:
 
-application.yml
+src/main/resources/application.yml
 
 The JDBC URL must point to the correct SQL Server instance and database.
 
@@ -157,7 +172,7 @@ Possible Error
 This driver is not configured for integrated authentication
 Cause
 
-The project uses Windows integrated authentication through:
+The project uses Windows Integrated Authentication through:
 
 integratedSecurity=true
 
@@ -221,7 +236,9 @@ spring:
 
 The project uses Hibernate/JPA to create or update the schema based on the entity mappings.
 
-Verify the tables:
+Verify Tables
+
+Run:
 
 SELECT TABLE_NAME
 FROM INFORMATION_SCHEMA.TABLES
@@ -234,8 +251,7 @@ Meaning
 
 A 400 Bad Request generally means that the request contains invalid input or fails request validation.
 
-Possible causes include:
-
+Possible Causes
 Required field missing
 Blank field
 Invalid email
@@ -257,9 +273,7 @@ amount
 account ID
 request format
 10. Employee Validation Failure
-
-Example invalid Employee request:
-
+Example Invalid Employee Request
 {
   "name": "",
   "email": "invalid-email",
@@ -273,9 +287,7 @@ Name is blank
 Email format is invalid
 Designation is blank
 Salary is not positive
-
-Send valid data, for example:
-
+Valid Example
 {
   "name": "Rahul Sharma",
   "email": "rahul@example.com",
@@ -287,16 +299,13 @@ Meaning
 
 The requested Employee or Account does not exist.
 
-Example:
-
+Employee Example
 GET /api/v1/employees/999
 
 If employee 999 does not exist, the application returns:
 
 404 Not Found
-
-For an Account:
-
+Account Example
 GET /api/v1/accounts/999/balance
 
 may return:
@@ -327,8 +336,7 @@ A 409 Conflict indicates that the request conflicts with an existing resource.
 
 A common example is a duplicate Employee email.
 
-Example:
-
+Example
 rahul@example.com
 
 If another employee already uses this email, the application should reject the duplicate according to the project's business rules.
@@ -346,7 +354,7 @@ Use a different email address.
 13. HTTP 422 Unprocessable Entity
 Meaning
 
-A 422 response indicates that the request is syntactically valid but violates a business rule.
+A 422 Unprocessable Entity response indicates that the request is syntactically valid but violates a business rule.
 
 For example, an Account withdrawal may fail because:
 
@@ -363,13 +371,14 @@ GET /api/v1/accounts/{id}/balance
 
 Then request a withdrawal amount that satisfies the account's business rules.
 
+Note: If the current implementation maps insufficient balance to 400 Bad Request, follow the application's actual configured behavior.
+
 14. HTTP 500 Internal Server Error
 Meaning
 
 A 500 Internal Server Error indicates an unexpected server-side exception.
 
-Possible causes include:
-
+Possible Causes
 Database failure
 Unexpected NullPointerException
 SQL exception
@@ -474,16 +483,13 @@ Also verify that Spring Boot is running on port 8089.
 
 First verify that the URL matches the application's actual endpoint.
 
-Employee endpoints:
-
+Employee Endpoints
 GET    /api/v1/employees
 GET    /api/v1/employees/{id}
 POST   /api/v1/employees
 PUT    /api/v1/employees/{id}
 DELETE /api/v1/employees/{id}
-
-Account endpoints:
-
+Account Endpoints
 POST /api/v1/accounts/{id}/deposit
 POST /api/v1/accounts/{id}/withdraw
 GET  /api/v1/accounts/{id}/balance
@@ -503,7 +509,7 @@ If Postman receives:
 
 check the request body.
 
-For example:
+Example:
 
 {
   "name": "John",
@@ -627,8 +633,7 @@ target/
 
 The application uses HikariCP as the datasource connection pool.
 
-Possible symptoms:
-
+Possible Symptoms
 Connection is not available
 Connection timeout
 Pool exhausted
@@ -640,10 +645,13 @@ application.yml
 
 Important properties include:
 
-maximum-pool-size
-minimum-idle
-connection-timeout
-max-lifetime
+spring:
+  datasource:
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      connection-timeout: 30000
+      max-lifetime: 1800000
 
 If the pool becomes exhausted, check:
 
@@ -667,14 +675,14 @@ Integrated authentication fails	JDBC authentication configuration	Check authenti
 422 response	Business rule violation	Check business condition
 500 response	Server/database error	Check application logs
 Withdrawal fails	Insufficient balance	Check account balance
-Deposit issue	Account/service/database problem	Check transaction and DB
+Deposit issue	Account/service/database problem	Check transaction and database
 Postman URL fails	Incorrect baseUrl	Check environment
 Postman tests fail	Incorrect response/request	Check response and console
 Newman not recognized	Newman/PATH problem	Install Newman
 Node not recognized	Node.js/PATH problem	Install/configure Node.js
 Newman Invalid URI	Missing baseUrl	Provide baseUrl
 Maven build fails	Compilation/dependency/configuration	Check Maven error
-HikariCP timeout	Pool/database issue	Check DB and pool configuration
+HikariCP timeout	Pool/database issue	Check database and pool configuration
 28. Information to Collect Before Escalation
 
 If the issue cannot be resolved, collect the following information:
@@ -695,36 +703,56 @@ Newman output
 Steps to reproduce
 Related Jira ticket
 
-Do not include passwords, API keys, database credentials, or other sensitive information when sharing logs.
+Security: Do not include passwords, API keys, database credentials, or other sensitive information when sharing logs.
 
 29. Troubleshooting Complete
 
 After applying a fix, verify the complete flow:
 
 Fix Problem
-     |
-     v
+    |
+    v
 Restart Application
-     |
-     v
+    |
+    v
 Check Startup Logs
-     |
-     v
+    |
+    v
 Verify SQL Server
-     |
-     v
+    |
+    v
 Test Employee API
-     |
-     v
+    |
+    v
 Test Account API
-     |
-     v
+    |
+    v
 Run Postman Tests
-     |
-     v
+    |
+    v
 Run Newman Tests
-     |
-     v
+    |
+    v
 Confirm Successful Response
 
 The issue should be considered resolved only after the affected API operation works successfully and the relevant Postman/Newman tests pass.
+
+Troubleshooting Checklist
+[ ] Error message identified
+[ ] Spring Boot logs checked
+[ ] application.yml verified
+[ ] Java 21 verified
+[ ] Maven verified
+[ ] SQL Server verified
+[ ] Database verified
+[ ] Redis verified, if applicable
+[ ] Port 8089 verified
+[ ] API URL verified
+[ ] Request body verified
+[ ] Postman environment verified
+[ ] Postman tests verified
+[ ] Newman tests verified
+[ ] HikariCP configuration checked
+[ ] Database records verified
+[ ] Sensitive information removed from logs
+[ ] Issue retested successfully
