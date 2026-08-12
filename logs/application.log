@@ -1,0 +1,875 @@
+2026-08-12 11:45:05 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-08-12 11:45:05 INFO  [main] c.t.e.EmployeeApiApplication - Starting EmployeeApiApplication using Java 21.0.11 with PID 17388 (C:\Users\s.samantray\Desktop\Eclipse_Workspace\EmployeeBankRestApiPostman_Collection_Documentation\target\classes started by s.samantray in C:\Users\s.samantray\Desktop\Eclipse_Workspace\EmployeeBankRestApiPostman_Collection_Documentation)
+2026-08-12 11:45:05 DEBUG [main] c.t.e.EmployeeApiApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+2026-08-12 11:45:05 INFO  [main] c.t.e.EmployeeApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-12 11:45:09 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-12 11:45:09 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-12 11:45:09 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 457 ms. Found 2 JPA repository interfaces.
+2026-08-12 11:45:09 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-12 11:45:09 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-12 11:45:09 INFO  [main] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.tns.employeeapi.repository.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-08-12 11:45:09 INFO  [main] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.tns.employeeapi.repository.EmployeeRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-08-12 11:45:09 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 41 ms. Found 0 Redis repository interfaces.
+2026-08-12 11:45:13 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8091 (http)
+2026-08-12 11:45:13 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8091"]
+2026-08-12 11:45:13 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-12 11:45:13 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2026-08-12 11:45:13 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-12 11:45:13 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 8106 ms
+2026-08-12 11:45:15 DEBUG [main] com.zaxxer.hikari.HikariConfig - Class com.microsoft.sqlserver.jdbc.SQLServerDriver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@5c647e05
+2026-08-12 11:45:15 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-12 11:45:15 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2026-08-12 11:45:15 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-08-12 11:45:16 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - EmployeeBankingHikariPool - configuration:
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - catalog.........................none
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - credentials.....................com.zaxxer.hikari.util.Credentials@6ba355e4
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - dataSource......................none
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - driverClassName................."com.microsoft.sqlserver.jdbc.SQLServerDriver"
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - exceptionOverride...............none
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:sqlserver://TNS-IT-DESKTOP\SQLEXPRESS;databaseName=SpringBootRestApi;integratedSecurity=true;encrypt=true;trustServerCertificate=true
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - keepaliveTime...................120000
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........2000
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - minimumIdle.....................5
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - password........................<masked>
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - poolName........................"EmployeeBankingHikariPool"
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - readOnly........................false
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - schema..........................none
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - username........................none
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2026-08-12 11:45:16 INFO  [main] com.zaxxer.hikari.HikariDataSource - EmployeeBankingHikariPool - Starting...
+2026-08-12 11:45:16 DEBUG [main] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Attempting to create/setup new connection (bc6823bf-40a2-43e7-8a70-bfc0a518b3cf)
+2026-08-12 11:45:18 DEBUG [main] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Failed to create/setup connection (bc6823bf-40a2-43e7-8a70-bfc0a518b3cf): This driver is not configured for integrated authentication. ClientConnectionId:dbff1ce7-2528-486f-b558-c7f9fa388cfb
+2026-08-12 11:45:18 DEBUG [main] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Cannot acquire connection from data source
+com.microsoft.sqlserver.jdbc.SQLServerException: This driver is not configured for integrated authentication. ClientConnectionId:dbff1ce7-2528-486f-b558-c7f9fa388cfb
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.terminate(SQLServerConnection.java:4904)
+	at com.microsoft.sqlserver.jdbc.AuthenticationJNI.<init>(AuthenticationJNI.java:78)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:6090)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:6079)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7832)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:5024)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:4412)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:3937)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:3700)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:2385)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:1453)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:127)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:368)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:205)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:483)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:336)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.tns.employeeapi.EmployeeApiApplication.main(EmployeeApiApplication.java:10)
+Caused by: java.lang.UnsatisfiedLinkError: Unable to load authentication DLL mssql-jdbc_auth-13.4.0.x64
+	at com.microsoft.sqlserver.jdbc.AuthenticationJNI.<clinit>(AuthenticationJNI.java:67)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:6089)
+	... 53 common frames omitted
+2026-08-12 11:45:19 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+2026-08-12 11:45:19 ERROR [main] o.h.e.jdbc.spi.SqlExceptionHelper - This driver is not configured for integrated authentication. ClientConnectionId:dbff1ce7-2528-486f-b558-c7f9fa388cfb
+2026-08-12 11:45:19 WARN  [main] o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+org.hibernate.exception.JDBCConnectionException: unable to obtain isolated JDBC connection [This driver is not configured for integrated authentication. ClientConnectionId:dbff1ce7-2528-486f-b558-c7f9fa388cfb] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:336)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.tns.employeeapi.EmployeeApiApplication.main(EmployeeApiApplication.java:10)
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: This driver is not configured for integrated authentication. ClientConnectionId:dbff1ce7-2528-486f-b558-c7f9fa388cfb
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.terminate(SQLServerConnection.java:4904)
+	at com.microsoft.sqlserver.jdbc.AuthenticationJNI.<init>(AuthenticationJNI.java:78)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:6090)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:6079)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7832)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:5024)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:4412)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:3937)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:3700)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:2385)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:1453)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:127)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:368)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:205)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:483)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	... 35 common frames omitted
+Caused by: java.lang.UnsatisfiedLinkError: Unable to load authentication DLL mssql-jdbc_auth-13.4.0.x64
+	at com.microsoft.sqlserver.jdbc.AuthenticationJNI.<clinit>(AuthenticationJNI.java:67)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:6089)
+	... 53 common frames omitted
+2026-08-12 11:45:19 ERROR [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2026-08-12 11:45:19 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2026-08-12 11:45:19 INFO  [main] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-08-12 11:45:19 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-08-12 11:45:19 ERROR [main] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.tns.employeeapi.EmployeeApiApplication.main(EmployeeApiApplication.java:10)
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
+	... 15 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:191)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:186)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:408)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	... 30 common frames omitted
+2026-08-12 11:46:19 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-08-12 11:46:20 INFO  [main] c.t.e.EmployeeApiApplication - Starting EmployeeApiApplication using Java 21.0.11 with PID 1508 (C:\Users\s.samantray\Desktop\Eclipse_Workspace\EmployeeBankRestApiPostman_Collection_Documentation\target\classes started by s.samantray in C:\Users\s.samantray\Desktop\Eclipse_Workspace\EmployeeBankRestApiPostman_Collection_Documentation)
+2026-08-12 11:46:20 DEBUG [main] c.t.e.EmployeeApiApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+2026-08-12 11:46:20 INFO  [main] c.t.e.EmployeeApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-12 11:46:23 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-12 11:46:23 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-12 11:46:23 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 422 ms. Found 2 JPA repository interfaces.
+2026-08-12 11:46:23 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-12 11:46:24 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-12 11:46:24 INFO  [main] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.tns.employeeapi.repository.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-08-12 11:46:24 INFO  [main] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.tns.employeeapi.repository.EmployeeRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-08-12 11:46:24 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34 ms. Found 0 Redis repository interfaces.
+2026-08-12 11:46:25 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8091 (http)
+2026-08-12 11:46:25 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8091"]
+2026-08-12 11:46:25 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-12 11:46:25 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2026-08-12 11:46:26 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-12 11:46:26 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6115 ms
+2026-08-12 11:46:27 DEBUG [main] com.zaxxer.hikari.HikariConfig - Class com.microsoft.sqlserver.jdbc.SQLServerDriver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@5c647e05
+2026-08-12 11:46:28 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-12 11:46:28 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2026-08-12 11:46:28 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-08-12 11:46:29 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - EmployeeBankingHikariPool - configuration:
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - catalog.........................none
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - credentials.....................com.zaxxer.hikari.util.Credentials@8167f57
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - dataSource......................none
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - driverClassName................."com.microsoft.sqlserver.jdbc.SQLServerDriver"
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - exceptionOverride...............none
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:sqlserver://TNS-IT-DESKTOP\SQLEXPRESS;databaseName=SpringBootRestApi;integratedSecurity=true;encrypt=true;trustServerCertificate=true
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - keepaliveTime...................120000
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........2000
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - minimumIdle.....................5
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - password........................<masked>
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - poolName........................"EmployeeBankingHikariPool"
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - readOnly........................false
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - schema..........................none
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - username........................none
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2026-08-12 11:46:30 INFO  [main] com.zaxxer.hikari.HikariDataSource - EmployeeBankingHikariPool - Starting...
+2026-08-12 11:46:30 DEBUG [main] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Attempting to create/setup new connection (ac7b68e7-f79b-42be-81b1-efcd2b773dd6)
+2026-08-12 11:46:33 DEBUG [main] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Established new connection (ac7b68e7-f79b-42be-81b1-efcd2b773dd6)
+2026-08-12 11:46:33 INFO  [main] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Added connection ConnectionID:1 ClientConnectionId: 1307390b-359b-4acd-b7d6-2153854ed61d
+2026-08-12 11:46:33 INFO  [main] com.zaxxer.hikari.HikariDataSource - EmployeeBankingHikariPool - Start completed.
+2026-08-12 11:46:33 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=1/10, idle=0/5, active=1, waiting=0)
+2026-08-12 11:46:33 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=1/10, idle=0/5, active=1, waiting=0)
+2026-08-12 11:46:33 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Attempting to create/setup new connection (6b7c4908-7e12-49f1-8af3-2bc7622eaa42)
+2026-08-12 11:46:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Established new connection (6b7c4908-7e12-49f1-8af3-2bc7622eaa42)
+2026-08-12 11:46:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Added connection ConnectionID:2 ClientConnectionId: 14c907bb-f608-4bca-86f1-8132e46dbec2
+2026-08-12 11:46:34 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (EmployeeBankingHikariPool)']
+	Database driver: undefined/unknown
+	Database version: 15.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-12 11:46:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After adding stats (total=2/10, idle=2/5, active=0, waiting=0)
+2026-08-12 11:46:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Attempting to create/setup new connection (e4a7a1e6-64e0-4f0c-ba5c-998f53a5fc53)
+2026-08-12 11:46:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Established new connection (e4a7a1e6-64e0-4f0c-ba5c-998f53a5fc53)
+2026-08-12 11:46:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Added connection ConnectionID:3 ClientConnectionId: daa9ed60-b28d-4260-b918-00dfd6fa8567
+2026-08-12 11:46:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After adding stats (total=3/10, idle=3/5, active=0, waiting=0)
+2026-08-12 11:46:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Attempting to create/setup new connection (86b06dd0-f9b9-4074-b2c4-b822ca8e6770)
+2026-08-12 11:46:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Established new connection (86b06dd0-f9b9-4074-b2c4-b822ca8e6770)
+2026-08-12 11:46:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Added connection ConnectionID:4 ClientConnectionId: 4009ba32-8b19-454b-896f-25402ba42aa7
+2026-08-12 11:46:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After adding stats (total=4/10, idle=4/5, active=0, waiting=0)
+2026-08-12 11:46:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Attempting to create/setup new connection (bd35d4c2-595a-40cf-9fc5-d38c88bbf798)
+2026-08-12 11:46:36 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Established new connection (bd35d4c2-595a-40cf-9fc5-d38c88bbf798)
+2026-08-12 11:46:36 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Added connection ConnectionID:5 ClientConnectionId: 4dbc62b9-3816-462a-bbc9-9763476be9af
+2026-08-12 11:46:36 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After adding stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:46:36 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Connection not added, stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:46:37 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-12 11:46:38 DEBUG [main] org.hibernate.SQL - 
+    create table account_details7 (
+        id int identity not null,
+        account_holder_name varchar(255) not null,
+        account_number varchar(255) not null,
+        balance float(53) not null,
+        primary key (id)
+    )
+2026-08-12 11:46:38 DEBUG [main] org.hibernate.SQL - 
+    create table employee_details7 (
+        id int identity not null,
+        department varchar(100) not null,
+        email varchar(100) not null,
+        name varchar(100) not null,
+        salary float(53) not null,
+        primary key (id)
+    )
+2026-08-12 11:46:38 DEBUG [main] org.hibernate.SQL - 
+    alter table account_details7 
+       drop constraint UKegst703n0kqhggs0en7yp4jd6
+2026-08-12 11:46:38 DEBUG [main] org.hibernate.SQL - 
+    alter table account_details7 
+       add constraint UKegst703n0kqhggs0en7yp4jd6 unique (account_number)
+2026-08-12 11:46:38 DEBUG [main] org.hibernate.SQL - 
+    alter table employee_details7 
+       drop constraint UKnjy3it3jn0gcu7qmbd8te8ao9
+2026-08-12 11:46:38 DEBUG [main] org.hibernate.SQL - 
+    alter table employee_details7 
+       add constraint UKnjy3it3jn0gcu7qmbd8te8ao9 unique (email)
+2026-08-12 11:46:38 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-12 11:46:44 INFO  [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 5 endpoints beneath base path '/actuator'
+2026-08-12 11:46:44 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8091"]
+2026-08-12 11:46:44 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8091 (http) with context path '/'
+2026-08-12 11:46:44 INFO  [main] c.t.e.EmployeeApiApplication - Started EmployeeApiApplication in 26.166 seconds (process running for 27.427)
+2026-08-12 11:47:03 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:47:03 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:47:03 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 11:47:33 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:47:33 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:47:33 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 11:48:03 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:48:03 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:48:03 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 11:48:16 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:3 ClientConnectionId: daa9ed60-b28d-4260-b918-00dfd6fa8567 is alive
+2026-08-12 11:48:19 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:5 ClientConnectionId: 4dbc62b9-3816-462a-bbc9-9763476be9af is alive
+2026-08-12 11:48:21 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:1 ClientConnectionId: 1307390b-359b-4acd-b7d6-2153854ed61d is alive
+2026-08-12 11:48:21 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:2 ClientConnectionId: 14c907bb-f608-4bca-86f1-8132e46dbec2 is alive
+2026-08-12 11:48:29 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:4 ClientConnectionId: 4009ba32-8b19-454b-896f-25402ba42aa7 is alive
+2026-08-12 11:48:33 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:48:33 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:48:33 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 11:49:03 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:49:03 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:49:03 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 11:49:33 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:49:33 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:49:33 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 11:49:58 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:3 ClientConnectionId: daa9ed60-b28d-4260-b918-00dfd6fa8567 is alive
+2026-08-12 11:50:03 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:5 ClientConnectionId: 4dbc62b9-3816-462a-bbc9-9763476be9af is alive
+2026-08-12 11:50:03 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:50:03 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:50:03 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 11:50:08 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:2 ClientConnectionId: 14c907bb-f608-4bca-86f1-8132e46dbec2 is alive
+2026-08-12 11:50:09 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:1 ClientConnectionId: 1307390b-359b-4acd-b7d6-2153854ed61d is alive
+2026-08-12 11:50:24 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:4 ClientConnectionId: 4009ba32-8b19-454b-896f-25402ba42aa7 is alive
+2026-08-12 11:50:33 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:50:33 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:50:33 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 11:51:03 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:51:03 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:51:03 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 11:51:33 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:51:33 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:51:33 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 11:51:40 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:3 ClientConnectionId: daa9ed60-b28d-4260-b918-00dfd6fa8567 is alive
+2026-08-12 11:51:46 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:5 ClientConnectionId: 4dbc62b9-3816-462a-bbc9-9763476be9af is alive
+2026-08-12 11:51:56 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:2 ClientConnectionId: 14c907bb-f608-4bca-86f1-8132e46dbec2 is alive
+2026-08-12 11:51:57 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:1 ClientConnectionId: 1307390b-359b-4acd-b7d6-2153854ed61d is alive
+2026-08-12 11:52:03 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:52:03 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:52:03 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 11:52:19 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:4 ClientConnectionId: 4009ba32-8b19-454b-896f-25402ba42aa7 is alive
+2026-08-12 11:52:33 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:52:33 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:52:33 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 11:53:03 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:53:03 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:53:03 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 11:53:22 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:3 ClientConnectionId: daa9ed60-b28d-4260-b918-00dfd6fa8567 is alive
+2026-08-12 11:53:30 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:5 ClientConnectionId: 4dbc62b9-3816-462a-bbc9-9763476be9af is alive
+2026-08-12 11:53:33 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:53:33 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:53:33 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 11:53:43 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:2 ClientConnectionId: 14c907bb-f608-4bca-86f1-8132e46dbec2 is alive
+2026-08-12 11:53:44 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:1 ClientConnectionId: 1307390b-359b-4acd-b7d6-2153854ed61d is alive
+2026-08-12 11:54:03 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:54:03 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:54:03 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 11:54:13 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:4 ClientConnectionId: 4009ba32-8b19-454b-896f-25402ba42aa7 is alive
+2026-08-12 11:54:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:54:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:54:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 11:55:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:55:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:55:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 11:55:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:3 ClientConnectionId: daa9ed60-b28d-4260-b918-00dfd6fa8567 is alive
+2026-08-12 11:55:13 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:5 ClientConnectionId: 4dbc62b9-3816-462a-bbc9-9763476be9af is alive
+2026-08-12 11:55:31 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:2 ClientConnectionId: 14c907bb-f608-4bca-86f1-8132e46dbec2 is alive
+2026-08-12 11:55:32 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:1 ClientConnectionId: 1307390b-359b-4acd-b7d6-2153854ed61d is alive
+2026-08-12 11:55:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:55:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:55:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 11:56:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:56:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:56:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 11:56:08 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:4 ClientConnectionId: 4009ba32-8b19-454b-896f-25402ba42aa7 is alive
+2026-08-12 11:56:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:56:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:56:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 11:56:46 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:3 ClientConnectionId: daa9ed60-b28d-4260-b918-00dfd6fa8567 is alive
+2026-08-12 11:56:57 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:5 ClientConnectionId: 4dbc62b9-3816-462a-bbc9-9763476be9af is alive
+2026-08-12 11:57:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:57:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:57:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 11:57:18 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:2 ClientConnectionId: 14c907bb-f608-4bca-86f1-8132e46dbec2 is alive
+2026-08-12 11:57:20 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:1 ClientConnectionId: 1307390b-359b-4acd-b7d6-2153854ed61d is alive
+2026-08-12 11:57:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:57:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:57:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 11:58:03 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:4 ClientConnectionId: 4009ba32-8b19-454b-896f-25402ba42aa7 is alive
+2026-08-12 11:58:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:58:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:58:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 11:58:28 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:3 ClientConnectionId: daa9ed60-b28d-4260-b918-00dfd6fa8567 is alive
+2026-08-12 11:58:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:58:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:58:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 11:58:40 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:5 ClientConnectionId: 4dbc62b9-3816-462a-bbc9-9763476be9af is alive
+2026-08-12 11:59:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:59:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:59:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 11:59:05 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:2 ClientConnectionId: 14c907bb-f608-4bca-86f1-8132e46dbec2 is alive
+2026-08-12 11:59:08 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:1 ClientConnectionId: 1307390b-359b-4acd-b7d6-2153854ed61d is alive
+2026-08-12 11:59:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:59:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 11:59:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 11:59:57 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:4 ClientConnectionId: 4009ba32-8b19-454b-896f-25402ba42aa7 is alive
+2026-08-12 12:00:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:00:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:00:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 12:00:10 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:3 ClientConnectionId: daa9ed60-b28d-4260-b918-00dfd6fa8567 is alive
+2026-08-12 12:00:24 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:5 ClientConnectionId: 4dbc62b9-3816-462a-bbc9-9763476be9af is alive
+2026-08-12 12:00:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:00:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:00:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 12:00:53 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:2 ClientConnectionId: 14c907bb-f608-4bca-86f1-8132e46dbec2 is alive
+2026-08-12 12:00:56 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:1 ClientConnectionId: 1307390b-359b-4acd-b7d6-2153854ed61d is alive
+2026-08-12 12:01:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:01:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:01:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 12:01:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:01:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:01:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 12:01:52 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:3 ClientConnectionId: daa9ed60-b28d-4260-b918-00dfd6fa8567 is alive
+2026-08-12 12:01:52 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:4 ClientConnectionId: 4009ba32-8b19-454b-896f-25402ba42aa7 is alive
+2026-08-12 12:02:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:02:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:02:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 12:02:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:5 ClientConnectionId: 4dbc62b9-3816-462a-bbc9-9763476be9af is alive
+2026-08-12 12:02:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:02:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:02:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 12:02:40 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:2 ClientConnectionId: 14c907bb-f608-4bca-86f1-8132e46dbec2 is alive
+2026-08-12 12:02:43 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:1 ClientConnectionId: 1307390b-359b-4acd-b7d6-2153854ed61d is alive
+2026-08-12 12:03:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:03:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:03:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 12:03:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:3 ClientConnectionId: daa9ed60-b28d-4260-b918-00dfd6fa8567 is alive
+2026-08-12 12:03:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:03:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:03:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 12:03:47 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:4 ClientConnectionId: 4009ba32-8b19-454b-896f-25402ba42aa7 is alive
+2026-08-12 12:03:51 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:5 ClientConnectionId: 4dbc62b9-3816-462a-bbc9-9763476be9af is alive
+2026-08-12 12:04:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:04:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:04:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 12:04:27 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:2 ClientConnectionId: 14c907bb-f608-4bca-86f1-8132e46dbec2 is alive
+2026-08-12 12:04:31 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:1 ClientConnectionId: 1307390b-359b-4acd-b7d6-2153854ed61d is alive
+2026-08-12 12:04:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:04:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:04:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 12:05:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:05:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:05:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 12:05:15 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:3 ClientConnectionId: daa9ed60-b28d-4260-b918-00dfd6fa8567 is alive
+2026-08-12 12:05:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:05:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:05:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 12:05:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:5 ClientConnectionId: 4dbc62b9-3816-462a-bbc9-9763476be9af is alive
+2026-08-12 12:05:42 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:4 ClientConnectionId: 4009ba32-8b19-454b-896f-25402ba42aa7 is alive
+2026-08-12 12:06:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:06:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:06:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 12:06:15 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:2 ClientConnectionId: 14c907bb-f608-4bca-86f1-8132e46dbec2 is alive
+2026-08-12 12:06:19 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:1 ClientConnectionId: 1307390b-359b-4acd-b7d6-2153854ed61d is alive
+2026-08-12 12:06:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:06:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:06:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 12:06:57 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:3 ClientConnectionId: daa9ed60-b28d-4260-b918-00dfd6fa8567 is alive
+2026-08-12 12:07:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:07:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:07:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 12:07:18 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:5 ClientConnectionId: 4dbc62b9-3816-462a-bbc9-9763476be9af is alive
+2026-08-12 12:07:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:07:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:07:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 12:07:36 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:4 ClientConnectionId: 4009ba32-8b19-454b-896f-25402ba42aa7 is alive
+2026-08-12 12:08:02 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:2 ClientConnectionId: 14c907bb-f608-4bca-86f1-8132e46dbec2 is alive
+2026-08-12 12:08:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:08:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:08:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 12:08:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:1 ClientConnectionId: 1307390b-359b-4acd-b7d6-2153854ed61d is alive
+2026-08-12 12:08:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:08:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:08:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 12:08:39 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:3 ClientConnectionId: daa9ed60-b28d-4260-b918-00dfd6fa8567 is alive
+2026-08-12 12:09:01 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:5 ClientConnectionId: 4dbc62b9-3816-462a-bbc9-9763476be9af is alive
+2026-08-12 12:09:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:09:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-12 12:09:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-12 12:09:31 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:4 ClientConnectionId: 4009ba32-8b19-454b-896f-25402ba42aa7 is alive
+2026-08-12 12:09:31 DEBUG [EmployeeBankingHikariPool:connection-closer] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Closing connection ConnectionID:4 ClientConnectionId: 4009ba32-8b19-454b-896f-25402ba42aa7: (connection has passed maxLifetime)
+2026-08-12 12:09:31 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Attempting to create/setup new connection (c044044a-c461-47dc-b80f-7d855c7a0cc7)
+2026-08-12 12:09:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Failed to create/setup connection (c044044a-c461-47dc-b80f-7d855c7a0cc7): The connection to the host TNS-IT-DESKTOP, named instance sqlexpress failed. Error: "java.net.UnknownHostException: TNS-IT-DESKTOP". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434. For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host.
+2026-08-12 12:09:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Cannot acquire connection from data source
+com.microsoft.sqlserver.jdbc.SQLServerException: The connection to the host TNS-IT-DESKTOP, named instance sqlexpress failed. Error: "java.net.UnknownHostException: TNS-IT-DESKTOP". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434. For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:308)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.getInstancePort(SQLServerConnection.java:8791)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.primaryPermissionCheck(SQLServerConnection.java:4264)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:3914)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:3700)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:2385)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:1453)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:127)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:368)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:205)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-08-12 12:09:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Attempting to create/setup new connection (791e3731-760a-49ab-a264-a115b4646d0d)
+2026-08-12 12:09:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Failed to create/setup connection (791e3731-760a-49ab-a264-a115b4646d0d): The connection to the host TNS-IT-DESKTOP, named instance sqlexpress failed. Error: "java.net.UnknownHostException: TNS-IT-DESKTOP". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434. For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host.
+2026-08-12 12:09:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Cannot acquire connection from data source
+com.microsoft.sqlserver.jdbc.SQLServerException: The connection to the host TNS-IT-DESKTOP, named instance sqlexpress failed. Error: "java.net.UnknownHostException: TNS-IT-DESKTOP". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434. For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:308)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.getInstancePort(SQLServerConnection.java:8791)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.primaryPermissionCheck(SQLServerConnection.java:4264)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:3914)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:3700)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:2385)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:1453)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:127)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:368)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:205)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-08-12 12:09:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Attempting to create/setup new connection (94fcb136-5cd9-4a1d-8805-81322df9e085)
+2026-08-12 12:09:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Failed to create/setup connection (94fcb136-5cd9-4a1d-8805-81322df9e085): The connection to the host TNS-IT-DESKTOP, named instance sqlexpress failed. Error: "java.net.UnknownHostException: TNS-IT-DESKTOP". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434. For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host.
+2026-08-12 12:09:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Cannot acquire connection from data source
+com.microsoft.sqlserver.jdbc.SQLServerException: The connection to the host TNS-IT-DESKTOP, named instance sqlexpress failed. Error: "java.net.UnknownHostException: TNS-IT-DESKTOP". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434. For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:308)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.getInstancePort(SQLServerConnection.java:8791)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.primaryPermissionCheck(SQLServerConnection.java:4264)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:3914)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:3700)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:2385)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:1453)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:127)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:368)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:205)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-08-12 12:09:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=4/10, idle=4/5, active=0, waiting=0)
+2026-08-12 12:09:34 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=4/10, idle=4/5, active=0, waiting=0)
+2026-08-12 12:09:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Attempting to create/setup new connection (83bbab7b-365e-4c45-a72d-dc867d88fec5)
+2026-08-12 12:09:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Failed to create/setup connection (83bbab7b-365e-4c45-a72d-dc867d88fec5): The connection to the host TNS-IT-DESKTOP, named instance sqlexpress failed. Error: "java.net.UnknownHostException: TNS-IT-DESKTOP". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434. For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host.
+2026-08-12 12:09:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Cannot acquire connection from data source
+com.microsoft.sqlserver.jdbc.SQLServerException: The connection to the host TNS-IT-DESKTOP, named instance sqlexpress failed. Error: "java.net.UnknownHostException: TNS-IT-DESKTOP". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434. For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:308)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.getInstancePort(SQLServerConnection.java:8791)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.primaryPermissionCheck(SQLServerConnection.java:4264)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:3914)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:3700)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:2385)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:1453)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:127)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:368)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:205)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-08-12 12:09:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Attempting to create/setup new connection (f2de5e98-830f-4a79-a0b5-d5e57908e457)
+2026-08-12 12:09:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Failed to create/setup connection (f2de5e98-830f-4a79-a0b5-d5e57908e457): The connection to the host TNS-IT-DESKTOP, named instance sqlexpress failed. Error: "java.net.UnknownHostException: TNS-IT-DESKTOP". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434. For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host.
+2026-08-12 12:09:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Cannot acquire connection from data source
+com.microsoft.sqlserver.jdbc.SQLServerException: The connection to the host TNS-IT-DESKTOP, named instance sqlexpress failed. Error: "java.net.UnknownHostException: TNS-IT-DESKTOP". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434. For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:308)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.getInstancePort(SQLServerConnection.java:8791)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.primaryPermissionCheck(SQLServerConnection.java:4264)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:3914)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:3700)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:2385)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:1453)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:127)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:368)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:205)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-08-12 12:09:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Attempting to create/setup new connection (78bf5547-9caa-4c6c-9574-99e078418905)
+2026-08-12 12:09:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Failed to create/setup connection (78bf5547-9caa-4c6c-9574-99e078418905): The connection to the host TNS-IT-DESKTOP, named instance sqlexpress failed. Error: "java.net.UnknownHostException: TNS-IT-DESKTOP". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434. For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host.
+2026-08-12 12:09:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Cannot acquire connection from data source
+com.microsoft.sqlserver.jdbc.SQLServerException: The connection to the host TNS-IT-DESKTOP, named instance sqlexpress failed. Error: "java.net.UnknownHostException: TNS-IT-DESKTOP". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434. For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:308)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.getInstancePort(SQLServerConnection.java:8791)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.primaryPermissionCheck(SQLServerConnection.java:4264)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:3914)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:3700)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:2385)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:1453)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:127)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:368)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:205)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-08-12 12:09:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Attempting to create/setup new connection (326847ee-a02a-4483-8e71-d80f762dbaf5)
+2026-08-12 12:09:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Failed to create/setup connection (326847ee-a02a-4483-8e71-d80f762dbaf5): The connection to the host TNS-IT-DESKTOP, named instance sqlexpress failed. Error: "java.net.UnknownHostException: TNS-IT-DESKTOP". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434. For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host.
+2026-08-12 12:09:34 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Cannot acquire connection from data source
+com.microsoft.sqlserver.jdbc.SQLServerException: The connection to the host TNS-IT-DESKTOP, named instance sqlexpress failed. Error: "java.net.UnknownHostException: TNS-IT-DESKTOP". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434. For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:308)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.getInstancePort(SQLServerConnection.java:8791)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.primaryPermissionCheck(SQLServerConnection.java:4264)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:3914)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:3700)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:2385)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:1453)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:127)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:368)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:205)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-08-12 12:09:35 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Attempting to create/setup new connection (90a99ad0-95a6-4c2e-8c4e-2c1d48448f3d)
+2026-08-12 12:09:35 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Failed to create/setup connection (90a99ad0-95a6-4c2e-8c4e-2c1d48448f3d): The connection to the host TNS-IT-DESKTOP, named instance sqlexpress failed. Error: "java.net.UnknownHostException: TNS-IT-DESKTOP". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434. For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host.
+2026-08-12 12:09:35 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Cannot acquire connection from data source
+com.microsoft.sqlserver.jdbc.SQLServerException: The connection to the host TNS-IT-DESKTOP, named instance sqlexpress failed. Error: "java.net.UnknownHostException: TNS-IT-DESKTOP". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434. For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:308)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.getInstancePort(SQLServerConnection.java:8791)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.primaryPermissionCheck(SQLServerConnection.java:4264)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:3914)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:3700)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:2385)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:1453)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:127)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:368)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:205)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-08-12 12:09:37 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Attempting to create/setup new connection (ed18e9e0-3e98-4337-8893-47949e4d2f01)
+2026-08-12 12:09:37 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Failed to create/setup connection (ed18e9e0-3e98-4337-8893-47949e4d2f01): The connection to the host TNS-IT-DESKTOP, named instance sqlexpress failed. Error: "java.net.UnknownHostException: TNS-IT-DESKTOP". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434. For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host.
+2026-08-12 12:09:37 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Cannot acquire connection from data source
+com.microsoft.sqlserver.jdbc.SQLServerException: The connection to the host TNS-IT-DESKTOP, named instance sqlexpress failed. Error: "java.net.UnknownHostException: TNS-IT-DESKTOP". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434. For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:308)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.getInstancePort(SQLServerConnection.java:8791)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.primaryPermissionCheck(SQLServerConnection.java:4264)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:3914)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:3700)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:2385)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:1453)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:127)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:368)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:205)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-08-12 12:09:39 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Attempting to create/setup new connection (d245d589-539c-4cdc-b460-3f7eee331fa4)
+2026-08-12 12:09:39 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Failed to create/setup connection (d245d589-539c-4cdc-b460-3f7eee331fa4): The connection to the host TNS-IT-DESKTOP, named instance sqlexpress failed. Error: "java.net.UnknownHostException: TNS-IT-DESKTOP". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434. For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host.
+2026-08-12 12:09:39 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Cannot acquire connection from data source
+com.microsoft.sqlserver.jdbc.SQLServerException: The connection to the host TNS-IT-DESKTOP, named instance sqlexpress failed. Error: "java.net.UnknownHostException: TNS-IT-DESKTOP". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434. For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:308)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.getInstancePort(SQLServerConnection.java:8791)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.primaryPermissionCheck(SQLServerConnection.java:4264)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:3914)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:3700)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:2385)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:1453)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:127)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:368)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:205)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-08-12 12:09:44 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Attempting to create/setup new connection (62759e78-4cfc-4137-b0dd-2741f4da0b58)
+2026-08-12 12:09:46 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Failed to create/setup connection (62759e78-4cfc-4137-b0dd-2741f4da0b58): The connection to the host TNS-IT-DESKTOP, named instance sqlexpress failed. Error: "java.net.UnknownHostException: TNS-IT-DESKTOP". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434. For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host.
+2026-08-12 12:09:46 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Cannot acquire connection from data source
+com.microsoft.sqlserver.jdbc.SQLServerException: The connection to the host TNS-IT-DESKTOP, named instance sqlexpress failed. Error: "java.net.UnknownHostException: TNS-IT-DESKTOP". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434. For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:308)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.getInstancePort(SQLServerConnection.java:8791)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.primaryPermissionCheck(SQLServerConnection.java:4264)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:3914)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:3700)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:2385)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:1453)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:127)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:368)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:205)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-08-12 12:09:50 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:2 ClientConnectionId: 14c907bb-f608-4bca-86f1-8132e46dbec2 is alive
+2026-08-12 12:09:51 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Attempting to create/setup new connection (4120d0df-4c44-42d4-be2e-83e6eaf7bff2)
+2026-08-12 12:09:51 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Failed to create/setup connection (4120d0df-4c44-42d4-be2e-83e6eaf7bff2): The connection to the host TNS-IT-DESKTOP, named instance sqlexpress failed. Error: "java.net.UnknownHostException: TNS-IT-DESKTOP". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434. For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host.
+2026-08-12 12:09:51 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Cannot acquire connection from data source
+com.microsoft.sqlserver.jdbc.SQLServerException: The connection to the host TNS-IT-DESKTOP, named instance sqlexpress failed. Error: "java.net.UnknownHostException: TNS-IT-DESKTOP". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434. For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:308)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.getInstancePort(SQLServerConnection.java:8791)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.primaryPermissionCheck(SQLServerConnection.java:4264)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:3914)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:3700)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:2385)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:1453)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:127)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:368)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:205)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-08-12 12:09:55 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:1 ClientConnectionId: 1307390b-359b-4acd-b7d6-2153854ed61d is alive
+2026-08-12 12:09:56 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Attempting to create/setup new connection (17d59e08-820a-42d6-ab8b-b994098348d7)
+2026-08-12 12:09:59 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Failed to create/setup connection (17d59e08-820a-42d6-ab8b-b994098348d7): The connection to the host TNS-IT-DESKTOP, named instance sqlexpress failed. Error: "java.net.UnknownHostException: TNS-IT-DESKTOP". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434. For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host.
+2026-08-12 12:09:59 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Cannot acquire connection from data source
+com.microsoft.sqlserver.jdbc.SQLServerException: The connection to the host TNS-IT-DESKTOP, named instance sqlexpress failed. Error: "java.net.UnknownHostException: TNS-IT-DESKTOP". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434. For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:308)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.getInstancePort(SQLServerConnection.java:8791)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.primaryPermissionCheck(SQLServerConnection.java:4264)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:3914)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:3700)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:2385)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:1453)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:127)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:368)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:205)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-08-12 12:10:04 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Attempting to create/setup new connection (d92fe4b3-fbb4-49df-892a-59586e08b9b5)
+2026-08-12 12:10:04 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Failed to create/setup connection (d92fe4b3-fbb4-49df-892a-59586e08b9b5): The connection to the host TNS-IT-DESKTOP, named instance sqlexpress failed. Error: "java.net.UnknownHostException: TNS-IT-DESKTOP". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434. For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host.
+2026-08-12 12:10:04 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Cannot acquire connection from data source
+com.microsoft.sqlserver.jdbc.SQLServerException: The connection to the host TNS-IT-DESKTOP, named instance sqlexpress failed. Error: "java.net.UnknownHostException: TNS-IT-DESKTOP". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434. For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:308)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.getInstancePort(SQLServerConnection.java:8791)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.primaryPermissionCheck(SQLServerConnection.java:4264)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:3914)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:3700)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:2385)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:1453)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:127)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:368)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:205)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-08-12 12:10:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=4/10, idle=4/5, active=0, waiting=0)
+2026-08-12 12:10:04 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=4/10, idle=4/5, active=0, waiting=0)

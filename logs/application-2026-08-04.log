@@ -1,0 +1,2249 @@
+2026-08-04 16:44:06 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-08-04 16:44:06 INFO  [main] c.t.e.EmployeeApiApplication - Starting EmployeeApiApplication using Java 21.0.11 with PID 12968 (C:\Users\s.samantray\Desktop\Eclipse_Workspace\EmployeeBankRestApi\target\classes started by s.samantray in C:\Users\s.samantray\Desktop\Eclipse_Workspace\EmployeeBankRestApi)
+2026-08-04 16:44:06 INFO  [main] c.t.e.EmployeeApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-04 16:44:09 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-04 16:44:09 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 114 ms. Found 2 JPA repository interfaces.
+2026-08-04 16:44:11 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-08-04 16:44:11 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-04 16:44:11 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-04 16:44:11 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2026-08-04 16:44:11 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-04 16:44:11 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5356 ms
+2026-08-04 16:44:12 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2026-08-04 16:44:12 INFO  [main] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-08-04 16:44:12 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-08-04 16:44:12 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2026-08-04 16:46:04 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-08-04 16:46:05 INFO  [main] c.t.e.EmployeeApiApplication - Starting EmployeeApiApplication using Java 21.0.11 with PID 10760 (C:\Users\s.samantray\Desktop\Eclipse_Workspace\EmployeeBankRestApi\target\classes started by s.samantray in C:\Users\s.samantray\Desktop\Eclipse_Workspace\EmployeeBankRestApi)
+2026-08-04 16:46:05 INFO  [main] c.t.e.EmployeeApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-04 16:46:07 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-04 16:46:08 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 134 ms. Found 2 JPA repository interfaces.
+2026-08-04 16:46:09 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-08-04 16:46:09 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-04 16:46:09 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-04 16:46:09 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2026-08-04 16:46:10 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-04 16:46:10 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4964 ms
+2026-08-04 16:46:10 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2026-08-04 16:46:10 INFO  [main] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-08-04 16:46:11 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-08-04 16:46:11 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2026-08-04 16:46:35 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-08-04 16:46:35 INFO  [main] c.t.e.EmployeeApiApplication - Starting EmployeeApiApplication using Java 21.0.11 with PID 16216 (C:\Users\s.samantray\Desktop\Eclipse_Workspace\EmployeeBankRestApi\target\classes started by s.samantray in C:\Users\s.samantray\Desktop\Eclipse_Workspace\EmployeeBankRestApi)
+2026-08-04 16:46:35 INFO  [main] c.t.e.EmployeeApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-04 16:46:38 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-04 16:46:38 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 135 ms. Found 2 JPA repository interfaces.
+2026-08-04 16:46:40 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-08-04 16:46:40 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-04 16:46:40 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-04 16:46:40 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2026-08-04 16:46:40 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-04 16:46:40 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4863 ms
+2026-08-04 16:46:41 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2026-08-04 16:46:41 INFO  [main] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-08-04 16:46:41 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-08-04 16:46:41 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2026-08-04 16:49:07 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-08-04 16:49:07 INFO  [main] c.t.e.EmployeeApiApplication - Starting EmployeeApiApplication using Java 21.0.11 with PID 120 (C:\Users\s.samantray\Desktop\Eclipse_Workspace\EmployeeBankRestApi\target\classes started by s.samantray in C:\Users\s.samantray\Desktop\Eclipse_Workspace\EmployeeBankRestApi)
+2026-08-04 16:49:07 INFO  [main] c.t.e.EmployeeApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-04 16:49:10 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-04 16:49:10 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 141 ms. Found 2 JPA repository interfaces.
+2026-08-04 16:49:11 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-08-04 16:49:11 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-04 16:49:11 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-04 16:49:11 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2026-08-04 16:49:12 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-04 16:49:12 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4665 ms
+2026-08-04 16:49:13 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-04 16:49:13 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2026-08-04 16:49:13 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-08-04 16:49:14 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-04 16:49:14 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-08-04 16:49:16 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 925ac07c-f259-422e-bba4-cd9ee5c5d384
+2026-08-04 16:49:16 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-08-04 16:49:16 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-04 16:49:18 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-04 16:49:18 DEBUG [main] org.hibernate.SQL - 
+    create table accounts (
+        id int identity not null,
+        account_holder_name varchar(255) not null,
+        account_number varchar(255) not null,
+        balance float(53) not null,
+        primary key (id)
+    )
+2026-08-04 16:49:18 DEBUG [main] org.hibernate.SQL - 
+    create table employees (
+        id int identity not null,
+        department varchar(100) not null,
+        email varchar(100) not null,
+        name varchar(100) not null,
+        salary float(53) not null,
+        primary key (id)
+    )
+2026-08-04 16:49:19 DEBUG [main] org.hibernate.SQL - 
+    alter table accounts 
+       drop constraint UK6kplolsdtr3slnvx97xsy2kc8
+2026-08-04 16:49:19 DEBUG [main] org.hibernate.SQL - 
+    alter table accounts 
+       add constraint UK6kplolsdtr3slnvx97xsy2kc8 unique (account_number)
+2026-08-04 16:49:19 DEBUG [main] org.hibernate.SQL - 
+    alter table employees 
+       drop constraint UKj9xgmd0ya5jmus09o0b8pqrpb
+2026-08-04 16:49:19 DEBUG [main] org.hibernate.SQL - 
+    alter table employees 
+       add constraint UKj9xgmd0ya5jmus09o0b8pqrpb unique (email)
+2026-08-04 16:49:19 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-04 16:49:22 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-04 16:49:22 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-08-04 16:49:22 INFO  [main] c.t.e.EmployeeApiApplication - Started EmployeeApiApplication in 16.113 seconds (process running for 17.172)
+2026-08-04 16:52:54 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-04 16:52:54 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-08-04 16:52:54 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-08-04 16:52:55 INFO  [http-nio-8080-exec-1] c.t.e.controller.EmployeeController - Received request to create employee.
+2026-08-04 16:52:55 INFO  [http-nio-8080-exec-1] c.t.e.service.EmployeeService - Creating employee with email: satya@gmail.com
+2026-08-04 16:52:55 DEBUG [http-nio-8080-exec-1] org.hibernate.SQL - 
+    select
+        top (?) e1_0.id 
+    from
+        employees e1_0 
+    where
+        e1_0.email=?
+2026-08-04 16:52:55 TRACE [http-nio-8080-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 16:52:55 TRACE [http-nio-8080-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [satya@gmail.com]
+2026-08-04 16:52:56 DEBUG [http-nio-8080-exec-1] org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (department, email, name, salary) 
+    values
+        (?, ?, ?, ?)
+2026-08-04 16:52:56 TRACE [http-nio-8080-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [IT]
+2026-08-04 16:52:56 TRACE [http-nio-8080-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [satya@gmail.com]
+2026-08-04 16:52:56 TRACE [http-nio-8080-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Satya Samantray]
+2026-08-04 16:52:56 TRACE [http-nio-8080-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (4:DOUBLE) <- [55000.0]
+2026-08-04 16:52:56 INFO  [http-nio-8080-exec-1] c.t.e.service.EmployeeService - Employee created successfully with id: 1
+2026-08-04 16:53:31 INFO  [http-nio-8080-exec-2] c.t.e.controller.EmployeeController - Received request to create employee.
+2026-08-04 16:53:31 INFO  [http-nio-8080-exec-2] c.t.e.service.EmployeeService - Creating employee with email: prakash@gmail.com
+2026-08-04 16:53:31 DEBUG [http-nio-8080-exec-2] org.hibernate.SQL - 
+    select
+        top (?) e1_0.id 
+    from
+        employees e1_0 
+    where
+        e1_0.email=?
+2026-08-04 16:53:31 TRACE [http-nio-8080-exec-2] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 16:53:31 TRACE [http-nio-8080-exec-2] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [prakash@gmail.com]
+2026-08-04 16:53:31 DEBUG [http-nio-8080-exec-2] org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (department, email, name, salary) 
+    values
+        (?, ?, ?, ?)
+2026-08-04 16:53:31 TRACE [http-nio-8080-exec-2] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [SALES]
+2026-08-04 16:53:31 TRACE [http-nio-8080-exec-2] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [prakash@gmail.com]
+2026-08-04 16:53:31 TRACE [http-nio-8080-exec-2] org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [prakash Samantray]
+2026-08-04 16:53:31 TRACE [http-nio-8080-exec-2] org.hibernate.orm.jdbc.bind - binding parameter (4:DOUBLE) <- [50000.0]
+2026-08-04 16:53:31 INFO  [http-nio-8080-exec-2] c.t.e.service.EmployeeService - Employee created successfully with id: 2
+2026-08-04 16:54:02 INFO  [http-nio-8080-exec-3] c.t.e.controller.EmployeeController - Received request to create employee.
+2026-08-04 16:54:02 INFO  [http-nio-8080-exec-3] c.t.e.service.EmployeeService - Creating employee with email: raj@gmail.com
+2026-08-04 16:54:02 DEBUG [http-nio-8080-exec-3] org.hibernate.SQL - 
+    select
+        top (?) e1_0.id 
+    from
+        employees e1_0 
+    where
+        e1_0.email=?
+2026-08-04 16:54:02 TRACE [http-nio-8080-exec-3] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 16:54:02 TRACE [http-nio-8080-exec-3] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [raj@gmail.com]
+2026-08-04 16:54:02 DEBUG [http-nio-8080-exec-3] org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (department, email, name, salary) 
+    values
+        (?, ?, ?, ?)
+2026-08-04 16:54:02 TRACE [http-nio-8080-exec-3] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [QA]
+2026-08-04 16:54:02 TRACE [http-nio-8080-exec-3] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [raj@gmail.com]
+2026-08-04 16:54:02 TRACE [http-nio-8080-exec-3] org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Raj Samantray]
+2026-08-04 16:54:02 TRACE [http-nio-8080-exec-3] org.hibernate.orm.jdbc.bind - binding parameter (4:DOUBLE) <- [40000.0]
+2026-08-04 16:54:02 INFO  [http-nio-8080-exec-3] c.t.e.service.EmployeeService - Employee created successfully with id: 3
+2026-08-04 16:54:32 INFO  [http-nio-8080-exec-4] c.t.e.controller.EmployeeController - Received request to create employee.
+2026-08-04 16:54:32 INFO  [http-nio-8080-exec-4] c.t.e.service.EmployeeService - Creating employee with email: ranbeer@gmail.com
+2026-08-04 16:54:32 DEBUG [http-nio-8080-exec-4] org.hibernate.SQL - 
+    select
+        top (?) e1_0.id 
+    from
+        employees e1_0 
+    where
+        e1_0.email=?
+2026-08-04 16:54:32 TRACE [http-nio-8080-exec-4] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 16:54:32 TRACE [http-nio-8080-exec-4] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [ranbeer@gmail.com]
+2026-08-04 16:54:32 DEBUG [http-nio-8080-exec-4] org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (department, email, name, salary) 
+    values
+        (?, ?, ?, ?)
+2026-08-04 16:54:32 TRACE [http-nio-8080-exec-4] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [DEV]
+2026-08-04 16:54:32 TRACE [http-nio-8080-exec-4] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [ranbeer@gmail.com]
+2026-08-04 16:54:32 TRACE [http-nio-8080-exec-4] org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Ranbeer Samantray]
+2026-08-04 16:54:32 TRACE [http-nio-8080-exec-4] org.hibernate.orm.jdbc.bind - binding parameter (4:DOUBLE) <- [80000.0]
+2026-08-04 16:54:33 INFO  [http-nio-8080-exec-4] c.t.e.service.EmployeeService - Employee created successfully with id: 4
+2026-08-04 16:54:59 INFO  [http-nio-8080-exec-5] c.t.e.controller.EmployeeController - Received request to fetch all employees.
+2026-08-04 16:54:59 INFO  [http-nio-8080-exec-5] c.t.e.service.EmployeeService - Fetching all employees.
+2026-08-04 16:54:59 DEBUG [http-nio-8080-exec-5] org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.department,
+        e1_0.email,
+        e1_0.name,
+        e1_0.salary 
+    from
+        employees e1_0 
+    order by
+        (select
+            0) 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-08-04 16:54:59 TRACE [http-nio-8080-exec-5] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [0]
+2026-08-04 16:54:59 TRACE [http-nio-8080-exec-5] org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [20]
+2026-08-04 16:54:59 WARN  [http-nio-8080-exec-5] o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2026-08-04 16:55:24 INFO  [http-nio-8080-exec-6] c.t.e.controller.EmployeeController - Received request to fetch employee with id: 2
+2026-08-04 16:55:24 INFO  [http-nio-8080-exec-6] c.t.e.service.EmployeeService - Fetching employee with id: 2
+2026-08-04 16:55:24 DEBUG [http-nio-8080-exec-6] org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.department,
+        e1_0.email,
+        e1_0.name,
+        e1_0.salary 
+    from
+        employees e1_0 
+    where
+        e1_0.id=?
+2026-08-04 16:55:24 TRACE [http-nio-8080-exec-6] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [2]
+2026-08-04 16:55:31 INFO  [http-nio-8080-exec-7] c.t.e.controller.EmployeeController - Received request to fetch employee with id: 7
+2026-08-04 16:55:31 INFO  [http-nio-8080-exec-7] c.t.e.service.EmployeeService - Fetching employee with id: 7
+2026-08-04 16:55:31 DEBUG [http-nio-8080-exec-7] org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.department,
+        e1_0.email,
+        e1_0.name,
+        e1_0.salary 
+    from
+        employees e1_0 
+    where
+        e1_0.id=?
+2026-08-04 16:55:31 TRACE [http-nio-8080-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [7]
+2026-08-04 16:55:31 ERROR [http-nio-8080-exec-7] c.t.e.e.GlobalExceptionHandler - Resource not found: Employee not found with id: 7
+2026-08-04 16:55:38 INFO  [http-nio-8080-exec-8] c.t.e.controller.EmployeeController - Received request to fetch employee with id: 1
+2026-08-04 16:55:38 INFO  [http-nio-8080-exec-8] c.t.e.service.EmployeeService - Fetching employee with id: 1
+2026-08-04 16:55:38 DEBUG [http-nio-8080-exec-8] org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.department,
+        e1_0.email,
+        e1_0.name,
+        e1_0.salary 
+    from
+        employees e1_0 
+    where
+        e1_0.id=?
+2026-08-04 16:55:38 TRACE [http-nio-8080-exec-8] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 16:56:18 INFO  [http-nio-8080-exec-9] c.t.e.controller.EmployeeController - Received request to fetch employee with id: 1
+2026-08-04 16:56:18 INFO  [http-nio-8080-exec-9] c.t.e.service.EmployeeService - Fetching employee with id: 1
+2026-08-04 16:56:18 DEBUG [http-nio-8080-exec-9] org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.department,
+        e1_0.email,
+        e1_0.name,
+        e1_0.salary 
+    from
+        employees e1_0 
+    where
+        e1_0.id=?
+2026-08-04 16:56:18 TRACE [http-nio-8080-exec-9] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 16:56:53 INFO  [http-nio-8080-exec-10] c.t.e.controller.EmployeeController - Received request to update employee with id: 1
+2026-08-04 16:56:53 INFO  [http-nio-8080-exec-10] c.t.e.service.EmployeeService - Updating employee with id: 1
+2026-08-04 16:56:53 DEBUG [http-nio-8080-exec-10] org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.department,
+        e1_0.email,
+        e1_0.name,
+        e1_0.salary 
+    from
+        employees e1_0 
+    where
+        e1_0.id=?
+2026-08-04 16:56:53 TRACE [http-nio-8080-exec-10] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 16:56:54 DEBUG [http-nio-8080-exec-10] org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.department,
+        e1_0.email,
+        e1_0.name,
+        e1_0.salary 
+    from
+        employees e1_0 
+    where
+        e1_0.email=?
+2026-08-04 16:56:54 TRACE [http-nio-8080-exec-10] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [satyaprakash@gmail.com]
+2026-08-04 16:56:54 DEBUG [http-nio-8080-exec-10] org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.department,
+        e1_0.email,
+        e1_0.name,
+        e1_0.salary 
+    from
+        employees e1_0 
+    where
+        e1_0.id=?
+2026-08-04 16:56:54 TRACE [http-nio-8080-exec-10] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 16:56:54 DEBUG [http-nio-8080-exec-10] org.hibernate.SQL - 
+    update
+        employees 
+    set
+        department=?,
+        email=?,
+        name=?,
+        salary=? 
+    where
+        id=?
+2026-08-04 16:56:54 TRACE [http-nio-8080-exec-10] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [IT]
+2026-08-04 16:56:54 TRACE [http-nio-8080-exec-10] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [satyaprakash@gmail.com]
+2026-08-04 16:56:54 TRACE [http-nio-8080-exec-10] org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Satyaprakash Samantray]
+2026-08-04 16:56:54 TRACE [http-nio-8080-exec-10] org.hibernate.orm.jdbc.bind - binding parameter (4:DOUBLE) <- [55000.0]
+2026-08-04 16:56:54 TRACE [http-nio-8080-exec-10] org.hibernate.orm.jdbc.bind - binding parameter (5:INTEGER) <- [1]
+2026-08-04 16:56:54 INFO  [http-nio-8080-exec-10] c.t.e.service.EmployeeService - Employee updated successfully with id: 1
+2026-08-04 16:57:03 INFO  [http-nio-8080-exec-1] c.t.e.controller.EmployeeController - Received request to fetch employee with id: 1
+2026-08-04 16:57:03 INFO  [http-nio-8080-exec-1] c.t.e.service.EmployeeService - Fetching employee with id: 1
+2026-08-04 16:57:03 DEBUG [http-nio-8080-exec-1] org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.department,
+        e1_0.email,
+        e1_0.name,
+        e1_0.salary 
+    from
+        employees e1_0 
+    where
+        e1_0.id=?
+2026-08-04 16:57:03 TRACE [http-nio-8080-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 16:57:18 INFO  [http-nio-8080-exec-2] c.t.e.controller.EmployeeController - Received request to delete employee with id: 1
+2026-08-04 16:57:18 INFO  [http-nio-8080-exec-2] c.t.e.service.EmployeeService - Deleting employee with id: 1
+2026-08-04 16:57:18 DEBUG [http-nio-8080-exec-2] org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.department,
+        e1_0.email,
+        e1_0.name,
+        e1_0.salary 
+    from
+        employees e1_0 
+    where
+        e1_0.id=?
+2026-08-04 16:57:18 TRACE [http-nio-8080-exec-2] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 16:57:18 DEBUG [http-nio-8080-exec-2] org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.department,
+        e1_0.email,
+        e1_0.name,
+        e1_0.salary 
+    from
+        employees e1_0 
+    where
+        e1_0.id=?
+2026-08-04 16:57:18 TRACE [http-nio-8080-exec-2] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 16:57:19 DEBUG [http-nio-8080-exec-2] org.hibernate.SQL - 
+    delete 
+    from
+        employees 
+    where
+        id=?
+2026-08-04 16:57:19 TRACE [http-nio-8080-exec-2] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 16:57:19 INFO  [http-nio-8080-exec-2] c.t.e.service.EmployeeService - Employee deleted successfully with id: 1
+2026-08-04 16:57:28 INFO  [http-nio-8080-exec-3] c.t.e.controller.EmployeeController - Received request to fetch employee with id: 1
+2026-08-04 16:57:28 INFO  [http-nio-8080-exec-3] c.t.e.service.EmployeeService - Fetching employee with id: 1
+2026-08-04 16:57:28 DEBUG [http-nio-8080-exec-3] org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.department,
+        e1_0.email,
+        e1_0.name,
+        e1_0.salary 
+    from
+        employees e1_0 
+    where
+        e1_0.id=?
+2026-08-04 16:57:28 TRACE [http-nio-8080-exec-3] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 16:57:29 ERROR [http-nio-8080-exec-3] c.t.e.e.GlobalExceptionHandler - Resource not found: Employee not found with id: 1
+2026-08-04 16:57:36 INFO  [http-nio-8080-exec-4] c.t.e.controller.EmployeeController - Received request to fetch employee with id: 2
+2026-08-04 16:57:36 INFO  [http-nio-8080-exec-4] c.t.e.service.EmployeeService - Fetching employee with id: 2
+2026-08-04 16:57:36 DEBUG [http-nio-8080-exec-4] org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.department,
+        e1_0.email,
+        e1_0.name,
+        e1_0.salary 
+    from
+        employees e1_0 
+    where
+        e1_0.id=?
+2026-08-04 16:57:36 TRACE [http-nio-8080-exec-4] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [2]
+2026-08-04 17:01:00 ERROR [http-nio-8080-exec-6] c.t.e.e.GlobalExceptionHandler - Unexpected error
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/v1/accounts.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-08-04 17:03:43 ERROR [http-nio-8080-exec-7] c.t.e.e.GlobalExceptionHandler - Unexpected error
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/v1/accounts.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-08-04 17:14:00 ERROR [http-nio-8080-exec-8] c.t.e.e.GlobalExceptionHandler - Unexpected error
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/v1/accounts.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-08-04 17:15:29 ERROR [http-nio-8080-exec-9] c.t.e.e.GlobalExceptionHandler - Unexpected error
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:267)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:441)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:382)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:127)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:68)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:509)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-08-04 17:15:43 ERROR [http-nio-8080-exec-10] c.t.e.e.GlobalExceptionHandler - Unexpected error
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:267)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:441)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:382)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:127)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:68)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:509)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-08-04 17:16:02 INFO  [http-nio-8080-exec-1] c.t.e.controller.AccountController - Received balance request for account id: 1
+2026-08-04 17:16:02 INFO  [http-nio-8080-exec-1] c.t.e.service.AccountService - Fetching balance for account id: 1
+2026-08-04 17:16:02 DEBUG [http-nio-8080-exec-1] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_holder_name,
+        a1_0.account_number,
+        a1_0.balance 
+    from
+        accounts a1_0 
+    where
+        a1_0.id=?
+2026-08-04 17:16:02 TRACE [http-nio-8080-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 17:16:44 INFO  [http-nio-8080-exec-2] c.t.e.controller.AccountController - Received balance request for account id: 7
+2026-08-04 17:16:44 INFO  [http-nio-8080-exec-2] c.t.e.service.AccountService - Fetching balance for account id: 7
+2026-08-04 17:16:45 DEBUG [http-nio-8080-exec-2] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_holder_name,
+        a1_0.account_number,
+        a1_0.balance 
+    from
+        accounts a1_0 
+    where
+        a1_0.id=?
+2026-08-04 17:16:45 TRACE [http-nio-8080-exec-2] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [7]
+2026-08-04 17:16:45 ERROR [http-nio-8080-exec-2] c.t.e.e.GlobalExceptionHandler - Resource not found: Account not found with id: 7
+2026-08-04 17:17:51 INFO  [http-nio-8080-exec-4] c.t.e.controller.AccountController - Received deposit request for account id: 1
+2026-08-04 17:17:51 INFO  [http-nio-8080-exec-4] c.t.e.service.AccountService - Depositing 10000.0 into account id: 1
+2026-08-04 17:17:51 DEBUG [http-nio-8080-exec-4] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_holder_name,
+        a1_0.account_number,
+        a1_0.balance 
+    from
+        accounts a1_0 
+    where
+        a1_0.id=?
+2026-08-04 17:17:51 TRACE [http-nio-8080-exec-4] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 17:17:51 DEBUG [http-nio-8080-exec-4] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_holder_name,
+        a1_0.account_number,
+        a1_0.balance 
+    from
+        accounts a1_0 
+    where
+        a1_0.id=?
+2026-08-04 17:17:51 TRACE [http-nio-8080-exec-4] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 17:17:51 DEBUG [http-nio-8080-exec-4] org.hibernate.SQL - 
+    update
+        accounts 
+    set
+        account_holder_name=?,
+        account_number=?,
+        balance=? 
+    where
+        id=?
+2026-08-04 17:17:51 TRACE [http-nio-8080-exec-4] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Satyaprakash Samantray]
+2026-08-04 17:17:51 TRACE [http-nio-8080-exec-4] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [ACC100001]
+2026-08-04 17:17:51 TRACE [http-nio-8080-exec-4] org.hibernate.orm.jdbc.bind - binding parameter (3:DOUBLE) <- [60000.0]
+2026-08-04 17:17:51 TRACE [http-nio-8080-exec-4] org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [1]
+2026-08-04 17:18:20 INFO  [http-nio-8080-exec-4] c.t.e.service.AccountService - Deposit successful for account id: 1
+2026-08-04 17:19:55 INFO  [http-nio-8080-exec-6] c.t.e.controller.AccountController - Received withdraw request for account id: 1
+2026-08-04 17:19:55 INFO  [http-nio-8080-exec-6] c.t.e.service.AccountService - Withdrawing 10000.0 from account id: 1
+2026-08-04 17:19:55 DEBUG [http-nio-8080-exec-6] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_holder_name,
+        a1_0.account_number,
+        a1_0.balance 
+    from
+        accounts a1_0 
+    where
+        a1_0.id=?
+2026-08-04 17:19:55 TRACE [http-nio-8080-exec-6] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 17:19:55 DEBUG [http-nio-8080-exec-6] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_holder_name,
+        a1_0.account_number,
+        a1_0.balance 
+    from
+        accounts a1_0 
+    where
+        a1_0.id=?
+2026-08-04 17:19:55 TRACE [http-nio-8080-exec-6] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 17:19:55 DEBUG [http-nio-8080-exec-6] org.hibernate.SQL - 
+    update
+        accounts 
+    set
+        account_holder_name=?,
+        account_number=?,
+        balance=? 
+    where
+        id=?
+2026-08-04 17:19:55 TRACE [http-nio-8080-exec-6] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Satyaprakash Samantray]
+2026-08-04 17:19:55 TRACE [http-nio-8080-exec-6] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [ACC100001]
+2026-08-04 17:19:55 TRACE [http-nio-8080-exec-6] org.hibernate.orm.jdbc.bind - binding parameter (3:DOUBLE) <- [50000.0]
+2026-08-04 17:19:55 TRACE [http-nio-8080-exec-6] org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [1]
+2026-08-04 17:20:23 INFO  [http-nio-8080-exec-6] c.t.e.service.AccountService - Withdrawal successful for account id: 1
+2026-08-04 17:20:33 INFO  [http-nio-8080-exec-7] c.t.e.controller.AccountController - Received withdraw request for account id: 7
+2026-08-04 17:20:33 INFO  [http-nio-8080-exec-7] c.t.e.service.AccountService - Withdrawing 10000.0 from account id: 7
+2026-08-04 17:20:33 DEBUG [http-nio-8080-exec-7] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_holder_name,
+        a1_0.account_number,
+        a1_0.balance 
+    from
+        accounts a1_0 
+    where
+        a1_0.id=?
+2026-08-04 17:20:33 TRACE [http-nio-8080-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [7]
+2026-08-04 17:20:33 ERROR [http-nio-8080-exec-7] c.t.e.e.GlobalExceptionHandler - Resource not found: Account not found with id: 7
+2026-08-04 17:23:13 INFO  [http-nio-8080-exec-6] o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 1406 ms
+2026-08-04 17:23:40 INFO  [http-nio-8080-exec-7] c.t.e.controller.AccountController - Received balance request for account id: 2
+2026-08-04 17:23:40 INFO  [http-nio-8080-exec-7] c.t.e.service.AccountService - Fetching balance for account id: 2
+2026-08-04 17:23:40 DEBUG [http-nio-8080-exec-7] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_holder_name,
+        a1_0.account_number,
+        a1_0.balance 
+    from
+        accounts a1_0 
+    where
+        a1_0.id=?
+2026-08-04 17:23:40 TRACE [http-nio-8080-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [2]
+2026-08-04 17:23:59 INFO  [http-nio-8080-exec-8] c.t.e.controller.AccountController - Received balance request for account id: 7
+2026-08-04 17:23:59 INFO  [http-nio-8080-exec-8] c.t.e.service.AccountService - Fetching balance for account id: 7
+2026-08-04 17:23:59 DEBUG [http-nio-8080-exec-8] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_holder_name,
+        a1_0.account_number,
+        a1_0.balance 
+    from
+        accounts a1_0 
+    where
+        a1_0.id=?
+2026-08-04 17:23:59 TRACE [http-nio-8080-exec-8] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [7]
+2026-08-04 17:24:00 ERROR [http-nio-8080-exec-8] c.t.e.e.GlobalExceptionHandler - Resource not found: Account not found with id: 7
+2026-08-04 17:24:38 INFO  [http-nio-8080-exec-4] c.t.e.controller.AccountController - Received withdraw request for account id: 2
+2026-08-04 17:24:38 INFO  [http-nio-8080-exec-4] c.t.e.service.AccountService - Withdrawing 500.0 from account id: 2
+2026-08-04 17:24:38 DEBUG [http-nio-8080-exec-4] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_holder_name,
+        a1_0.account_number,
+        a1_0.balance 
+    from
+        accounts a1_0 
+    where
+        a1_0.id=?
+2026-08-04 17:24:38 TRACE [http-nio-8080-exec-4] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [2]
+2026-08-04 17:24:38 DEBUG [http-nio-8080-exec-4] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_holder_name,
+        a1_0.account_number,
+        a1_0.balance 
+    from
+        accounts a1_0 
+    where
+        a1_0.id=?
+2026-08-04 17:24:38 TRACE [http-nio-8080-exec-4] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [2]
+2026-08-04 17:24:38 DEBUG [http-nio-8080-exec-4] org.hibernate.SQL - 
+    update
+        accounts 
+    set
+        account_holder_name=?,
+        account_number=?,
+        balance=? 
+    where
+        id=?
+2026-08-04 17:24:38 TRACE [http-nio-8080-exec-4] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Rahul Sharma]
+2026-08-04 17:24:38 TRACE [http-nio-8080-exec-4] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [ACC100002]
+2026-08-04 17:24:38 TRACE [http-nio-8080-exec-4] org.hibernate.orm.jdbc.bind - binding parameter (3:DOUBLE) <- [24500.0]
+2026-08-04 17:24:38 TRACE [http-nio-8080-exec-4] org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [2]
+2026-08-04 17:24:38 INFO  [http-nio-8080-exec-4] c.t.e.service.AccountService - Withdrawal successful for account id: 2
+2026-08-04 17:25:08 INFO  [http-nio-8080-exec-1] c.t.e.controller.AccountController - Received withdraw request for account id: 7
+2026-08-04 17:25:08 INFO  [http-nio-8080-exec-1] c.t.e.service.AccountService - Withdrawing 500.0 from account id: 7
+2026-08-04 17:25:08 DEBUG [http-nio-8080-exec-1] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_holder_name,
+        a1_0.account_number,
+        a1_0.balance 
+    from
+        accounts a1_0 
+    where
+        a1_0.id=?
+2026-08-04 17:25:08 TRACE [http-nio-8080-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [7]
+2026-08-04 17:25:08 ERROR [http-nio-8080-exec-1] c.t.e.e.GlobalExceptionHandler - Resource not found: Account not found with id: 7
+2026-08-04 17:26:29 ERROR [http-nio-8080-exec-6] c.t.e.e.GlobalExceptionHandler - Unexpected error
+org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'sat': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:408)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:356)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:204)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:176)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:150)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:227)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:181)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'sat': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 2, column: 17]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:2596)
+	at com.fasterxml.jackson.core.JsonParser._constructReadException(JsonParser.java:2622)
+	at com.fasterxml.jackson.core.JsonParser._constructReadException(JsonParser.java:2630)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:830)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._reportInvalidToken(UTF8StreamJsonParser.java:3662)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._handleUnexpectedValue(UTF8StreamJsonParser.java:2749)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:818)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:173)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)
+	at com.fasterxml.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:2130)
+	at com.fasterxml.jackson.databind.ObjectReader.readValue(ObjectReader.java:1500)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:397)
+	... 51 common frames omitted
+2026-08-04 17:27:28 INFO  [http-nio-8080-exec-7] c.t.e.controller.AccountController - Received withdraw request for account id: 3
+2026-08-04 17:27:28 INFO  [http-nio-8080-exec-7] c.t.e.service.AccountService - Withdrawing 2000.0 from account id: 3
+2026-08-04 17:27:28 DEBUG [http-nio-8080-exec-7] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_holder_name,
+        a1_0.account_number,
+        a1_0.balance 
+    from
+        accounts a1_0 
+    where
+        a1_0.id=?
+2026-08-04 17:27:28 TRACE [http-nio-8080-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [3]
+2026-08-04 17:27:29 DEBUG [http-nio-8080-exec-7] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_holder_name,
+        a1_0.account_number,
+        a1_0.balance 
+    from
+        accounts a1_0 
+    where
+        a1_0.id=?
+2026-08-04 17:27:29 TRACE [http-nio-8080-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [3]
+2026-08-04 17:27:29 DEBUG [http-nio-8080-exec-7] org.hibernate.SQL - 
+    update
+        accounts 
+    set
+        account_holder_name=?,
+        account_number=?,
+        balance=? 
+    where
+        id=?
+2026-08-04 17:27:29 TRACE [http-nio-8080-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Priya Das]
+2026-08-04 17:27:29 TRACE [http-nio-8080-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [ACC100003]
+2026-08-04 17:27:29 TRACE [http-nio-8080-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (3:DOUBLE) <- [73000.0]
+2026-08-04 17:27:29 TRACE [http-nio-8080-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [3]
+2026-08-04 17:27:29 INFO  [http-nio-8080-exec-7] c.t.e.service.AccountService - Withdrawal successful for account id: 3
+2026-08-04 17:28:08 INFO  [http-nio-8080-exec-8] c.t.e.controller.AccountController - Received withdraw request for account id: 3
+2026-08-04 17:28:08 INFO  [http-nio-8080-exec-8] c.t.e.service.AccountService - Withdrawing 2000.0 from account id: 3
+2026-08-04 17:28:08 DEBUG [http-nio-8080-exec-8] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_holder_name,
+        a1_0.account_number,
+        a1_0.balance 
+    from
+        accounts a1_0 
+    where
+        a1_0.id=?
+2026-08-04 17:28:08 TRACE [http-nio-8080-exec-8] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [3]
+2026-08-04 17:28:09 DEBUG [http-nio-8080-exec-8] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_holder_name,
+        a1_0.account_number,
+        a1_0.balance 
+    from
+        accounts a1_0 
+    where
+        a1_0.id=?
+2026-08-04 17:28:09 TRACE [http-nio-8080-exec-8] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [3]
+2026-08-04 17:28:09 DEBUG [http-nio-8080-exec-8] org.hibernate.SQL - 
+    update
+        accounts 
+    set
+        account_holder_name=?,
+        account_number=?,
+        balance=? 
+    where
+        id=?
+2026-08-04 17:28:09 TRACE [http-nio-8080-exec-8] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Priya Das]
+2026-08-04 17:28:09 TRACE [http-nio-8080-exec-8] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [ACC100003]
+2026-08-04 17:28:09 TRACE [http-nio-8080-exec-8] org.hibernate.orm.jdbc.bind - binding parameter (3:DOUBLE) <- [71000.0]
+2026-08-04 17:28:09 TRACE [http-nio-8080-exec-8] org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [3]
+2026-08-04 17:28:09 INFO  [http-nio-8080-exec-8] c.t.e.service.AccountService - Withdrawal successful for account id: 3
+2026-08-04 17:28:18 ERROR [http-nio-8080-exec-9] c.t.e.e.GlobalExceptionHandler - Unexpected error
+org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('s' (code 115)): was expecting comma to separate Object entries
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:408)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:356)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:204)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:176)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:150)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:227)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:181)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('s' (code 115)): was expecting comma to separate Object entries
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 2, column: 17]
+	at com.fasterxml.jackson.core.JsonParser._constructReadException(JsonParser.java:2672)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:742)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextFieldName(UTF8StreamJsonParser.java:1021)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:399)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)
+	at com.fasterxml.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:2130)
+	at com.fasterxml.jackson.databind.ObjectReader.readValue(ObjectReader.java:1500)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:397)
+	... 51 common frames omitted
+2026-08-04 17:29:28 WARN  [http-nio-8080-exec-10] c.t.e.e.GlobalExceptionHandler - Validation failed: {amount=Amount is required}
+2026-08-04 17:31:31 INFO  [http-nio-8080-exec-3] c.t.e.controller.AccountController - Received withdraw request for account id: 0
+2026-08-04 17:31:31 INFO  [http-nio-8080-exec-3] c.t.e.service.AccountService - Withdrawing 2000.0 from account id: 0
+2026-08-04 17:31:31 DEBUG [http-nio-8080-exec-3] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_holder_name,
+        a1_0.account_number,
+        a1_0.balance 
+    from
+        accounts a1_0 
+    where
+        a1_0.id=?
+2026-08-04 17:31:31 TRACE [http-nio-8080-exec-3] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [0]
+2026-08-04 17:31:31 ERROR [http-nio-8080-exec-3] c.t.e.e.GlobalExceptionHandler - Resource not found: Account not found with id: 0
+2026-08-04 17:32:53 INFO  [http-nio-8080-exec-4] c.t.e.controller.EmployeeController - Received request to fetch all employees.
+2026-08-04 17:32:53 INFO  [http-nio-8080-exec-4] c.t.e.service.EmployeeService - Fetching all employees.
+2026-08-04 17:32:53 ERROR [http-nio-8080-exec-4] c.t.e.e.GlobalExceptionHandler - Unexpected error
+org.springframework.data.mapping.PropertyReferenceException: No property '["string"]' found for type 'Employee'
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:94)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:455)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:431)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:384)
+	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:366)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:344)
+	at org.springframework.data.jpa.repository.query.QueryUtils.toJpaOrder(QueryUtils.java:725)
+	at org.springframework.data.jpa.repository.query.QueryUtils.toOrders(QueryUtils.java:678)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.getQuery(SimpleJpaRepository.java:848)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.getQuery(SimpleJpaRepository.java:777)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.getQuery(SimpleJpaRepository.java:744)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:469)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:463)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:443)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:515)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:284)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:734)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:174)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy135.findAll(Unknown Source)
+	at com.tns.employeeapi.service.EmployeeService.getAllEmployees(EmployeeService.java:33)
+	at com.tns.employeeapi.controller.EmployeeController.getAllEmployees(EmployeeController.java:47)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.tns.employeeapi.controller.EmployeeController$$SpringCGLIB$$0.getAllEmployees(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-08-04 17:33:15 INFO  [http-nio-8080-exec-1] c.t.e.controller.EmployeeController - Received request to fetch all employees.
+2026-08-04 17:33:15 INFO  [http-nio-8080-exec-1] c.t.e.service.EmployeeService - Fetching all employees.
+2026-08-04 17:33:15 ERROR [http-nio-8080-exec-1] c.t.e.e.GlobalExceptionHandler - Unexpected error
+org.springframework.data.mapping.PropertyReferenceException: No property '["name"]' found for type 'Employee'
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:94)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:455)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:431)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:384)
+	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:366)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:344)
+	at org.springframework.data.jpa.repository.query.QueryUtils.toJpaOrder(QueryUtils.java:725)
+	at org.springframework.data.jpa.repository.query.QueryUtils.toOrders(QueryUtils.java:678)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.getQuery(SimpleJpaRepository.java:848)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.getQuery(SimpleJpaRepository.java:777)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.getQuery(SimpleJpaRepository.java:744)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:469)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:463)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:443)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:515)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:284)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:734)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:174)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy135.findAll(Unknown Source)
+	at com.tns.employeeapi.service.EmployeeService.getAllEmployees(EmployeeService.java:33)
+	at com.tns.employeeapi.controller.EmployeeController.getAllEmployees(EmployeeController.java:47)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.tns.employeeapi.controller.EmployeeController$$SpringCGLIB$$0.getAllEmployees(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-08-04 17:35:19 INFO  [http-nio-8080-exec-5] c.t.e.controller.EmployeeController - Received request to fetch employee with id: 1
+2026-08-04 17:35:19 INFO  [http-nio-8080-exec-5] c.t.e.service.EmployeeService - Fetching employee with id: 1
+2026-08-04 17:35:19 DEBUG [http-nio-8080-exec-5] org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.department,
+        e1_0.email,
+        e1_0.name,
+        e1_0.salary 
+    from
+        employees e1_0 
+    where
+        e1_0.id=?
+2026-08-04 17:35:19 TRACE [http-nio-8080-exec-5] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 17:35:19 ERROR [http-nio-8080-exec-5] c.t.e.e.GlobalExceptionHandler - Resource not found: Employee not found with id: 1
+2026-08-04 17:35:25 INFO  [http-nio-8080-exec-6] c.t.e.controller.EmployeeController - Received request to fetch employee with id: 2
+2026-08-04 17:35:25 INFO  [http-nio-8080-exec-6] c.t.e.service.EmployeeService - Fetching employee with id: 2
+2026-08-04 17:35:25 DEBUG [http-nio-8080-exec-6] org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.department,
+        e1_0.email,
+        e1_0.name,
+        e1_0.salary 
+    from
+        employees e1_0 
+    where
+        e1_0.id=?
+2026-08-04 17:35:25 TRACE [http-nio-8080-exec-6] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [2]
+2026-08-04 17:36:07 INFO  [http-nio-8080-exec-7] c.t.e.controller.EmployeeController - Received request to create employee.
+2026-08-04 17:36:07 INFO  [http-nio-8080-exec-7] c.t.e.service.EmployeeService - Creating employee with email: satyaprakash@gmail.com
+2026-08-04 17:36:07 DEBUG [http-nio-8080-exec-7] org.hibernate.SQL - 
+    select
+        top (?) e1_0.id 
+    from
+        employees e1_0 
+    where
+        e1_0.email=?
+2026-08-04 17:36:07 TRACE [http-nio-8080-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 17:36:07 TRACE [http-nio-8080-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [satyaprakash@gmail.com]
+2026-08-04 17:36:07 DEBUG [http-nio-8080-exec-7] org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (department, email, name, salary) 
+    values
+        (?, ?, ?, ?)
+2026-08-04 17:36:07 TRACE [http-nio-8080-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [IT]
+2026-08-04 17:36:07 TRACE [http-nio-8080-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [satyaprakash@gmail.com]
+2026-08-04 17:36:07 TRACE [http-nio-8080-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Satyaprakash Samantray]
+2026-08-04 17:36:07 TRACE [http-nio-8080-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (4:DOUBLE) <- [55000.0]
+2026-08-04 17:36:07 INFO  [http-nio-8080-exec-7] c.t.e.service.EmployeeService - Employee created successfully with id: 5
+2026-08-04 17:36:52 ERROR [http-nio-8080-exec-8] c.t.e.e.GlobalExceptionHandler - Unexpected error
+org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('s' (code 115)): was expecting comma to separate Object entries
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:408)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:356)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:204)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:176)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:150)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:227)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:181)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('s' (code 115)): was expecting comma to separate Object entries
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 5, column: 18]
+	at com.fasterxml.jackson.core.JsonParser._constructReadException(JsonParser.java:2672)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:742)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextFieldName(UTF8StreamJsonParser.java:1021)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:399)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)
+	at com.fasterxml.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:2130)
+	at com.fasterxml.jackson.databind.ObjectReader.readValue(ObjectReader.java:1500)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:397)
+	... 51 common frames omitted
+2026-08-04 17:38:06 INFO  [http-nio-8080-exec-9] c.t.e.controller.EmployeeController - Received request to delete employee with id: 2
+2026-08-04 17:38:06 INFO  [http-nio-8080-exec-9] c.t.e.service.EmployeeService - Deleting employee with id: 2
+2026-08-04 17:38:06 DEBUG [http-nio-8080-exec-9] org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.department,
+        e1_0.email,
+        e1_0.name,
+        e1_0.salary 
+    from
+        employees e1_0 
+    where
+        e1_0.id=?
+2026-08-04 17:38:06 TRACE [http-nio-8080-exec-9] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [2]
+2026-08-04 17:38:06 DEBUG [http-nio-8080-exec-9] org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.department,
+        e1_0.email,
+        e1_0.name,
+        e1_0.salary 
+    from
+        employees e1_0 
+    where
+        e1_0.id=?
+2026-08-04 17:38:06 TRACE [http-nio-8080-exec-9] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [2]
+2026-08-04 17:38:06 DEBUG [http-nio-8080-exec-9] org.hibernate.SQL - 
+    delete 
+    from
+        employees 
+    where
+        id=?
+2026-08-04 17:38:06 TRACE [http-nio-8080-exec-9] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [2]
+2026-08-04 17:38:06 INFO  [http-nio-8080-exec-9] c.t.e.service.EmployeeService - Employee deleted successfully with id: 2
+2026-08-04 17:38:28 INFO  [http-nio-8080-exec-10] c.t.e.controller.EmployeeController - Received request to delete employee with id: 2
+2026-08-04 17:38:28 INFO  [http-nio-8080-exec-10] c.t.e.service.EmployeeService - Deleting employee with id: 2
+2026-08-04 17:38:28 DEBUG [http-nio-8080-exec-10] org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.department,
+        e1_0.email,
+        e1_0.name,
+        e1_0.salary 
+    from
+        employees e1_0 
+    where
+        e1_0.id=?
+2026-08-04 17:38:28 TRACE [http-nio-8080-exec-10] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [2]
+2026-08-04 17:38:28 ERROR [http-nio-8080-exec-10] c.t.e.e.GlobalExceptionHandler - Resource not found: Employee not found with id: 2
+2026-08-04 17:40:07 ERROR [http-nio-8080-exec-2] c.t.e.e.GlobalExceptionHandler - Unexpected error
+org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('s' (code 115)): was expecting comma to separate Object entries
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:408)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:356)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:204)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:176)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:150)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:227)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:181)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('s' (code 115)): was expecting comma to separate Object entries
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 5, column: 18]
+	at com.fasterxml.jackson.core.JsonParser._constructReadException(JsonParser.java:2672)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:742)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextFieldName(UTF8StreamJsonParser.java:1021)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:399)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)
+	at com.fasterxml.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:2130)
+	at com.fasterxml.jackson.databind.ObjectReader.readValue(ObjectReader.java:1500)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:397)
+	... 51 common frames omitted
+2026-08-04 17:40:51 INFO  [http-nio-8080-exec-4] c.t.e.controller.EmployeeController - Received request to create employee.
+2026-08-04 17:40:51 INFO  [http-nio-8080-exec-4] c.t.e.service.EmployeeService - Creating employee with email: satyaprakash@gmail.com
+2026-08-04 17:40:51 DEBUG [http-nio-8080-exec-4] org.hibernate.SQL - 
+    select
+        top (?) e1_0.id 
+    from
+        employees e1_0 
+    where
+        e1_0.email=?
+2026-08-04 17:40:51 TRACE [http-nio-8080-exec-4] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 17:40:51 TRACE [http-nio-8080-exec-4] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [satyaprakash@gmail.com]
+2026-08-04 17:40:52 WARN  [http-nio-8080-exec-4] c.t.e.e.GlobalExceptionHandler - Duplicate email: Email already exists: satyaprakash@gmail.com
+2026-08-04 17:43:07 WARN  [http-nio-8080-exec-5] c.t.e.e.GlobalExceptionHandler - Validation failed: {salary=Salary must be greater than zero}
+2026-08-04 17:45:20 WARN  [http-nio-8080-exec-6] c.t.e.e.GlobalExceptionHandler - Validation failed: {amount=Amount must be greater than zero}
+2026-08-04 17:52:18 INFO  [http-nio-8080-exec-7] c.t.e.controller.AccountController - Received deposit request for account id: 1
+2026-08-04 17:52:18 INFO  [http-nio-8080-exec-7] c.t.e.service.AccountService - Depositing 1000.0 into account id: 1
+2026-08-04 17:52:18 DEBUG [http-nio-8080-exec-7] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_holder_name,
+        a1_0.account_number,
+        a1_0.balance 
+    from
+        accounts a1_0 
+    where
+        a1_0.id=?
+2026-08-04 17:52:18 TRACE [http-nio-8080-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 17:52:18 DEBUG [http-nio-8080-exec-7] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_holder_name,
+        a1_0.account_number,
+        a1_0.balance 
+    from
+        accounts a1_0 
+    where
+        a1_0.id=?
+2026-08-04 17:52:18 TRACE [http-nio-8080-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 17:52:18 DEBUG [http-nio-8080-exec-7] org.hibernate.SQL - 
+    update
+        accounts 
+    set
+        account_holder_name=?,
+        account_number=?,
+        balance=? 
+    where
+        id=?
+2026-08-04 17:52:18 TRACE [http-nio-8080-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Satyaprakash Samantray]
+2026-08-04 17:52:18 TRACE [http-nio-8080-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [ACC100001]
+2026-08-04 17:52:18 TRACE [http-nio-8080-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (3:DOUBLE) <- [51000.0]
+2026-08-04 17:52:18 TRACE [http-nio-8080-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [1]
+2026-08-04 17:52:19 INFO  [http-nio-8080-exec-7] c.t.e.service.AccountService - Deposit successful for account id: 1
+2026-08-04 17:53:00 INFO  [http-nio-8080-exec-8] c.t.e.controller.AccountController - Received deposit request for account id: 1
+2026-08-04 17:53:00 INFO  [http-nio-8080-exec-8] c.t.e.service.AccountService - Depositing 1.0 into account id: 1
+2026-08-04 17:53:00 DEBUG [http-nio-8080-exec-8] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_holder_name,
+        a1_0.account_number,
+        a1_0.balance 
+    from
+        accounts a1_0 
+    where
+        a1_0.id=?
+2026-08-04 17:53:00 TRACE [http-nio-8080-exec-8] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 17:53:00 DEBUG [http-nio-8080-exec-8] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_holder_name,
+        a1_0.account_number,
+        a1_0.balance 
+    from
+        accounts a1_0 
+    where
+        a1_0.id=?
+2026-08-04 17:53:00 TRACE [http-nio-8080-exec-8] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 17:53:00 DEBUG [http-nio-8080-exec-8] org.hibernate.SQL - 
+    update
+        accounts 
+    set
+        account_holder_name=?,
+        account_number=?,
+        balance=? 
+    where
+        id=?
+2026-08-04 17:53:00 TRACE [http-nio-8080-exec-8] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Satyaprakash Samantray]
+2026-08-04 17:53:00 TRACE [http-nio-8080-exec-8] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [ACC100001]
+2026-08-04 17:53:00 TRACE [http-nio-8080-exec-8] org.hibernate.orm.jdbc.bind - binding parameter (3:DOUBLE) <- [51001.0]
+2026-08-04 17:53:00 TRACE [http-nio-8080-exec-8] org.hibernate.orm.jdbc.bind - binding parameter (4:INTEGER) <- [1]
+2026-08-04 17:53:00 INFO  [http-nio-8080-exec-8] c.t.e.service.AccountService - Deposit successful for account id: 1
+2026-08-04 17:56:31 INFO  [http-nio-8080-exec-10] c.t.e.controller.EmployeeController - Received request to fetch all employees.
+2026-08-04 17:56:31 INFO  [http-nio-8080-exec-10] c.t.e.service.EmployeeService - Fetching all employees.
+2026-08-04 17:56:31 ERROR [http-nio-8080-exec-10] c.t.e.e.GlobalExceptionHandler - Unexpected error
+org.springframework.data.mapping.PropertyReferenceException: No property '["salary"]' found for type 'Employee'
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:94)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:455)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:431)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:384)
+	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:366)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:344)
+	at org.springframework.data.jpa.repository.query.QueryUtils.toJpaOrder(QueryUtils.java:725)
+	at org.springframework.data.jpa.repository.query.QueryUtils.toOrders(QueryUtils.java:678)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.getQuery(SimpleJpaRepository.java:848)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.getQuery(SimpleJpaRepository.java:777)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.getQuery(SimpleJpaRepository.java:744)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:469)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:463)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:443)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:515)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:284)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:734)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:174)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy135.findAll(Unknown Source)
+	at com.tns.employeeapi.service.EmployeeService.getAllEmployees(EmployeeService.java:33)
+	at com.tns.employeeapi.controller.EmployeeController.getAllEmployees(EmployeeController.java:47)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.tns.employeeapi.controller.EmployeeController$$SpringCGLIB$$0.getAllEmployees(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-08-04 17:57:23 INFO  [http-nio-8080-exec-3] c.t.e.controller.EmployeeController - Received request to fetch all employees.
+2026-08-04 17:57:23 INFO  [http-nio-8080-exec-3] c.t.e.service.EmployeeService - Fetching all employees.
+2026-08-04 17:57:23 ERROR [http-nio-8080-exec-3] c.t.e.e.GlobalExceptionHandler - Unexpected error
+org.springframework.data.mapping.PropertyReferenceException: No property '["Salary"]' found for type 'Employee'
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:94)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:455)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:431)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:384)
+	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:366)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:344)
+	at org.springframework.data.jpa.repository.query.QueryUtils.toJpaOrder(QueryUtils.java:725)
+	at org.springframework.data.jpa.repository.query.QueryUtils.toOrders(QueryUtils.java:678)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.getQuery(SimpleJpaRepository.java:848)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.getQuery(SimpleJpaRepository.java:777)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.getQuery(SimpleJpaRepository.java:744)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:469)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:463)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:443)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:515)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:284)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:734)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:174)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy135.findAll(Unknown Source)
+	at com.tns.employeeapi.service.EmployeeService.getAllEmployees(EmployeeService.java:33)
+	at com.tns.employeeapi.controller.EmployeeController.getAllEmployees(EmployeeController.java:47)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.tns.employeeapi.controller.EmployeeController$$SpringCGLIB$$0.getAllEmployees(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-08-04 18:01:16 INFO  [http-nio-8080-exec-2] c.t.e.controller.EmployeeController - Received request to fetch all employees.
+2026-08-04 18:01:16 INFO  [http-nio-8080-exec-2] c.t.e.service.EmployeeService - Fetching all employees.
+2026-08-04 18:01:16 DEBUG [http-nio-8080-exec-2] org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.department,
+        e1_0.email,
+        e1_0.name,
+        e1_0.salary 
+    from
+        employees e1_0 
+    order by
+        e1_0.salary desc 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-08-04 18:01:16 TRACE [http-nio-8080-exec-2] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [2]
+2026-08-04 18:01:16 TRACE [http-nio-8080-exec-2] org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [2]
+2026-08-04 18:01:33 INFO  [http-nio-8080-exec-4] c.t.e.controller.EmployeeController - Received request to fetch all employees.
+2026-08-04 18:01:33 INFO  [http-nio-8080-exec-4] c.t.e.service.EmployeeService - Fetching all employees.
+2026-08-04 18:01:33 DEBUG [http-nio-8080-exec-4] org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.department,
+        e1_0.email,
+        e1_0.name,
+        e1_0.salary 
+    from
+        employees e1_0 
+    order by
+        e1_0.salary desc 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-08-04 18:01:33 TRACE [http-nio-8080-exec-4] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [0]
+2026-08-04 18:01:33 TRACE [http-nio-8080-exec-4] org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [2]
+2026-08-04 18:01:33 DEBUG [http-nio-8080-exec-4] org.hibernate.SQL - 
+    select
+        count_big(e1_0.id) 
+    from
+        employees e1_0
+2026-08-04 18:01:42 INFO  [http-nio-8080-exec-1] c.t.e.controller.EmployeeController - Received request to fetch all employees.
+2026-08-04 18:01:42 INFO  [http-nio-8080-exec-1] c.t.e.service.EmployeeService - Fetching all employees.
+2026-08-04 18:01:42 DEBUG [http-nio-8080-exec-1] org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.department,
+        e1_0.email,
+        e1_0.name,
+        e1_0.salary 
+    from
+        employees e1_0 
+    order by
+        e1_0.salary desc 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-08-04 18:01:42 TRACE [http-nio-8080-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [0]
+2026-08-04 18:01:42 TRACE [http-nio-8080-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2026-08-04 18:01:42 DEBUG [http-nio-8080-exec-1] org.hibernate.SQL - 
+    select
+        count_big(e1_0.id) 
+    from
+        employees e1_0
+2026-08-04 18:10:18 INFO  [http-nio-8080-exec-6] c.t.e.controller.AccountController - Received withdraw request for account id: 1
+2026-08-04 18:10:18 INFO  [http-nio-8080-exec-6] c.t.e.service.AccountService - Withdrawing 1.0E7 from account id: 1
+2026-08-04 18:10:18 DEBUG [http-nio-8080-exec-6] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_holder_name,
+        a1_0.account_number,
+        a1_0.balance 
+    from
+        accounts a1_0 
+    where
+        a1_0.id=?
+2026-08-04 18:10:18 TRACE [http-nio-8080-exec-6] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 18:10:18 WARN  [http-nio-8080-exec-6] c.t.e.e.GlobalExceptionHandler - Bad request: Insufficient balance.
+2026-08-04 18:14:30 INFO  [http-nio-8080-exec-7] c.t.e.controller.AccountController - Received withdraw request for account id: 1
+2026-08-04 18:14:30 INFO  [http-nio-8080-exec-7] c.t.e.service.AccountService - Withdrawing 1.0E7 from account id: 1
+2026-08-04 18:14:30 DEBUG [http-nio-8080-exec-7] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_holder_name,
+        a1_0.account_number,
+        a1_0.balance 
+    from
+        accounts a1_0 
+    where
+        a1_0.id=?
+2026-08-04 18:14:30 TRACE [http-nio-8080-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 18:14:30 WARN  [http-nio-8080-exec-7] c.t.e.e.GlobalExceptionHandler - Bad request: Insufficient balance.
+2026-08-04 18:14:38 INFO  [http-nio-8080-exec-8] c.t.e.controller.AccountController - Received withdraw request for account id: 1
+2026-08-04 18:14:38 INFO  [http-nio-8080-exec-8] c.t.e.service.AccountService - Withdrawing 1.0E7 from account id: 1
+2026-08-04 18:14:39 DEBUG [http-nio-8080-exec-8] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_holder_name,
+        a1_0.account_number,
+        a1_0.balance 
+    from
+        accounts a1_0 
+    where
+        a1_0.id=?
+2026-08-04 18:14:39 TRACE [http-nio-8080-exec-8] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 18:14:39 WARN  [http-nio-8080-exec-8] c.t.e.e.GlobalExceptionHandler - Bad request: Insufficient balance.
+2026-08-04 18:14:56 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-08-04 18:14:56 INFO  [main] c.t.e.EmployeeApiApplication - Starting EmployeeApiApplication using Java 21.0.11 with PID 544 (C:\Users\s.samantray\Desktop\Eclipse_Workspace\EmployeeBankRestApi\target\classes started by s.samantray in C:\Users\s.samantray\Desktop\Eclipse_Workspace\EmployeeBankRestApi)
+2026-08-04 18:14:56 INFO  [main] c.t.e.EmployeeApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-04 18:14:59 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-04 18:14:59 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 117 ms. Found 2 JPA repository interfaces.
+2026-08-04 18:15:01 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-08-04 18:15:01 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-04 18:15:01 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-04 18:15:01 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2026-08-04 18:15:01 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-04 18:15:01 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4938 ms
+2026-08-04 18:15:02 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-04 18:15:03 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2026-08-04 18:15:03 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-08-04 18:15:04 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-04 18:15:04 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-08-04 18:15:05 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: ba06122e-62f1-42a3-8e2d-f539a2158313
+2026-08-04 18:15:05 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-08-04 18:15:05 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-04 18:15:07 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-04 18:15:08 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-04 18:15:11 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-04 18:15:11 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-08-04 18:15:11 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-04 18:15:11 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-08-04 18:15:11 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-08-04 18:15:11 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-08-04 18:15:11 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-08-04 18:15:29 INFO  [http-nio-8080-exec-9] c.t.e.controller.AccountController - Received withdraw request for account id: 1
+2026-08-04 18:15:29 INFO  [http-nio-8080-exec-9] c.t.e.service.AccountService - Withdrawing 1000000.0 from account id: 1
+2026-08-04 18:15:29 DEBUG [http-nio-8080-exec-9] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_holder_name,
+        a1_0.account_number,
+        a1_0.balance 
+    from
+        accounts a1_0 
+    where
+        a1_0.id=?
+2026-08-04 18:15:29 TRACE [http-nio-8080-exec-9] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 18:15:29 WARN  [http-nio-8080-exec-9] c.t.e.e.GlobalExceptionHandler - Bad request: Insufficient balance.
+2026-08-04 18:18:02 INFO  [http-nio-8080-exec-10] c.t.e.controller.AccountController - Received withdraw request for account id: 1
+2026-08-04 18:18:02 INFO  [http-nio-8080-exec-10] c.t.e.service.AccountService - Withdrawing 999999.0 from account id: 1
+2026-08-04 18:18:02 DEBUG [http-nio-8080-exec-10] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_holder_name,
+        a1_0.account_number,
+        a1_0.balance 
+    from
+        accounts a1_0 
+    where
+        a1_0.id=?
+2026-08-04 18:18:02 TRACE [http-nio-8080-exec-10] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 18:18:02 WARN  [http-nio-8080-exec-10] c.t.e.e.GlobalExceptionHandler - Bad request: Insufficient balance.
+2026-08-04 18:23:35 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-08-04 18:23:35 INFO  [main] c.t.e.EmployeeApiApplication - Starting EmployeeApiApplication using Java 21.0.11 with PID 15640 (C:\Users\s.samantray\Desktop\Eclipse_Workspace\EmployeeBankRestApi\target\classes started by s.samantray in C:\Users\s.samantray\Desktop\Eclipse_Workspace\EmployeeBankRestApi)
+2026-08-04 18:23:35 INFO  [main] c.t.e.EmployeeApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-04 18:23:38 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-04 18:23:38 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 133 ms. Found 2 JPA repository interfaces.
+2026-08-04 18:23:40 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-08-04 18:23:40 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-04 18:23:40 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-04 18:23:40 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2026-08-04 18:23:41 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-04 18:23:41 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5086 ms
+2026-08-04 18:23:42 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-04 18:23:42 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2026-08-04 18:23:42 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-08-04 18:23:43 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-04 18:23:43 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-08-04 18:23:45 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: b6ef07ab-33ac-46b3-9696-5e52eaca8e9e
+2026-08-04 18:23:45 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-08-04 18:23:45 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-04 18:23:47 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-04 18:23:48 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-04 18:23:50 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-04 18:23:50 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-08-04 18:23:50 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-04 18:23:50 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-08-04 18:23:51 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-08-04 18:23:51 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-08-04 18:23:51 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-08-04 18:24:17 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-08-04 18:24:17 INFO  [main] c.t.e.EmployeeApiApplication - Starting EmployeeApiApplication using Java 21.0.11 with PID 4772 (C:\Users\s.samantray\Desktop\Eclipse_Workspace\EmployeeBankRestApi\target\classes started by s.samantray in C:\Users\s.samantray\Desktop\Eclipse_Workspace\EmployeeBankRestApi)
+2026-08-04 18:24:17 INFO  [main] c.t.e.EmployeeApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-04 18:24:20 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-04 18:24:20 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 123 ms. Found 2 JPA repository interfaces.
+2026-08-04 18:24:22 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8088 (http)
+2026-08-04 18:24:22 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2026-08-04 18:24:22 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-04 18:24:22 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2026-08-04 18:24:22 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-04 18:24:22 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4991 ms
+2026-08-04 18:24:23 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-04 18:24:24 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2026-08-04 18:24:24 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-08-04 18:24:25 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-04 18:24:25 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-08-04 18:24:26 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 044f8e1b-97c2-4a44-81c4-f60037b0a75d
+2026-08-04 18:24:26 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-08-04 18:24:26 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-04 18:24:29 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-04 18:24:29 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-04 18:24:32 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2026-08-04 18:24:32 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8088 (http) with context path '/'
+2026-08-04 18:24:32 INFO  [main] c.t.e.EmployeeApiApplication - Started EmployeeApiApplication in 16.98 seconds (process running for 18.048)
+2026-08-04 18:24:41 INFO  [http-nio-8080-exec-3] c.t.e.controller.AccountController - Received withdraw request for account id: 1
+2026-08-04 18:24:41 INFO  [http-nio-8080-exec-3] c.t.e.service.AccountService - Withdrawing 999999.0 from account id: 1
+2026-08-04 18:24:41 DEBUG [http-nio-8080-exec-3] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_holder_name,
+        a1_0.account_number,
+        a1_0.balance 
+    from
+        accounts a1_0 
+    where
+        a1_0.id=?
+2026-08-04 18:24:41 TRACE [http-nio-8080-exec-3] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 18:24:41 WARN  [http-nio-8080-exec-3] c.t.e.e.GlobalExceptionHandler - Bad request: Insufficient balance.
+2026-08-04 18:25:13 INFO  [http-nio-8080-exec-2] c.t.e.controller.AccountController - Received withdraw request for account id: 1
+2026-08-04 18:25:13 INFO  [http-nio-8080-exec-2] c.t.e.service.AccountService - Withdrawing 999999.0 from account id: 1
+2026-08-04 18:25:13 DEBUG [http-nio-8080-exec-2] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_holder_name,
+        a1_0.account_number,
+        a1_0.balance 
+    from
+        accounts a1_0 
+    where
+        a1_0.id=?
+2026-08-04 18:25:13 TRACE [http-nio-8080-exec-2] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 18:25:13 WARN  [http-nio-8080-exec-2] c.t.e.e.GlobalExceptionHandler - Bad request: Insufficient balance.
+2026-08-04 18:28:11 INFO  [http-nio-8080-exec-4] c.t.e.controller.AccountController - Received withdraw request for account id: 1
+2026-08-04 18:28:11 INFO  [http-nio-8080-exec-4] c.t.e.service.AccountService - Withdrawing 9999999.0 from account id: 1
+2026-08-04 18:28:11 DEBUG [http-nio-8080-exec-4] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_holder_name,
+        a1_0.account_number,
+        a1_0.balance 
+    from
+        accounts a1_0 
+    where
+        a1_0.id=?
+2026-08-04 18:28:11 TRACE [http-nio-8080-exec-4] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 18:28:11 WARN  [http-nio-8080-exec-4] c.t.e.e.GlobalExceptionHandler - Bad request: Insufficient balance.
+2026-08-04 18:33:29 INFO  [http-nio-8080-exec-1] c.t.e.controller.EmployeeController - Received request to create employee.
+2026-08-04 18:33:29 INFO  [http-nio-8080-exec-1] c.t.e.service.EmployeeService - Creating employee with email: test@gmail.com
+2026-08-04 18:33:29 DEBUG [http-nio-8080-exec-1] org.hibernate.SQL - 
+    select
+        top (?) e1_0.id 
+    from
+        employees e1_0 
+    where
+        e1_0.email=?
+2026-08-04 18:33:29 TRACE [http-nio-8080-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 18:33:29 TRACE [http-nio-8080-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [test@gmail.com]
+2026-08-04 18:33:29 WARN  [http-nio-8080-exec-1] c.t.e.e.GlobalExceptionHandler - Business rule violation: Salary must be greater than or equal to 1000.
+2026-08-04 18:33:49 INFO  [http-nio-8080-exec-5] c.t.e.controller.EmployeeController - Received request to create employee.
+2026-08-04 18:33:49 INFO  [http-nio-8080-exec-5] c.t.e.service.EmployeeService - Creating employee with email: test@gmail.com
+2026-08-04 18:33:49 DEBUG [http-nio-8080-exec-5] org.hibernate.SQL - 
+    select
+        top (?) e1_0.id 
+    from
+        employees e1_0 
+    where
+        e1_0.email=?
+2026-08-04 18:33:49 TRACE [http-nio-8080-exec-5] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 18:33:49 TRACE [http-nio-8080-exec-5] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [test@gmail.com]
+2026-08-04 18:33:49 DEBUG [http-nio-8080-exec-5] org.hibernate.SQL - 
+    insert 
+    into
+        employees
+        (department, email, name, salary) 
+    values
+        (?, ?, ?, ?)
+2026-08-04 18:33:49 TRACE [http-nio-8080-exec-5] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [IT]
+2026-08-04 18:33:49 TRACE [http-nio-8080-exec-5] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [test@gmail.com]
+2026-08-04 18:33:49 TRACE [http-nio-8080-exec-5] org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Test User]
+2026-08-04 18:33:49 TRACE [http-nio-8080-exec-5] org.hibernate.orm.jdbc.bind - binding parameter (4:DOUBLE) <- [5000.0]
+2026-08-04 18:33:49 INFO  [http-nio-8080-exec-5] c.t.e.service.EmployeeService - Employee created successfully with id: 6
+2026-08-04 18:34:02 INFO  [http-nio-8080-exec-6] c.t.e.controller.EmployeeController - Received request to create employee.
+2026-08-04 18:34:02 INFO  [http-nio-8080-exec-6] c.t.e.service.EmployeeService - Creating employee with email: test@gmail.com
+2026-08-04 18:34:02 DEBUG [http-nio-8080-exec-6] org.hibernate.SQL - 
+    select
+        top (?) e1_0.id 
+    from
+        employees e1_0 
+    where
+        e1_0.email=?
+2026-08-04 18:34:02 TRACE [http-nio-8080-exec-6] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 18:34:02 TRACE [http-nio-8080-exec-6] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [test@gmail.com]
+2026-08-04 18:34:02 WARN  [http-nio-8080-exec-6] c.t.e.e.GlobalExceptionHandler - Duplicate email: Email already exists: test@gmail.com
+2026-08-04 18:34:26 INFO  [http-nio-8080-exec-7] c.t.e.controller.EmployeeController - Received request to create employee.
+2026-08-04 18:34:26 INFO  [http-nio-8080-exec-7] c.t.e.service.EmployeeService - Creating employee with email: test@gmail.com
+2026-08-04 18:34:26 DEBUG [http-nio-8080-exec-7] org.hibernate.SQL - 
+    select
+        top (?) e1_0.id 
+    from
+        employees e1_0 
+    where
+        e1_0.email=?
+2026-08-04 18:34:26 TRACE [http-nio-8080-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 18:34:26 TRACE [http-nio-8080-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [test@gmail.com]
+2026-08-04 18:34:26 WARN  [http-nio-8080-exec-7] c.t.e.e.GlobalExceptionHandler - Duplicate email: Email already exists: test@gmail.com
+2026-08-04 18:34:39 INFO  [http-nio-8080-exec-8] c.t.e.controller.EmployeeController - Received request to create employee.
+2026-08-04 18:34:39 INFO  [http-nio-8080-exec-8] c.t.e.service.EmployeeService - Creating employee with email: test@gmail.com
+2026-08-04 18:34:39 DEBUG [http-nio-8080-exec-8] org.hibernate.SQL - 
+    select
+        top (?) e1_0.id 
+    from
+        employees e1_0 
+    where
+        e1_0.email=?
+2026-08-04 18:34:39 TRACE [http-nio-8080-exec-8] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 18:34:39 TRACE [http-nio-8080-exec-8] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [test@gmail.com]
+2026-08-04 18:34:39 WARN  [http-nio-8080-exec-8] c.t.e.e.GlobalExceptionHandler - Duplicate email: Email already exists: test@gmail.com
+2026-08-04 18:34:49 INFO  [http-nio-8080-exec-9] c.t.e.controller.EmployeeController - Received request to create employee.
+2026-08-04 18:34:49 INFO  [http-nio-8080-exec-9] c.t.e.service.EmployeeService - Creating employee with email: test@gmail.com
+2026-08-04 18:34:49 DEBUG [http-nio-8080-exec-9] org.hibernate.SQL - 
+    select
+        top (?) e1_0.id 
+    from
+        employees e1_0 
+    where
+        e1_0.email=?
+2026-08-04 18:34:49 TRACE [http-nio-8080-exec-9] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-04 18:34:49 TRACE [http-nio-8080-exec-9] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [test@gmail.com]
+2026-08-04 18:34:49 WARN  [http-nio-8080-exec-9] c.t.e.e.GlobalExceptionHandler - Duplicate email: Email already exists: test@gmail.com

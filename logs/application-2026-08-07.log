@@ -1,0 +1,574 @@
+2026-08-07 15:36:55 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-08-07 15:36:55 INFO  [main] c.t.e.EmployeeApiApplication - Starting EmployeeApiApplication using Java 21.0.11 with PID 7148 (C:\Users\s.samantray\Desktop\Eclipse_Workspace\EmployeeBankRestApiPostman_Collection\target\classes started by s.samantray in C:\Users\s.samantray\Desktop\Eclipse_Workspace\EmployeeBankRestApiPostman_Collection)
+2026-08-07 15:36:55 DEBUG [main] c.t.e.EmployeeApiApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+2026-08-07 15:36:55 INFO  [main] c.t.e.EmployeeApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-07 15:36:59 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-07 15:36:59 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-07 15:37:00 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 447 ms. Found 2 JPA repository interfaces.
+2026-08-07 15:37:00 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-07 15:37:00 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-07 15:37:00 INFO  [main] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.tns.employeeapi.repository.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-08-07 15:37:00 INFO  [main] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.tns.employeeapi.repository.EmployeeRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-08-07 15:37:00 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 0 Redis repository interfaces.
+2026-08-07 15:37:02 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8091 (http)
+2026-08-07 15:37:02 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8091"]
+2026-08-07 15:37:02 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-07 15:37:02 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2026-08-07 15:37:02 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-07 15:37:02 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6382 ms
+2026-08-07 15:37:03 DEBUG [main] com.zaxxer.hikari.HikariConfig - Class com.microsoft.sqlserver.jdbc.SQLServerDriver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@5c647e05
+2026-08-07 15:37:03 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-07 15:37:03 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2026-08-07 15:37:04 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-08-07 15:37:05 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - EmployeeBankingHikariPool - configuration:
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - catalog.........................none
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - credentials.....................com.zaxxer.hikari.util.Credentials@6ba355e4
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - dataSource......................none
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - driverClassName................."com.microsoft.sqlserver.jdbc.SQLServerDriver"
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - exceptionOverride...............none
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:sqlserver://TNS-IT-DESKTOP\SQLEXPRESS;databaseName=SpringBootRestApi;integratedSecurity=true;encrypt=true;trustServerCertificate=true
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - keepaliveTime...................120000
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........2000
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - minimumIdle.....................5
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - password........................<masked>
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - poolName........................"EmployeeBankingHikariPool"
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - readOnly........................false
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - schema..........................none
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - username........................none
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2026-08-07 15:37:05 INFO  [main] com.zaxxer.hikari.HikariDataSource - EmployeeBankingHikariPool - Starting...
+2026-08-07 15:37:05 DEBUG [main] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Attempting to create/setup new connection (af84b990-0fdf-4fb3-994b-dfa4cb80c675)
+2026-08-07 15:37:07 DEBUG [main] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Established new connection (af84b990-0fdf-4fb3-994b-dfa4cb80c675)
+2026-08-07 15:37:07 INFO  [main] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Added connection ConnectionID:1 ClientConnectionId: dc5ea839-0c0c-4393-be38-34ef57314059
+2026-08-07 15:37:07 INFO  [main] com.zaxxer.hikari.HikariDataSource - EmployeeBankingHikariPool - Start completed.
+2026-08-07 15:37:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=1/10, idle=0/5, active=1, waiting=0)
+2026-08-07 15:37:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=1/10, idle=0/5, active=1, waiting=0)
+2026-08-07 15:37:07 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Attempting to create/setup new connection (dd60d81d-c6ca-408a-bf5a-27592c9db588)
+2026-08-07 15:37:07 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (EmployeeBankingHikariPool)']
+	Database driver: undefined/unknown
+	Database version: 15.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-07 15:37:07 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Established new connection (dd60d81d-c6ca-408a-bf5a-27592c9db588)
+2026-08-07 15:37:07 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Added connection ConnectionID:2 ClientConnectionId: 2d814c1d-fff6-4041-a4b1-c9bd5b76ccad
+2026-08-07 15:37:07 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After adding stats (total=2/10, idle=2/5, active=0, waiting=0)
+2026-08-07 15:37:07 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Attempting to create/setup new connection (f3b6405b-47eb-4795-ab4d-286795e6fca2)
+2026-08-07 15:37:08 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Established new connection (f3b6405b-47eb-4795-ab4d-286795e6fca2)
+2026-08-07 15:37:08 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Added connection ConnectionID:3 ClientConnectionId: 75e4d6f0-2577-4f9b-a4ca-a6bc54a15386
+2026-08-07 15:37:08 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After adding stats (total=3/10, idle=3/5, active=0, waiting=0)
+2026-08-07 15:37:08 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Attempting to create/setup new connection (bd47fb14-7752-40e3-851b-413fb7d91c6d)
+2026-08-07 15:37:08 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Established new connection (bd47fb14-7752-40e3-851b-413fb7d91c6d)
+2026-08-07 15:37:08 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Added connection ConnectionID:4 ClientConnectionId: b9bbf9a9-052c-4500-a07b-f9eec750a8f5
+2026-08-07 15:37:08 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After adding stats (total=4/10, idle=4/5, active=0, waiting=0)
+2026-08-07 15:37:08 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Attempting to create/setup new connection (0dd87680-5f5f-4888-a208-aa3d2f269f5a)
+2026-08-07 15:37:09 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.PoolBase - EmployeeBankingHikariPool - Established new connection (0dd87680-5f5f-4888-a208-aa3d2f269f5a)
+2026-08-07 15:37:09 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Added connection ConnectionID:5 ClientConnectionId: 65c7615f-194a-4d6b-9030-09c238b103fe
+2026-08-07 15:37:09 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After adding stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:37:09 DEBUG [EmployeeBankingHikariPool:connection-adder] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Connection not added, stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:37:09 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-07 15:37:10 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-07 15:37:14 INFO  [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 5 endpoints beneath base path '/actuator'
+2026-08-07 15:37:14 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8091"]
+2026-08-07 15:37:14 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8091 (http) with context path '/'
+2026-08-07 15:37:14 INFO  [main] c.t.e.EmployeeApiApplication - Started EmployeeApiApplication in 20.571 seconds (process running for 22.008)
+2026-08-07 15:37:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:37:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:37:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-07 15:37:47 INFO  [http-nio-8091-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-07 15:37:47 INFO  [http-nio-8091-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-08-07 15:37:47 INFO  [http-nio-8091-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2026-08-07 15:37:47 INFO  [http-nio-8091-exec-1] c.t.e.controller.EmployeeController - Received request to create employee.
+2026-08-07 15:37:47 INFO  [http-nio-8091-exec-1] c.t.e.service.EmployeeService - Creating employee with email: biranchi@example.com
+2026-08-07 15:37:48 DEBUG [http-nio-8091-exec-1] org.hibernate.SQL - 
+    select
+        top (?) e1_0.id 
+    from
+        employee_details5 e1_0 
+    where
+        e1_0.email=?
+2026-08-07 15:37:48 TRACE [http-nio-8091-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-07 15:37:48 TRACE [http-nio-8091-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [biranchi@example.com]
+2026-08-07 15:37:48 DEBUG [http-nio-8091-exec-1] org.hibernate.SQL - 
+    insert 
+    into
+        employee_details5
+        (department, email, name, salary) 
+    values
+        (?, ?, ?, ?)
+2026-08-07 15:37:48 TRACE [http-nio-8091-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [HR]
+2026-08-07 15:37:48 TRACE [http-nio-8091-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [biranchi@example.com]
+2026-08-07 15:37:48 TRACE [http-nio-8091-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Biranchi das]
+2026-08-07 15:37:48 TRACE [http-nio-8091-exec-1] org.hibernate.orm.jdbc.bind - binding parameter (4:DOUBLE) <- [95000.0]
+2026-08-07 15:37:49 ERROR [http-nio-8091-exec-1] c.t.e.e.GlobalExceptionHandler - Unexpected exception
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1866)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1797)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1594)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.lambda$getConnection$0(LettuceConnectionFactory.java:1574)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.doInLock(LettuceConnectionFactory.java:1535)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1571)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:1257)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:1063)
+	at org.springframework.data.redis.cache.DefaultRedisCacheWriter.execute(DefaultRedisCacheWriter.java:401)
+	at org.springframework.data.redis.cache.DefaultRedisCacheWriter.clean(DefaultRedisCacheWriter.java:322)
+	at org.springframework.data.redis.cache.RedisCache.clear(RedisCache.java:243)
+	at org.springframework.data.redis.cache.RedisCache.clear(RedisCache.java:231)
+	at org.springframework.cache.interceptor.AbstractCacheInvoker.doClear(AbstractCacheInvoker.java:192)
+	at org.springframework.cache.interceptor.CacheAspectSupport.performCacheEvicts(CacheAspectSupport.java:711)
+	at org.springframework.cache.interceptor.CacheAspectSupport.processCacheEvicts(CacheAspectSupport.java:699)
+	at org.springframework.cache.interceptor.CacheAspectSupport.evaluate(CacheAspectSupport.java:623)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:448)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:410)
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:65)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.tns.employeeapi.service.EmployeeService$$SpringCGLIB$$0.addEmployee(<generated>)
+	at com.tns.employeeapi.controller.EmployeeController.addEmployee(EmployeeController.java:65)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.tns.employeeapi.controller.EmployeeController$$SpringCGLIB$$0.addEmployee(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to localhost/<unresolved>:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:63)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:41)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:354)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:220)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:112)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:112)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1795)
+	... 82 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: getsockopt: localhost/127.0.0.1:6379
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:336)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:339)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:784)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-08-07 15:38:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:38:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:38:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-07 15:38:07 INFO  [http-nio-8091-exec-3] c.t.e.controller.EmployeeController - Received request to fetch all employees.
+2026-08-07 15:38:08 DEBUG [http-nio-8091-exec-3] org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.department,
+        e1_0.email,
+        e1_0.name,
+        e1_0.salary 
+    from
+        employee_details5 e1_0 
+    order by
+        (select
+            0) 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-08-07 15:38:08 TRACE [http-nio-8091-exec-3] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [0]
+2026-08-07 15:38:08 TRACE [http-nio-8091-exec-3] org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [20]
+2026-08-07 15:38:08 WARN  [http-nio-8091-exec-3] o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2026-08-07 15:38:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:38:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:38:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-07 15:38:52 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:5 ClientConnectionId: 65c7615f-194a-4d6b-9030-09c238b103fe is alive
+2026-08-07 15:38:58 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:1 ClientConnectionId: dc5ea839-0c0c-4393-be38-34ef57314059 is alive
+2026-08-07 15:38:59 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:2 ClientConnectionId: 2d814c1d-fff6-4041-a4b1-c9bd5b76ccad is alive
+2026-08-07 15:39:01 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:4 ClientConnectionId: b9bbf9a9-052c-4500-a07b-f9eec750a8f5 is alive
+2026-08-07 15:39:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:39:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:39:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-07 15:39:08 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:3 ClientConnectionId: 75e4d6f0-2577-4f9b-a4ca-a6bc54a15386 is alive
+2026-08-07 15:39:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:39:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:39:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-07 15:40:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:40:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:40:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-07 15:40:36 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:5 ClientConnectionId: 65c7615f-194a-4d6b-9030-09c238b103fe is alive
+2026-08-07 15:40:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:40:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:40:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-07 15:40:50 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:1 ClientConnectionId: dc5ea839-0c0c-4393-be38-34ef57314059 is alive
+2026-08-07 15:40:51 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:2 ClientConnectionId: 2d814c1d-fff6-4041-a4b1-c9bd5b76ccad is alive
+2026-08-07 15:40:53 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:4 ClientConnectionId: b9bbf9a9-052c-4500-a07b-f9eec750a8f5 is alive
+2026-08-07 15:41:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:41:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:41:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-07 15:41:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:3 ClientConnectionId: 75e4d6f0-2577-4f9b-a4ca-a6bc54a15386 is alive
+2026-08-07 15:41:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:41:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:41:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-07 15:42:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:42:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:42:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-07 15:42:19 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:5 ClientConnectionId: 65c7615f-194a-4d6b-9030-09c238b103fe is alive
+2026-08-07 15:42:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:42:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:42:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-07 15:42:41 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:1 ClientConnectionId: dc5ea839-0c0c-4393-be38-34ef57314059 is alive
+2026-08-07 15:42:43 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:2 ClientConnectionId: 2d814c1d-fff6-4041-a4b1-c9bd5b76ccad is alive
+2026-08-07 15:42:45 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:4 ClientConnectionId: b9bbf9a9-052c-4500-a07b-f9eec750a8f5 is alive
+2026-08-07 15:43:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:43:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:43:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-07 15:43:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:3 ClientConnectionId: 75e4d6f0-2577-4f9b-a4ca-a6bc54a15386 is alive
+2026-08-07 15:43:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:43:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:43:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-07 15:43:57 INFO  [http-nio-8091-exec-7] c.t.e.controller.EmployeeController - Received request to create employee.
+2026-08-07 15:43:57 INFO  [http-nio-8091-exec-7] c.t.e.service.EmployeeService - Creating employee with email: bira@example.com
+2026-08-07 15:43:57 DEBUG [http-nio-8091-exec-7] org.hibernate.SQL - 
+    select
+        top (?) e1_0.id 
+    from
+        employee_details5 e1_0 
+    where
+        e1_0.email=?
+2026-08-07 15:43:57 TRACE [http-nio-8091-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [1]
+2026-08-07 15:43:57 TRACE [http-nio-8091-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [bira@example.com]
+2026-08-07 15:43:57 DEBUG [http-nio-8091-exec-7] org.hibernate.SQL - 
+    insert 
+    into
+        employee_details5
+        (department, email, name, salary) 
+    values
+        (?, ?, ?, ?)
+2026-08-07 15:43:57 TRACE [http-nio-8091-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [HR]
+2026-08-07 15:43:57 TRACE [http-nio-8091-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [bira@example.com]
+2026-08-07 15:43:57 TRACE [http-nio-8091-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [Biranchikumar das]
+2026-08-07 15:43:57 TRACE [http-nio-8091-exec-7] org.hibernate.orm.jdbc.bind - binding parameter (4:DOUBLE) <- [95000.0]
+2026-08-07 15:43:57 ERROR [http-nio-8091-exec-7] c.t.e.e.GlobalExceptionHandler - Unexpected exception
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1866)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1797)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1594)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.lambda$getConnection$0(LettuceConnectionFactory.java:1574)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.doInLock(LettuceConnectionFactory.java:1535)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1571)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:1257)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:1063)
+	at org.springframework.data.redis.cache.DefaultRedisCacheWriter.execute(DefaultRedisCacheWriter.java:401)
+	at org.springframework.data.redis.cache.DefaultRedisCacheWriter.clean(DefaultRedisCacheWriter.java:322)
+	at org.springframework.data.redis.cache.RedisCache.clear(RedisCache.java:243)
+	at org.springframework.data.redis.cache.RedisCache.clear(RedisCache.java:231)
+	at org.springframework.cache.interceptor.AbstractCacheInvoker.doClear(AbstractCacheInvoker.java:192)
+	at org.springframework.cache.interceptor.CacheAspectSupport.performCacheEvicts(CacheAspectSupport.java:711)
+	at org.springframework.cache.interceptor.CacheAspectSupport.processCacheEvicts(CacheAspectSupport.java:699)
+	at org.springframework.cache.interceptor.CacheAspectSupport.evaluate(CacheAspectSupport.java:623)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:448)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:410)
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:65)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.tns.employeeapi.service.EmployeeService$$SpringCGLIB$$0.addEmployee(<generated>)
+	at com.tns.employeeapi.controller.EmployeeController.addEmployee(EmployeeController.java:65)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.tns.employeeapi.controller.EmployeeController$$SpringCGLIB$$0.addEmployee(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to localhost/<unresolved>:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:63)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:41)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:354)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:220)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:112)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:112)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1795)
+	... 82 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: getsockopt: localhost/127.0.0.1:6379
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:336)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:339)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:784)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-08-07 15:44:02 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:5 ClientConnectionId: 65c7615f-194a-4d6b-9030-09c238b103fe is alive
+2026-08-07 15:44:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:44:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:44:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-07 15:44:33 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:1 ClientConnectionId: dc5ea839-0c0c-4393-be38-34ef57314059 is alive
+2026-08-07 15:44:35 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:2 ClientConnectionId: 2d814c1d-fff6-4041-a4b1-c9bd5b76ccad is alive
+2026-08-07 15:44:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:44:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:44:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-07 15:44:38 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:4 ClientConnectionId: b9bbf9a9-052c-4500-a07b-f9eec750a8f5 is alive
+2026-08-07 15:45:00 INFO  [http-nio-8091-exec-9] c.t.e.controller.EmployeeController - Received request to fetch all employees.
+2026-08-07 15:45:00 DEBUG [http-nio-8091-exec-9] org.hibernate.SQL - 
+    select
+        e1_0.id,
+        e1_0.department,
+        e1_0.email,
+        e1_0.name,
+        e1_0.salary 
+    from
+        employee_details5 e1_0 
+    order by
+        (select
+            0) 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-08-07 15:45:00 TRACE [http-nio-8091-exec-9] org.hibernate.orm.jdbc.bind - binding parameter (1:INTEGER) <- [0]
+2026-08-07 15:45:00 TRACE [http-nio-8091-exec-9] org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [20]
+2026-08-07 15:45:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:3 ClientConnectionId: 75e4d6f0-2577-4f9b-a4ca-a6bc54a15386 is alive
+2026-08-07 15:45:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:45:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:45:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-07 15:45:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:45:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:45:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-07 15:45:46 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:5 ClientConnectionId: 65c7615f-194a-4d6b-9030-09c238b103fe is alive
+2026-08-07 15:45:49 WARN  [http-nio-8091-exec-10] c.t.e.e.GlobalExceptionHandler - Validation failed: {email=Invalid email format}
+2026-08-07 15:46:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:46:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:46:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-07 15:46:25 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:1 ClientConnectionId: dc5ea839-0c0c-4393-be38-34ef57314059 is alive
+2026-08-07 15:46:27 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:2 ClientConnectionId: 2d814c1d-fff6-4041-a4b1-c9bd5b76ccad is alive
+2026-08-07 15:46:30 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:4 ClientConnectionId: b9bbf9a9-052c-4500-a07b-f9eec750a8f5 is alive
+2026-08-07 15:46:33 ERROR [http-nio-8091-exec-2] c.t.e.e.GlobalExceptionHandler - Unexpected exception
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; For input string: "null"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.convertIfNecessary(AbstractNamedValueMethodArgumentResolver.java:301)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:136)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:227)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:181)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.NumberFormatException: For input string: "null"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.valueOf(Integer.java:989)
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:201)
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115)
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:439)
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:412)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:161)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:80)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53)
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:867)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.convertIfNecessary(AbstractNamedValueMethodArgumentResolver.java:293)
+	... 52 common frames omitted
+2026-08-07 15:46:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:46:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:46:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-07 15:47:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:3 ClientConnectionId: 75e4d6f0-2577-4f9b-a4ca-a6bc54a15386 is alive
+2026-08-07 15:47:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:47:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:47:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-07 15:47:29 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:5 ClientConnectionId: 65c7615f-194a-4d6b-9030-09c238b103fe is alive
+2026-08-07 15:47:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:47:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:47:37 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-07 15:48:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Before cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:48:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - After  cleanup stats (total=5/10, idle=5/5, active=0, waiting=0)
+2026-08-07 15:48:07 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-08-07 15:48:16 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:1 ClientConnectionId: dc5ea839-0c0c-4393-be38-34ef57314059 is alive
+2026-08-07 15:48:19 DEBUG [EmployeeBankingHikariPool:housekeeper] com.zaxxer.hikari.pool.HikariPool - EmployeeBankingHikariPool - keepalive: connection ConnectionID:2 ClientConnectionId: 2d814c1d-fff6-4041-a4b1-c9bd5b76ccad is alive
